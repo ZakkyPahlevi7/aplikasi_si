@@ -1,11 +1,19 @@
 // ignore_for_file: prefer_const_constructors, camel_case_types, prefer_const_literals_to_create_immutables, import_of_legacy_library_into_null_safe, avoid_unnecessary_containers
-import 'dart:html';
 
 import 'package:aplikasi_si/CarouselWithDotsPage.dart';
+import 'package:aplikasi_si/denahsekolah.dart';
+import 'package:aplikasi_si/detaildatasiswa.dart';
+import 'package:aplikasi_si/detaildatastaff.dart';
+import 'package:aplikasi_si/detailkkepalasekolah.dart';
+import 'package:aplikasi_si/detailwalikelas.dart';
+import 'package:aplikasi_si/list_prestasi.dart';
+import 'package:aplikasi_si/profile.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'detaildataguru.dart';
+import 'detailwakilkepala.dart';
 import 'main.dart';
 
 class dashboardpage extends StatefulWidget {
@@ -17,11 +25,18 @@ class dashboardpage extends StatefulWidget {
 
 class _dashboardpageState extends State<dashboardpage> {
   int currentIndex = 0;
+
   List<String> images = [
-    'assets/images/visi.png',
-    'assets/images/misi.png',
-    'assets/images/tujuan.png',
+    'assets/images/misiskolah.png',
+    'assets/images/visitujuan.png'
   ];
+
+  Widget myText(String textnya) {
+    return Text(
+      textnya,
+      style: GoogleFonts.poppins(fontWeight: FontWeight.w400, fontSize: 18),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,9 +56,17 @@ class _dashboardpageState extends State<dashboardpage> {
                       width: 80,
                     ),
                     Spacer(),
-                    Image.asset(
-                      'assets/images/profile.png',
-                      width: 45,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => profilepage()));
+                      },
+                      child: Image.asset(
+                        'assets/images/profile.png',
+                        width: 45,
+                      ),
                     )
                   ],
                 ),
@@ -53,7 +76,7 @@ class _dashboardpageState extends State<dashboardpage> {
               ),
               CarouselWithDotsPage(imgList: imgList),
               SizedBox(
-                height: 140,
+                height: 300,
                 width: double.infinity,
                 child: PageView.builder(
                   onPageChanged: (index) {
@@ -90,58 +113,66 @@ class _dashboardpageState extends State<dashboardpage> {
               ),
               Container(
                 margin: EdgeInsets.only(top: 12, left: 36),
-                child: Text(
-                  'Civitas',
-                  style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.bold, fontSize: 18),
-                ),
+                child: myText('Civitas'),
               ),
               SizedBox(
                 height: 12,
               ),
               Row(
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(6.0),
-                        border: Border.all(color: Color(0xff00DB8C))),
-                    margin: EdgeInsets.only(left: 36),
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 19.5, vertical: 4),
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/profilks.png',
-                          width: 22,
-                        ),
-                        Text(
-                          'Kepala Sekolah',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12, fontWeight: FontWeight.w500),
-                        )
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => detaiilks()));
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(6.0),
+                          border: Border.all(color: Color(0xff00DB8C))),
+                      margin: EdgeInsets.only(left: 36),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 19.5, vertical: 4),
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/profilks.png',
+                            width: 22,
+                          ),
+                          Text(
+                            'Kepala Sekolah',
+                            style: GoogleFonts.poppins(
+                                fontSize: 12, fontWeight: FontWeight.w500),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   Spacer(),
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(6.0),
-                        border: Border.all(color: Color(0xff00DB8C))),
-                    margin: EdgeInsets.only(right: 36),
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 27.5, vertical: 4),
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/profilwk.png',
-                          width: 22,
-                        ),
-                        Text(
-                          'Wakil Kepala',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12, fontWeight: FontWeight.w500),
-                        )
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => detailwk()));
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(6.0),
+                          border: Border.all(color: Color(0xff00DB8C))),
+                      margin: EdgeInsets.only(right: 36),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 27.5, vertical: 4),
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/profilwk.png',
+                            width: 22,
+                          ),
+                          Text(
+                            'Wakil Kepala',
+                            style: GoogleFonts.poppins(
+                                fontSize: 12, fontWeight: FontWeight.w500),
+                          )
+                        ],
+                      ),
                     ),
                   )
                 ],
@@ -151,47 +182,59 @@ class _dashboardpageState extends State<dashboardpage> {
               ),
               Row(
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(6.0),
-                        border: Border.all(color: Color(0xff00DB8C))),
-                    margin: EdgeInsets.only(left: 36),
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 35.2, vertical: 4),
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/profildg.png',
-                          width: 22,
-                        ),
-                        Text(
-                          'Data Guru',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12, fontWeight: FontWeight.w500),
-                        )
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => detaildg()));
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(6.0),
+                          border: Border.all(color: Color(0xff00DB8C))),
+                      margin: EdgeInsets.only(left: 36),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 35.2, vertical: 4),
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/profildg.png',
+                            width: 22,
+                          ),
+                          Text(
+                            'Data Guru',
+                            style: GoogleFonts.poppins(
+                                fontSize: 12, fontWeight: FontWeight.w500),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   Spacer(),
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(6.0),
-                        border: Border.all(color: Color(0xff00DB8C))),
-                    margin: EdgeInsets.only(right: 36),
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 35.5, vertical: 4),
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/profilkw.png',
-                          width: 22,
-                        ),
-                        Text(
-                          'Wali Kelas',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12, fontWeight: FontWeight.w500),
-                        )
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => detailkw()));
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(6.0),
+                          border: Border.all(color: Color(0xff00DB8C))),
+                      margin: EdgeInsets.only(right: 36),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 35.5, vertical: 4),
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/profilkw.png',
+                            width: 22,
+                          ),
+                          Text(
+                            'Wali Kelas',
+                            style: GoogleFonts.poppins(
+                                fontSize: 12, fontWeight: FontWeight.w500),
+                          )
+                        ],
+                      ),
                     ),
                   )
                 ],
@@ -201,47 +244,61 @@ class _dashboardpageState extends State<dashboardpage> {
               ),
               Row(
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(6.0),
-                        border: Border.all(color: Color(0xff00DB8C))),
-                    margin: EdgeInsets.only(left: 36),
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 35.7, vertical: 4),
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/profilds.png',
-                          width: 22,
-                        ),
-                        Text(
-                          'Data Staff',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12, fontWeight: FontWeight.w500),
-                        )
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: ((context) => detailds())));
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(6.0),
+                          border: Border.all(color: Color(0xff00DB8C))),
+                      margin: EdgeInsets.only(left: 36),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 35.7, vertical: 4),
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/profilds.png',
+                            width: 22,
+                          ),
+                          Text(
+                            'Data Staff',
+                            style: GoogleFonts.poppins(
+                                fontSize: 12, fontWeight: FontWeight.w500),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   Spacer(),
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(6.0),
-                        border: Border.all(color: Color(0xff00DB8C))),
-                    margin: EdgeInsets.only(right: 36),
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 27.5, vertical: 4),
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/profilwk.png',
-                          width: 22,
-                        ),
-                        Text(
-                          'Wakil Kepala',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12, fontWeight: FontWeight.w500),
-                        )
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => detailsd()));
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(6.0),
+                          border: Border.all(color: Color(0xff00DB8C))),
+                      margin: EdgeInsets.only(right: 36),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 32.5, vertical: 4),
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/profilwk.png',
+                            width: 22,
+                          ),
+                          Text(
+                            'Data Siswa',
+                            style: GoogleFonts.poppins(
+                                fontSize: 12, fontWeight: FontWeight.w500),
+                          )
+                        ],
+                      ),
                     ),
                   )
                 ],
@@ -259,10 +316,18 @@ class _dashboardpageState extends State<dashboardpage> {
                           fontWeight: FontWeight.bold, fontSize: 18),
                     ),
                     Spacer(),
-                    Text(
-                      'Lihat Semua',
-                      style: GoogleFonts.poppins(
-                          color: Color.fromRGBO(0, 0, 0, 0.5), fontSize: 13),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => listprestasipage()));
+                      },
+                      child: Text(
+                        'Lihat Semua',
+                        style: GoogleFonts.poppins(
+                            color: Color.fromRGBO(0, 0, 0, 0.5), fontSize: 13),
+                      ),
                     )
                   ],
                 ),
@@ -507,22 +572,189 @@ class _dashboardpageState extends State<dashboardpage> {
               SizedBox(
                 height: 10,
               ),
-              Row(
-                children: [
-                  Container(
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: 78,
-                        ),
-                        Text('Extrakurikuler')
-                      ],
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(7.0),
+                          image: DecorationImage(
+                              image: AssetImage('assets/images/basket.png'),
+                              fit: BoxFit.cover)),
+                      margin: EdgeInsets.only(left: 34, top: 6),
+                      padding: EdgeInsets.symmetric(horizontal: 9, vertical: 8),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 80,
+                          ),
+                          Text(
+                            'Extrakurikuler Basket',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          Text(
+                            'Setiap Hari Senin 15:00 - 17:00',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                                fontWeight: FontWeight.w400),
+                          ),
+                          SizedBox(
+                            width: 210,
+                          )
+                        ],
+                      ),
                     ),
-                  )
-                ],
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(7.0),
+                          image: DecorationImage(
+                              image: AssetImage('assets/images/pramuka.png'),
+                              fit: BoxFit.cover)),
+                      margin: EdgeInsets.only(left: 16, top: 6),
+                      padding: EdgeInsets.symmetric(horizontal: 9, vertical: 8),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 80,
+                          ),
+                          Text(
+                            'Extrakurikuler Pramuka',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          Text(
+                            'Setiap Hari Senin 14:00 - 16:00',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                                fontWeight: FontWeight.w400),
+                          ),
+                          SizedBox(
+                            width: 210,
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(7.0),
+                          image: DecorationImage(
+                              image: AssetImage('assets/images/voli.png'),
+                              fit: BoxFit.cover)),
+                      margin: EdgeInsets.only(left: 16, top: 6),
+                      padding: EdgeInsets.symmetric(horizontal: 9, vertical: 8),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 80,
+                          ),
+                          Text(
+                            'Extrakurikuler Volly',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          Text(
+                            'Setiap Hari Senin 15:00 - 17:00',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                                fontWeight: FontWeight.w400),
+                          ),
+                          SizedBox(
+                            width: 210,
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(7.0),
+                          image: DecorationImage(
+                              image: AssetImage('assets/images/tari.png'),
+                              fit: BoxFit.cover)),
+                      margin: EdgeInsets.only(left: 16, top: 6),
+                      padding: EdgeInsets.symmetric(horizontal: 9, vertical: 8),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 80,
+                          ),
+                          Text(
+                            'Extrakurikuler Tari',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          Text(
+                            'Setiap Hari Senin 14:00 - 15:00',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                                fontWeight: FontWeight.w400),
+                          ),
+                          SizedBox(
+                            width: 210,
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 38,
+                    )
+                  ],
+                ),
               ),
               SizedBox(
-                height: 200,
+                height: 18,
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 36),
+                child: Row(
+                  children: [
+                    Text(
+                      'Lokasi',
+                      style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.bold, fontSize: 18),
+                    ),
+                    Spacer(),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => denahpage()));
+                      },
+                      child: Text(
+                        'Lihat Denah',
+                        style: GoogleFonts.poppins(
+                            color: Color.fromRGBO(0, 0, 0, 0.5), fontSize: 13),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 12,
+              ),
+              Container(
+                  margin: EdgeInsets.symmetric(horizontal: 28),
+                  child: Image.asset('assets/images/mapsnya.png')),
+              SizedBox(
+                height: 20,
               ),
             ],
           ),
