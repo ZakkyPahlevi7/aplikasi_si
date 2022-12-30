@@ -1,6 +1,7 @@
 // ignore_for_file: unused_local_variable, unnecessary_const, camel_case_types, prefer_const_constructors
 
 import 'package:aplikasi_si/dashboard.dart';
+import 'package:aplikasi_si/main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:introduction_screen/introduction_screen.dart';
@@ -62,10 +63,8 @@ class _onboardingpageState extends State<onboardingpage> {
                           EdgeInsets.symmetric(horizontal: 118, vertical: 10),
                       primary: Color(0xff39623C)),
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => dashboardpage()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => utamapage()));
                   },
                   child: Text(
                     'AYO MULAI!',
