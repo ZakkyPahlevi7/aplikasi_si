@@ -1,52 +1,49 @@
-// ignore_for_file: prefer_const_constructors, camel_case_types, duplicate_ignore
-
-import 'package:aplikasi_si/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:aplikasi_si/bottom_navbar.dart';
 
-import 'main.dart';
-
-class tentangaplikasipage extends StatefulWidget {
-  const tentangaplikasipage({Key? key}) : super(key: key);
+class DenahPage extends StatefulWidget {
+  const DenahPage({Key? key}) : super(key: key);
 
   @override
-  State<tentangaplikasipage> createState() => _tentangaplikasipageState();
+  State<DenahPage> createState() => _DenahPageState();
 }
 
-class _tentangaplikasipageState extends State<tentangaplikasipage> {
+class _DenahPageState extends State<DenahPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 30, left: 33),
+            margin: const EdgeInsets.only(top: 30, left: 33),
             child: Row(
-              // ignore: prefer_const_constructors
               children: [
                 GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => profilepage()));
+                          MaterialPageRoute(builder: (context) => const BottomNavbar()));
                     },
-                    child: Icon(
+                    child: const Icon(
                       Icons.arrow_back_ios,
                       color: Colors.black,
                       size: 26,
                     )),
-                SizedBox(
+                const SizedBox(
                   width: 6,
                 ),
                 Text(
-                  'profile',
+                  'Denah MTsN 1 Pati',
                   style: GoogleFonts.poppins(
                       fontSize: 18,
-                      fontWeight: FontWeight.w400,
+                      fontWeight: FontWeight.w600,
                       color: Colors.black),
                 )
               ],
             ),
           ),
+          Image.asset('assets/images/denahskolah.png')
         ],
       ),
     );

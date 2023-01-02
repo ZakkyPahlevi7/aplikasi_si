@@ -1,19 +1,15 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore, avoid_unnecessary_containers
-
-import 'package:aplikasi_si/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../page.dart';
 
-import 'main.dart';
-
-class editprofilepage extends StatefulWidget {
-  const editprofilepage({Key? key}) : super(key: key);
+class EditProfilePage extends StatefulWidget {
+  const EditProfilePage({Key? key}) : super(key: key);
 
   @override
-  State<editprofilepage> createState() => _editprofilepageState();
+  State<EditProfilePage> createState() => _EditProfilePageState();
 }
 
-class _editprofilepageState extends State<editprofilepage> {
+class _EditProfilePageState extends State<EditProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +17,7 @@ class _editprofilepageState extends State<editprofilepage> {
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 30, left: 33),
+            margin: const EdgeInsets.only(top: 30, left: 33),
             child: Row(
               // ignore: prefer_const_constructors
               children: [
@@ -30,14 +26,14 @@ class _editprofilepageState extends State<editprofilepage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => profilepage()));
+                              builder: (context) => const ProfilePage()));
                     },
-                    child: Icon(
+                    child: const Icon(
                       Icons.arrow_back_ios,
                       color: Colors.black,
                       size: 26,
                     )),
-                SizedBox(
+                const SizedBox(
                   width: 6,
                 ),
                 Text(
@@ -51,18 +47,18 @@ class _editprofilepageState extends State<editprofilepage> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 40),
-            decoration: BoxDecoration(
+            margin: const EdgeInsets.only(top: 40),
+            decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('assets/images/editgambar.png'),
                     fit: BoxFit.contain)),
             child: Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 110,
               ),
               child: Row(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 210,
                   ),
                   Image.asset(
@@ -74,8 +70,8 @@ class _editprofilepageState extends State<editprofilepage> {
             ),
           ),
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 33),
-            child: TextField(
+            margin: const EdgeInsets.symmetric(horizontal: 33),
+            child: const TextField(
               decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(width: 3, color: Colors.black))),

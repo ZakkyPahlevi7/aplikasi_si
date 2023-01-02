@@ -1,26 +1,25 @@
-// ignore_for_file: camel_case_types, prefer_const_literals_to_create_immutables, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:aplikasi_si/theme/theme.dart';
 
-class detaiilks extends StatefulWidget {
-  const detaiilks({Key? key}) : super(key: key);
+class DetailWakilKepala extends StatefulWidget {
+  const DetailWakilKepala({Key? key}) : super(key: key);
 
   @override
-  State<detaiilks> createState() => _detaiilksState();
+  State<DetailWakilKepala> createState() => _DetailWakilKepalaState();
 }
 
-class _detaiilksState extends State<detaiilks> {
+class _DetailWakilKepalaState extends State<DetailWakilKepala> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Kepala Sekolah'),
+        title: const Text('Wakil Kepala'),
       ),
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 17,
           ),
           Container(
@@ -34,21 +33,21 @@ class _detaiilksState extends State<detaiilks> {
                     color: Colors.black.withOpacity(0.1))
               ],
             ),
-            margin: EdgeInsets.symmetric(horizontal: 22),
-            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+            margin: const EdgeInsets.symmetric(horizontal: 22),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
             child: Row(
               children: [
                 Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
-                      color: Color(0xffCCCCCC)),
-                  padding: EdgeInsets.all(10),
+                      color: AppColors.secondaryWhite),
+                  padding: const EdgeInsets.all(10),
                   child: Image.asset(
                     'assets/images/profilcivitas.png',
                     width: 50,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 16,
                 ),
                 Column(
@@ -59,22 +58,21 @@ class _detaiilksState extends State<detaiilks> {
                       style: GoogleFonts.poppins(
                           fontSize: 14, fontWeight: FontWeight.w700),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 2,
                     ),
                     Text(
-                      'Kepala Madrasah \nPeriode 2014 s/d 2018',
-                      style: GoogleFonts.poppins(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                          height: 1.3),
+                      'Wakil Kepala Bagian Kurikulum',
+                      style: AppTextStyle.appTitlew400s12h13(),
                     )
                   ],
                 )
               ],
             ),
           ),
-          SizedBox(height: 14,),
+          const SizedBox(
+            height: 14,
+          ),
           Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0),
@@ -86,40 +84,37 @@ class _detaiilksState extends State<detaiilks> {
                     color: Colors.black.withOpacity(0.1))
               ],
             ),
-            margin: EdgeInsets.symmetric(horizontal: 22),
-            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+            margin: const EdgeInsets.symmetric(horizontal: 22),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
             child: Row(
               children: [
                 Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
-                      color: Color(0xffCCCCCC)),
-                  padding: EdgeInsets.all(10),
+                      color: AppColors.secondaryWhite),
+                  padding: const EdgeInsets.all(10),
                   child: Image.asset(
                     'assets/images/profilcivitas.png',
                     width: 50,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 16,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Shillakhudin M.Pd',
+                      'Dikdik Cunadi, S.Ud',
                       style: GoogleFonts.poppins(
                           fontSize: 14, fontWeight: FontWeight.w700),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 2,
                     ),
                     Text(
-                      'Kepala Madrasah \nPeriode 2019 s/d sekarang',
-                      style: GoogleFonts.poppins(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                          height: 1.3),
+                      'Wakil Kepala Bagian Kesiswaan',
+                      style: AppTextStyle.appTitlew400s12h13(),
                     )
                   ],
                 )

@@ -1,15 +1,13 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 
-class ppdbpage extends StatefulWidget {
-  const ppdbpage({Key? key}) : super(key: key);
+class PpdbPage extends StatefulWidget {
+  const PpdbPage({Key? key}) : super(key: key);
 
   @override
-  State<ppdbpage> createState() => _ppdbpageState();
+  State<PpdbPage> createState() => _PpdbPageState();
 }
 
-class _ppdbpageState extends State<ppdbpage> {
+class _PpdbPageState extends State<PpdbPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,10 +16,10 @@ class _ppdbpageState extends State<ppdbpage> {
         children: 
           [Column(
             children: [
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               Center(
                 child: Container(
-                  margin: EdgeInsets.symmetric(horizontal: 28),
+                  margin: const EdgeInsets.symmetric(horizontal: 28),
                   child: Image.asset(
                     'assets/images/alurppdb.png',
                     width: 340,

@@ -1,18 +1,15 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:aplikasi_si/bottom_navbar.dart';
 
-import 'main.dart';
-
-class listprestasipage extends StatefulWidget {
-  const listprestasipage({Key? key}) : super(key: key);
+class ListPrestasiPage extends StatefulWidget {
+  const ListPrestasiPage({Key? key}) : super(key: key);
 
   @override
-  State<listprestasipage> createState() => _listprestasipageState();
+  State<ListPrestasiPage> createState() => _ListPrestasiPageState();
 }
 
-class _listprestasipageState extends State<listprestasipage> {
+class _ListPrestasiPageState extends State<ListPrestasiPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,21 +17,21 @@ class _listprestasipageState extends State<listprestasipage> {
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 30, left: 33),
+            margin: const EdgeInsets.only(top: 30, left: 33),
             child: Row(
               // ignore: prefer_const_constructors
               children: [
                 GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => utamapage()));
+                          MaterialPageRoute(builder: (context) => const BottomNavbar()));
                     },
-                    child: Icon(
+                    child: const Icon(
                       Icons.arrow_back_ios,
                       color: Colors.black,
                       size: 26,
                     )),
-                SizedBox(
+                const SizedBox(
                   width: 6,
                 ),
                 Text(
