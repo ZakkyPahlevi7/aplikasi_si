@@ -3,14 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class detailkw extends StatefulWidget {
-  const detailkw({Key? key}) : super(key: key);
+class DetailWaliKelas extends StatefulWidget {
+  const DetailWaliKelas({Key? key}) : super(key: key);
 
   @override
-  State<detailkw> createState() => _detailkwState();
+  State<DetailWaliKelas> createState() => _DetailWaliKelasState();
 }
 
-class _detailkwState extends State<detailkw> {
+class _DetailWaliKelasState extends State<DetailWaliKelas> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

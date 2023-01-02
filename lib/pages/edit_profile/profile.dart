@@ -1,22 +1,16 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, camel_case_types, prefer_const_constructors, duplicate_ignore
-
-
-import 'package:aplikasi_si/dashboard.dart';
-import 'package:aplikasi_si/editprofile.dart';
-import 'package:aplikasi_si/main.dart';
-import 'package:aplikasi_si/tentangaplikasi.dart';
-import 'package:aplikasi_si/websitekami.dart';
+import 'page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:aplikasi_si/bottom_navbar.dart';
 
-class profilepage extends StatefulWidget {
-  const profilepage({Key? key}) : super(key: key);
+class ProfilePage extends StatefulWidget {
+  const ProfilePage({Key? key}) : super(key: key);
 
   @override
-  State<profilepage> createState() => _profilepageState();
+  State<ProfilePage> createState() => _ProfilePageState();
 }
 
-class _profilepageState extends State<profilepage> {
+class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +30,7 @@ class _profilepageState extends State<profilepage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => utamapage()));
+                                    builder: (context) => BottomNavbar()));
                           },
                           child: Icon(
                             Icons.arrow_back_ios,
@@ -100,7 +94,7 @@ class _profilepageState extends State<profilepage> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => editprofilepage()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => EditProfilePage()));
                   },
                   child: Row(
                     children: [
@@ -133,7 +127,7 @@ class _profilepageState extends State<profilepage> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => websitekamipage()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => WebsiteKamiPage()));
                   },
                   child: Row(
                     children: [
@@ -166,7 +160,7 @@ class _profilepageState extends State<profilepage> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => tentangaplikasipage()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => AboutAppsPage()));
                   },
                   child: Row(
                     children: [

@@ -1,17 +1,15 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icons_plus/icons_plus.dart';
 
-class kontakkamipage extends StatefulWidget {
-  const kontakkamipage({Key? key}) : super(key: key);
+class ContactUsPage extends StatefulWidget {
+  const ContactUsPage({Key? key}) : super(key: key);
 
   @override
-  State<kontakkamipage> createState() => _kontakkamipageState();
+  State<ContactUsPage> createState() => _ContactUsPageState();
 }
 
-class _kontakkamipageState extends State<kontakkamipage> {
+class _ContactUsPageState extends State<ContactUsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

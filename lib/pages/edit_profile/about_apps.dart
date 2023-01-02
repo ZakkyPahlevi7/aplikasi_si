@@ -1,22 +1,22 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore
+// ignore_for_file: prefer_const_constructors, camel_case_types, duplicate_ignore
 
+import 'profile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'main.dart';
+import '../main.dart';
 
-class listprestasipage extends StatefulWidget {
-  const listprestasipage({Key? key}) : super(key: key);
+class AboutAppsPage extends StatefulWidget {
+  const AboutAppsPage({Key? key}) : super(key: key);
 
   @override
-  State<listprestasipage> createState() => _listprestasipageState();
+  State<AboutAppsPage> createState() => _AboutAppsPageState();
 }
 
-class _listprestasipageState extends State<listprestasipage> {
+class _AboutAppsPageState extends State<AboutAppsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Column(
         children: [
           Container(
@@ -27,7 +27,7 @@ class _listprestasipageState extends State<listprestasipage> {
                 GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => utamapage()));
+                          MaterialPageRoute(builder: (context) => ProfilePage()));
                     },
                     child: Icon(
                       Icons.arrow_back_ios,
@@ -38,7 +38,7 @@ class _listprestasipageState extends State<listprestasipage> {
                   width: 6,
                 ),
                 Text(
-                  'Prestasi',
+                  'profile',
                   style: GoogleFonts.poppins(
                       fontSize: 18,
                       fontWeight: FontWeight.w400,

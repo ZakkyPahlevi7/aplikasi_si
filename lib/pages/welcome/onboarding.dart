@@ -1,19 +1,18 @@
 // ignore_for_file: unused_local_variable, unnecessary_const, camel_case_types, prefer_const_constructors
 
-import 'package:aplikasi_si/dashboard.dart';
-import 'package:aplikasi_si/main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:aplikasi_si/bottom_navbar.dart';
 
-class onboardingpage extends StatefulWidget {
-  const onboardingpage({Key? key}) : super(key: key);
+class OnBoardingPage extends StatefulWidget {
+  const OnBoardingPage({Key? key}) : super(key: key);
 
   @override
-  State<onboardingpage> createState() => _onboardingpageState();
+  State<OnBoardingPage> createState() => _OnBoardingPageState();
 }
 
-class _onboardingpageState extends State<onboardingpage> {
+class _OnBoardingPageState extends State<OnBoardingPage> {
   @override
   Widget build(BuildContext context) {
     const pageDecoration = const PageDecoration(
@@ -64,7 +63,7 @@ class _onboardingpageState extends State<onboardingpage> {
                       primary: Color(0xff39623C)),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => utamapage()));
+                        MaterialPageRoute(builder: (context) => BottomNavbar()));
                   },
                   child: Text(
                     'AYO MULAI!',

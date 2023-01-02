@@ -1,18 +1,15 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:aplikasi_si/bottom_navbar.dart';
 
-import 'main.dart';
-
-class denahpage extends StatefulWidget {
-  const denahpage({Key? key}) : super(key: key);
+class ListPrestasiPage extends StatefulWidget {
+  const ListPrestasiPage({Key? key}) : super(key: key);
 
   @override
-  State<denahpage> createState() => _denahpageState();
+  State<ListPrestasiPage> createState() => _ListPrestasiPageState();
 }
 
-class _denahpageState extends State<denahpage> {
+class _ListPrestasiPageState extends State<ListPrestasiPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +24,7 @@ class _denahpageState extends State<denahpage> {
                 GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => utamapage()));
+                          MaterialPageRoute(builder: (context) => BottomNavbar()));
                     },
                     child: Icon(
                       Icons.arrow_back_ios,
@@ -38,16 +35,15 @@ class _denahpageState extends State<denahpage> {
                   width: 6,
                 ),
                 Text(
-                  'Denah MTsN 1 Pati',
+                  'Prestasi',
                   style: GoogleFonts.poppins(
                       fontSize: 18,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w400,
                       color: Colors.black),
                 )
               ],
             ),
           ),
-          Image.asset('assets/images/denahskolah.png')
         ],
       ),
     );

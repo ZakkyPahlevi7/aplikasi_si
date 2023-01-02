@@ -1,15 +1,13 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 
-class ppdbpage extends StatefulWidget {
-  const ppdbpage({Key? key}) : super(key: key);
+class PpdbPage extends StatefulWidget {
+  const PpdbPage({Key? key}) : super(key: key);
 
   @override
-  State<ppdbpage> createState() => _ppdbpageState();
+  State<PpdbPage> createState() => _PpdbPageState();
 }
 
-class _ppdbpageState extends State<ppdbpage> {
+class _PpdbPageState extends State<PpdbPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,19 +1,17 @@
 // ignore_for_file: prefer_const_constructors, duplicate_ignore, avoid_unnecessary_containers
 
-import 'package:aplikasi_si/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'page.dart';
 
-import 'main.dart';
-
-class editprofilepage extends StatefulWidget {
-  const editprofilepage({Key? key}) : super(key: key);
+class EditProfilePage extends StatefulWidget {
+  const EditProfilePage({Key? key}) : super(key: key);
 
   @override
-  State<editprofilepage> createState() => _editprofilepageState();
+  State<EditProfilePage> createState() => _EditProfilePageState();
 }
 
-class _editprofilepageState extends State<editprofilepage> {
+class _EditProfilePageState extends State<EditProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +28,7 @@ class _editprofilepageState extends State<editprofilepage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => profilepage()));
+                              builder: (context) => ProfilePage()));
                     },
                     child: Icon(
                       Icons.arrow_back_ios,

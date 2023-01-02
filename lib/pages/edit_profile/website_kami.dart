@@ -1,19 +1,18 @@
-// ignore_for_file: prefer_const_constructors, camel_case_types, duplicate_ignore
+// ignore_for_file: prefer_const_constructors, duplicate_ignore, camel_case_types
 
-import 'package:aplikasi_si/profile.dart';
+import 'package:aplikasi_si/pages/edit_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'profile.dart';
 
-import 'main.dart';
-
-class tentangaplikasipage extends StatefulWidget {
-  const tentangaplikasipage({Key? key}) : super(key: key);
+class WebsiteKamiPage extends StatefulWidget {
+  const WebsiteKamiPage({Key? key}) : super(key: key);
 
   @override
-  State<tentangaplikasipage> createState() => _tentangaplikasipageState();
+  State<WebsiteKamiPage> createState() => _WebsiteKamiPageState();
 }
 
-class _tentangaplikasipageState extends State<tentangaplikasipage> {
+class _WebsiteKamiPageState extends State<WebsiteKamiPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,8 +25,10 @@ class _tentangaplikasipageState extends State<tentangaplikasipage> {
               children: [
                 GestureDetector(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => profilepage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProfilePage()));
                     },
                     child: Icon(
                       Icons.arrow_back_ios,

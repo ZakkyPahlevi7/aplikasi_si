@@ -1,21 +1,21 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore, camel_case_types
+// ignore_for_file: prefer_const_constructors, duplicate_ignore
 
-import 'package:aplikasi_si/editprofile.dart';
-import 'package:aplikasi_si/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:aplikasi_si/bottom_navbar.dart';
 
-class websitekamipage extends StatefulWidget {
-  const websitekamipage({Key? key}) : super(key: key);
+class DenahPage extends StatefulWidget {
+  const DenahPage({Key? key}) : super(key: key);
 
   @override
-  State<websitekamipage> createState() => _websitekamipageState();
+  State<DenahPage> createState() => _DenahPageState();
 }
 
-class _websitekamipageState extends State<websitekamipage> {
+class _DenahPageState extends State<DenahPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           Container(
@@ -25,10 +25,8 @@ class _websitekamipageState extends State<websitekamipage> {
               children: [
                 GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => profilepage()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => BottomNavbar()));
                     },
                     child: Icon(
                       Icons.arrow_back_ios,
@@ -39,15 +37,16 @@ class _websitekamipageState extends State<websitekamipage> {
                   width: 6,
                 ),
                 Text(
-                  'profile',
+                  'Denah MTsN 1 Pati',
                   style: GoogleFonts.poppins(
                       fontSize: 18,
-                      fontWeight: FontWeight.w400,
+                      fontWeight: FontWeight.w600,
                       color: Colors.black),
                 )
               ],
             ),
           ),
+          Image.asset('assets/images/denahskolah.png')
         ],
       ),
     );

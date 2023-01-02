@@ -1,29 +1,18 @@
-// ignore_for_file: prefer_const_constructors, camel_case_types, prefer_const_literals_to_create_immutables, import_of_legacy_library_into_null_safe, avoid_unnecessary_containers
-
-import 'package:aplikasi_si/CarouselWithDotsPage.dart';
-import 'package:aplikasi_si/denahsekolah.dart';
-import 'package:aplikasi_si/detaildatasiswa.dart';
-import 'package:aplikasi_si/detaildatastaff.dart';
-import 'package:aplikasi_si/detailkkepalasekolah.dart';
-import 'package:aplikasi_si/detailwalikelas.dart';
-import 'package:aplikasi_si/list_prestasi.dart';
-import 'package:aplikasi_si/profile.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/material.dart';
+import 'package:aplikasi_si/component/CarouselWithDotsPage.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../main.dart';
+import 'package:flutter/material.dart';
+import 'page.dart';
+import 'civitas/civitas.dart';
 
-import 'detaildataguru.dart';
-import 'detailwakilkepala.dart';
-import 'main.dart';
-
-class dashboardpage extends StatefulWidget {
-  const dashboardpage({Key? key}) : super(key: key);
+class DashboardPage extends StatefulWidget {
+  const DashboardPage({Key? key}) : super(key: key);
 
   @override
-  State<dashboardpage> createState() => _dashboardpageState();
+  State<DashboardPage> createState() => _DashboardPageState();
 }
 
-class _dashboardpageState extends State<dashboardpage> {
+class _DashboardPageState extends State<DashboardPage> {
   int currentIndex = 0;
 
   List<String> images = [
@@ -61,7 +50,7 @@ class _dashboardpageState extends State<dashboardpage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => profilepage()));
+                                builder: (context) => ProfilePage()));
                       },
                       child: Image.asset(
                         'assets/images/profile.png',
@@ -123,7 +112,7 @@ class _dashboardpageState extends State<dashboardpage> {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => detaiilks()));
+                          MaterialPageRoute(builder: (context) => DetailKepalaSekolah()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -151,7 +140,7 @@ class _dashboardpageState extends State<dashboardpage> {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => detailwk()));
+                          MaterialPageRoute(builder: (context) => DetailWakilKepala()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -185,7 +174,7 @@ class _dashboardpageState extends State<dashboardpage> {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => detaildg()));
+                          MaterialPageRoute(builder: (context) => DetailDataGuru()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -213,7 +202,7 @@ class _dashboardpageState extends State<dashboardpage> {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => detailkw()));
+                          MaterialPageRoute(builder: (context) => DetailWaliKelas()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -249,7 +238,7 @@ class _dashboardpageState extends State<dashboardpage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: ((context) => detailds())));
+                              builder: ((context) => DetaiDataStaff())));
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -277,7 +266,7 @@ class _dashboardpageState extends State<dashboardpage> {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => detailsd()));
+                          MaterialPageRoute(builder: (context) => DetailDataSiswa()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -321,7 +310,7 @@ class _dashboardpageState extends State<dashboardpage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => listprestasipage()));
+                                builder: (context) => ListPrestasiPage()));
                       },
                       child: Text(
                         'Lihat Semua',
@@ -736,7 +725,7 @@ class _dashboardpageState extends State<dashboardpage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => denahpage()));
+                                builder: (context) => DenahPage()));
                       },
                       child: Text(
                         'Lihat Denah',

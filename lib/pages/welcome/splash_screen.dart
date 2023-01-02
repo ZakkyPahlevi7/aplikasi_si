@@ -2,24 +2,24 @@
 
 import 'dart:async';
 
-import 'package:aplikasi_si/onboarding.dart';
+import 'package:aplikasi_si/pages/onboarding.dart';
 import 'package:flutter/material.dart';
 
-class splashpage extends StatefulWidget {
-  const splashpage({Key? key}) : super(key: key);
+class SplashPage extends StatefulWidget {
+  const SplashPage({Key? key}) : super(key: key);
 
   @override
-  State<splashpage> createState() => _splashpageState();
+  State<SplashPage> createState() => _SplashPageState();
 }
 
-class _splashpageState extends State<splashpage> {
+class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
     Timer(
         Duration(seconds: 3),
         () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => onboardingpage())));
+            MaterialPageRoute(builder: (context) => OnBoardingPage())));
   }
 
   @override

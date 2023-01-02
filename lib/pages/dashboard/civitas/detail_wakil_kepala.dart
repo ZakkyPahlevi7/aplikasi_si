@@ -1,21 +1,21 @@
-// ignore_for_file: camel_case_types, prefer_const_literals_to_create_immutables, prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, camel_case_types
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class detaiilks extends StatefulWidget {
-  const detaiilks({Key? key}) : super(key: key);
+class DetailWakilKepala extends StatefulWidget {
+  const DetailWakilKepala({Key? key}) : super(key: key);
 
   @override
-  State<detaiilks> createState() => _detaiilksState();
+  State<DetailWakilKepala> createState() => _DetailWakilKepalaState();
 }
 
-class _detaiilksState extends State<detaiilks> {
+class _DetailWakilKepalaState extends State<DetailWakilKepala> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Kepala Sekolah'),
+        title: const Text('Wakil Kepala'),
       ),
       backgroundColor: Colors.white,
       body: Column(
@@ -63,7 +63,7 @@ class _detaiilksState extends State<detaiilks> {
                       height: 2,
                     ),
                     Text(
-                      'Kepala Madrasah \nPeriode 2014 s/d 2018',
+                      'Wakil Kepala Bagian Kurikulum',
                       style: GoogleFonts.poppins(
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
@@ -74,7 +74,9 @@ class _detaiilksState extends State<detaiilks> {
               ],
             ),
           ),
-          SizedBox(height: 14,),
+          SizedBox(
+            height: 14,
+          ),
           Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0),
@@ -107,7 +109,7 @@ class _detaiilksState extends State<detaiilks> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Shillakhudin M.Pd',
+                      'Dikdik Cunadi, S.Ud',
                       style: GoogleFonts.poppins(
                           fontSize: 14, fontWeight: FontWeight.w700),
                     ),
@@ -115,7 +117,7 @@ class _detaiilksState extends State<detaiilks> {
                       height: 2,
                     ),
                     Text(
-                      'Kepala Madrasah \nPeriode 2019 s/d sekarang',
+                      'Wakil Kepala Bagian Kesiswaan',
                       style: GoogleFonts.poppins(
                           fontSize: 12,
                           fontWeight: FontWeight.w400,

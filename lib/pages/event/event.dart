@@ -1,16 +1,14 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class eventpage extends StatefulWidget {
-  const eventpage({Key? key}) : super(key: key);
+class EventPage extends StatefulWidget {
+  const EventPage({Key? key}) : super(key: key);
 
   @override
-  State<eventpage> createState() => _eventpageState();
+  State<EventPage> createState() => _EventPageState();
 }
 
-class _eventpageState extends State<eventpage> {
+class _EventPageState extends State<EventPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
