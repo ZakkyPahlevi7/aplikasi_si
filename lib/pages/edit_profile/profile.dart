@@ -1,4 +1,5 @@
 import 'package:aplikasi_si/theme/app_colors.dart';
+import 'package:aplikasi_si/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:aplikasi_si/bottom_navbar.dart';
@@ -42,10 +43,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     Text(
                       'profile',
-                      style: GoogleFonts.poppins(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.white),
+                      style: AppTextStyle.appTitlew400s18(Colors.white),
                     )
                   ],
                 ),

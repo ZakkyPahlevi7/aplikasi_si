@@ -57,8 +57,7 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                       children: [
                         Text(
                           'Susanto, M.Pd',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
                           height: 2,
@@ -108,8 +107,7 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                       children: [
                         Text(
                           'Lina Herlina, S.Pd',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
                           height: 2,
@@ -159,8 +157,7 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                       children: [
                         Text(
                           'Dian Santri Prihatin, S.Pd',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
                           height: 2,
@@ -210,8 +207,7 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                       children: [
                         Text(
                           'M.Syukri Ghozali, S.Pd.I',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
                           height: 2,
@@ -261,8 +257,7 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                       children: [
                         Text(
                           'Lutfi Akip Alfian, M.Pd',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
                           height: 2,
@@ -312,8 +307,7 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                       children: [
                         Text(
                           'Isma Rusan Farhani, S.Pd',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
                           height: 2,

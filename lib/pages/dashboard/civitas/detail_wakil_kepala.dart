@@ -55,8 +55,7 @@ class _DetailWakilKepalaState extends State<DetailWakilKepala> {
                   children: [
                     Text(
                       'Tri Puji Rahayu, SP',
-                      style: GoogleFonts.poppins(
-                          fontSize: 14, fontWeight: FontWeight.w700),
+                      style: AppTextStyle.appTitlew700s14(),
                     ),
                     const SizedBox(
                       height: 2,
@@ -106,8 +105,7 @@ class _DetailWakilKepalaState extends State<DetailWakilKepala> {
                   children: [
                     Text(
                       'Dikdik Cunadi, S.Ud',
-                      style: GoogleFonts.poppins(
-                          fontSize: 14, fontWeight: FontWeight.w700),
+                      style: AppTextStyle.appTitlew700s14(),
                     ),
                     const SizedBox(
                       height: 2,
