@@ -19,7 +19,7 @@ class _EventPageState extends State<EventPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                  margin: EdgeInsets.only(top: 30, left: 32, bottom: 20),
+                  margin: const EdgeInsets.only(top: 30, left: 32, bottom: 20),
                   child: Text(
                     'Event yang akan datang',
                     style: GoogleFonts.poppins(
@@ -31,11 +31,11 @@ class _EventPageState extends State<EventPage> {
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                          color: Color(0xffEDCC5D),
+                          color: const Color(0xffEDCC5D),
                           borderRadius: BorderRadius.circular(8.0)),
-                      margin: EdgeInsets.only(left: 33),
+                      margin: const EdgeInsets.only(left: 33),
                       padding:
-                          EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                          const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -51,34 +51,34 @@ class _EventPageState extends State<EventPage> {
                                 fontSize: 12,
                                 color: Colors.black54),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 24,
                           ),
                           Image.asset(
                             'assets/images/camping.png',
                             width: 160,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Container(
-                            margin: EdgeInsets.only(left: 126),
+                            margin: const EdgeInsets.only(left: 126),
                             child: Image.asset(
                               'assets/images/bunder.png',
                               width: 34,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 12,
                           ),
                           Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.calendar_month,
                                 size: 12,
                                 color: Colors.black45,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 4,
                               ),
                               Text(
@@ -90,12 +90,12 @@ class _EventPageState extends State<EventPage> {
                           ),
                           Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.location_on,
                                 size: 12,
                                 color: Colors.black45,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 4,
                               ),
                               Text(
@@ -110,11 +110,11 @@ class _EventPageState extends State<EventPage> {
                     ),
                     Container(
                       decoration: BoxDecoration(
-                          color: Color(0xff93E396),
+                          color: const Color(0xff93E396),
                           borderRadius: BorderRadius.circular(8.0)),
-                      margin: EdgeInsets.only(left: 20),
+                      margin: const EdgeInsets.only(left: 20),
                       padding:
-                          EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                          const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -130,34 +130,34 @@ class _EventPageState extends State<EventPage> {
                                 fontSize: 12,
                                 color: Colors.black54),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 24,
                           ),
                           Image.asset(
                             'assets/images/livemusik.png',
                             width: 160,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Container(
-                            margin: EdgeInsets.only(left: 126),
+                            margin: const EdgeInsets.only(left: 126),
                             child: Image.asset(
                               'assets/images/bunder.png',
                               width: 34,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 12,
                           ),
                           Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.calendar_month,
                                 size: 12,
                                 color: Colors.black45,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 4,
                               ),
                               Text(
@@ -169,12 +169,12 @@ class _EventPageState extends State<EventPage> {
                           ),
                           Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.location_on,
                                 size: 12,
                                 color: Colors.black45,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 4,
                               ),
                               Text(
@@ -189,11 +189,11 @@ class _EventPageState extends State<EventPage> {
                     ),
                     Container(
                       decoration: BoxDecoration(
-                          color: Color(0xff85B6FF),
+                          color: const Color(0xff85B6FF),
                           borderRadius: BorderRadius.circular(8.0)),
-                      margin: EdgeInsets.only(left: 20),
+                      margin: const EdgeInsets.only(left: 20),
                       padding:
-                          EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                          const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -209,34 +209,34 @@ class _EventPageState extends State<EventPage> {
                                 fontSize: 12,
                                 color: Colors.black54),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 24,
                           ),
                           Image.asset(
                             'assets/images/cosplay.png',
                             width: 160,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Container(
-                            margin: EdgeInsets.only(left: 126),
+                            margin: const EdgeInsets.only(left: 126),
                             child: Image.asset(
                               'assets/images/bunder.png',
                               width: 34,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 12,
                           ),
                           Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.calendar_month,
                                 size: 12,
                                 color: Colors.black45,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 4,
                               ),
                               Text(
@@ -248,12 +248,12 @@ class _EventPageState extends State<EventPage> {
                           ),
                           Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.location_on,
                                 size: 12,
                                 color: Colors.black45,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 4,
                               ),
                               Text(
@@ -268,11 +268,11 @@ class _EventPageState extends State<EventPage> {
                     ),
                     Container(
                       decoration: BoxDecoration(
-                          color: Color(0xffFF9790),
+                          color: const Color(0xffFF9790),
                           borderRadius: BorderRadius.circular(8.0)),
-                      margin: EdgeInsets.only(left: 20),
+                      margin: const EdgeInsets.only(left: 20),
                       padding:
-                          EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                          const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -288,34 +288,34 @@ class _EventPageState extends State<EventPage> {
                                 fontSize: 12,
                                 color: Colors.black54),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 24,
                           ),
                           Image.asset(
                             'assets/images/teater.png',
                             width: 160,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Container(
-                            margin: EdgeInsets.only(left: 126),
+                            margin: const EdgeInsets.only(left: 126),
                             child: Image.asset(
                               'assets/images/bunder.png',
                               width: 34,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 12,
                           ),
                           Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.calendar_month,
                                 size: 12,
                                 color: Colors.black45,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 4,
                               ),
                               Text(
@@ -327,12 +327,12 @@ class _EventPageState extends State<EventPage> {
                           ),
                           Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.location_on,
                                 size: 12,
                                 color: Colors.black45,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 4,
                               ),
                               Text(
@@ -345,14 +345,14 @@ class _EventPageState extends State<EventPage> {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 33,
                     )
                   ],
                 ),
               ),
               Container(
-                  margin: EdgeInsets.only(top: 26, left: 32, bottom: 20),
+                  margin: const EdgeInsets.only(top: 26, left: 32, bottom: 20),
                   child: Text(
                     'Event yang telah berlalu',
                     style: GoogleFonts.poppins(
@@ -362,10 +362,10 @@ class _EventPageState extends State<EventPage> {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                        color: Color(0xffFF9790),
+                        color: const Color(0xffFF9790),
                         borderRadius: BorderRadius.circular(8.0)),
-                    margin: EdgeInsets.only(left: 33),
-                    padding: EdgeInsets.symmetric(vertical: 13, horizontal: 13),
+                    margin: const EdgeInsets.only(left: 33),
+                    padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 13),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -376,7 +376,7 @@ class _EventPageState extends State<EventPage> {
                               fontWeight: FontWeight.w500,
                               height: 1.2),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
@@ -386,34 +386,34 @@ class _EventPageState extends State<EventPage> {
                               fontSize: 7,
                               color: Colors.black54),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 12,
                         ),
                         Image.asset(
                           'assets/images/tradisional.png',
                           width: 110,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 86),
+                          margin: const EdgeInsets.only(left: 86),
                           child: Image.asset(
                             'assets/images/bunder.png',
                             width: 24,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.calendar_month,
                               size: 12,
                               color: Colors.black45,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 4,
                             ),
                             Text(
@@ -425,12 +425,12 @@ class _EventPageState extends State<EventPage> {
                         ),
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.location_on,
                               size: 12,
                               color: Colors.black45,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 4,
                             ),
                             Text(
@@ -443,13 +443,13 @@ class _EventPageState extends State<EventPage> {
                       ],
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Container(
                     decoration: BoxDecoration(
-                        color: Color(0xffEDCC5D),
+                        color: const Color(0xffEDCC5D),
                         borderRadius: BorderRadius.circular(8.0)),
-                    margin: EdgeInsets.only(right: 33),
-                    padding: EdgeInsets.symmetric(vertical: 13, horizontal: 13),
+                    margin: const EdgeInsets.only(right: 33),
+                    padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 13),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -460,7 +460,7 @@ class _EventPageState extends State<EventPage> {
                               fontWeight: FontWeight.w500,
                               height: 1.2),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
@@ -470,34 +470,34 @@ class _EventPageState extends State<EventPage> {
                               fontSize: 7,
                               color: Colors.black54),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 12,
                         ),
                         Image.asset(
                           'assets/images/pameran.png',
                           width: 110,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 86),
+                          margin: const EdgeInsets.only(left: 86),
                           child: Image.asset(
                             'assets/images/bunder.png',
                             width: 24,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.calendar_month,
                               size: 12,
                               color: Colors.black45,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 4,
                             ),
                             Text(
@@ -509,12 +509,12 @@ class _EventPageState extends State<EventPage> {
                         ),
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.location_on,
                               size: 12,
                               color: Colors.black45,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 4,
                             ),
                             Text(
@@ -529,17 +529,17 @@ class _EventPageState extends State<EventPage> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 22,
               ),
               Row(
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                        color: Color(0xff85B6FF),
+                        color: const Color(0xff85B6FF),
                         borderRadius: BorderRadius.circular(8.0)),
-                    margin: EdgeInsets.only(left: 33),
-                    padding: EdgeInsets.symmetric(vertical: 13, horizontal: 13),
+                    margin: const EdgeInsets.only(left: 33),
+                    padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 13),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -550,7 +550,7 @@ class _EventPageState extends State<EventPage> {
                               fontWeight: FontWeight.w500,
                               height: 1.2),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
@@ -560,34 +560,34 @@ class _EventPageState extends State<EventPage> {
                               fontSize: 7,
                               color: Colors.black54),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 12,
                         ),
                         Image.asset(
                           'assets/images/seminar.png',
                           width: 110,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 86),
+                          margin: const EdgeInsets.only(left: 86),
                           child: Image.asset(
                             'assets/images/bunder.png',
                             width: 24,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.calendar_month,
                               size: 12,
                               color: Colors.black45,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 4,
                             ),
                             Text(
@@ -599,12 +599,12 @@ class _EventPageState extends State<EventPage> {
                         ),
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.location_on,
                               size: 12,
                               color: Colors.black45,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 4,
                             ),
                             Text(
@@ -617,13 +617,13 @@ class _EventPageState extends State<EventPage> {
                       ],
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Container(
                     decoration: BoxDecoration(
-                        color: Color(0xff93E396),
+                        color: const Color(0xff93E396),
                         borderRadius: BorderRadius.circular(8.0)),
-                    margin: EdgeInsets.only(right: 33),
-                    padding: EdgeInsets.symmetric(vertical: 13, horizontal: 13),
+                    margin: const EdgeInsets.only(right: 33),
+                    padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 13),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -634,7 +634,7 @@ class _EventPageState extends State<EventPage> {
                               fontWeight: FontWeight.w500,
                               height: 1.2),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
@@ -644,34 +644,34 @@ class _EventPageState extends State<EventPage> {
                               fontSize: 7,
                               color: Colors.black54),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 12,
                         ),
                         Image.asset(
                           'assets/images/bazaar.png',
                           width: 110,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 86),
+                          margin: const EdgeInsets.only(left: 86),
                           child: Image.asset(
                             'assets/images/bunder.png',
                             width: 24,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.calendar_month,
                               size: 12,
                               color: Colors.black45,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 4,
                             ),
                             Text(
@@ -683,12 +683,12 @@ class _EventPageState extends State<EventPage> {
                         ),
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.location_on,
                               size: 12,
                               color: Colors.black45,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 4,
                             ),
                             Text(
@@ -703,17 +703,17 @@ class _EventPageState extends State<EventPage> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 22,
               ),
               Row(
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                        color: Color(0xffEDCC5D),
+                        color: const Color(0xffEDCC5D),
                         borderRadius: BorderRadius.circular(8.0)),
-                    margin: EdgeInsets.only(left: 33),
-                    padding: EdgeInsets.symmetric(vertical: 13, horizontal: 13),
+                    margin: const EdgeInsets.only(left: 33),
+                    padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 13),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -724,7 +724,7 @@ class _EventPageState extends State<EventPage> {
                               fontWeight: FontWeight.w500,
                               height: 1.2),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
@@ -734,34 +734,34 @@ class _EventPageState extends State<EventPage> {
                               fontSize: 7,
                               color: Colors.black54),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 12,
                         ),
                         Image.asset(
                           'assets/images/senam.png',
                           width: 110,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 86),
+                          margin: const EdgeInsets.only(left: 86),
                           child: Image.asset(
                             'assets/images/bunder.png',
                             width: 24,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.calendar_month,
                               size: 12,
                               color: Colors.black45,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 4,
                             ),
                             Text(
@@ -773,12 +773,12 @@ class _EventPageState extends State<EventPage> {
                         ),
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.location_on,
                               size: 12,
                               color: Colors.black45,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 4,
                             ),
                             Text(
@@ -791,13 +791,13 @@ class _EventPageState extends State<EventPage> {
                       ],
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Container(
                     decoration: BoxDecoration(
-                        color: Color(0xffFF9790),
+                        color: const Color(0xffFF9790),
                         borderRadius: BorderRadius.circular(8.0)),
-                    margin: EdgeInsets.only(right: 33),
-                    padding: EdgeInsets.symmetric(vertical: 13, horizontal: 13),
+                    margin: const EdgeInsets.only(right: 33),
+                    padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 13),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -808,7 +808,7 @@ class _EventPageState extends State<EventPage> {
                               fontWeight: FontWeight.w500,
                               height: 1.2),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
@@ -818,34 +818,34 @@ class _EventPageState extends State<EventPage> {
                               fontSize: 7,
                               color: Colors.black54),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 12,
                         ),
                         Image.asset(
                           'assets/images/merdeka.png',
                           width: 110,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 86),
+                          margin: const EdgeInsets.only(left: 86),
                           child: Image.asset(
                             'assets/images/bunder.png',
                             width: 24,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.calendar_month,
                               size: 12,
                               color: Colors.black45,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 4,
                             ),
                             Text(
@@ -857,12 +857,12 @@ class _EventPageState extends State<EventPage> {
                         ),
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.location_on,
                               size: 12,
                               color: Colors.black45,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 4,
                             ),
                             Text(
@@ -877,7 +877,7 @@ class _EventPageState extends State<EventPage> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               )
             ],

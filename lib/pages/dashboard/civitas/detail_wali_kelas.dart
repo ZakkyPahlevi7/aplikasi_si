@@ -1,7 +1,6 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:aplikasi_si/theme/theme.dart';
 
 class DetailWaliKelas extends StatefulWidget {
   const DetailWaliKelas({Key? key}) : super(key: key);
@@ -22,7 +21,7 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
         children: [
           Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 17,
               ),
               Container(
@@ -36,21 +35,21 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -61,22 +60,19 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'VII-A',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -90,21 +86,21 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -115,22 +111,19 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'VII-B',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -144,21 +137,21 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -169,22 +162,19 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'VIII-A',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -198,21 +188,21 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -223,22 +213,19 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'VIII-B',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -252,21 +239,21 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -277,22 +264,19 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'IX-A',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -306,21 +290,21 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -331,22 +315,19 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'IX-B',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               )
             ],

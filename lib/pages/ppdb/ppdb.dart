@@ -16,10 +16,10 @@ class _PpdbPageState extends State<PpdbPage> {
         children: 
           [Column(
             children: [
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               Center(
                 child: Container(
-                  margin: EdgeInsets.symmetric(horizontal: 28),
+                  margin: const EdgeInsets.symmetric(horizontal: 28),
                   child: Image.asset(
                     'assets/images/alurppdb.png',
                     width: 340,

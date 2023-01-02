@@ -1,9 +1,6 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore, camel_case_types
-
-import 'package:aplikasi_si/pages/edit_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'profile.dart';
+import 'package:aplikasi_si/pages/page.dart';
 
 class WebsiteKamiPage extends StatefulWidget {
   const WebsiteKamiPage({Key? key}) : super(key: key);
@@ -19,7 +16,7 @@ class _WebsiteKamiPageState extends State<WebsiteKamiPage> {
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 30, left: 33),
+            margin: const EdgeInsets.only(top: 30, left: 33),
             child: Row(
               // ignore: prefer_const_constructors
               children: [
@@ -28,14 +25,14 @@ class _WebsiteKamiPageState extends State<WebsiteKamiPage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ProfilePage()));
+                              builder: (context) => const ProfilePage()));
                     },
-                    child: Icon(
+                    child: const Icon(
                       Icons.arrow_back_ios,
                       color: Colors.black,
                       size: 26,
                     )),
-                SizedBox(
+                const SizedBox(
                   width: 6,
                 ),
                 Text(

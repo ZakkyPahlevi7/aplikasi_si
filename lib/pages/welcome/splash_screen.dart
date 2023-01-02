@@ -1,8 +1,7 @@
-// ignore_for_file: prefer_const_constructors, camel_case_types
-
 import 'dart:async';
 
-import 'package:aplikasi_si/pages/onboarding.dart';
+import 'package:aplikasi_si/pages/welcome/onboarding.dart';
+import 'package:aplikasi_si/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatefulWidget {
@@ -17,16 +16,16 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 3),
+        const Duration(seconds: 3),
         () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => OnBoardingPage())));
+            MaterialPageRoute(builder: (context) => const OnBoardingPage())));
   }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      backgroundColor: Color(0xffC0FFE8),
+      backgroundColor: AppColors.backgroundSplash,
       body: Center(
         child: Image.asset(
           'assets/images/logo.png',

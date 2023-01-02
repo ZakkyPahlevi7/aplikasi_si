@@ -1,7 +1,6 @@
-// ignore_for_file: prefer_const_constructors, camel_case_types
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:aplikasi_si/theme/theme.dart';
 
 class DetailWakilKepala extends StatefulWidget {
   const DetailWakilKepala({Key? key}) : super(key: key);
@@ -20,7 +19,7 @@ class _DetailWakilKepalaState extends State<DetailWakilKepala> {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 17,
           ),
           Container(
@@ -34,21 +33,21 @@ class _DetailWakilKepalaState extends State<DetailWakilKepala> {
                     color: Colors.black.withOpacity(0.1))
               ],
             ),
-            margin: EdgeInsets.symmetric(horizontal: 22),
-            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+            margin: const EdgeInsets.symmetric(horizontal: 22),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
             child: Row(
               children: [
                 Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
-                      color: Color(0xffCCCCCC)),
-                  padding: EdgeInsets.all(10),
+                      color: AppColors.secondaryWhite),
+                  padding: const EdgeInsets.all(10),
                   child: Image.asset(
                     'assets/images/profilcivitas.png',
                     width: 50,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 16,
                 ),
                 Column(
@@ -59,22 +58,19 @@ class _DetailWakilKepalaState extends State<DetailWakilKepala> {
                       style: GoogleFonts.poppins(
                           fontSize: 14, fontWeight: FontWeight.w700),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 2,
                     ),
                     Text(
                       'Wakil Kepala Bagian Kurikulum',
-                      style: GoogleFonts.poppins(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                          height: 1.3),
+                      style: AppTextStyle.appTitlew400s12h13(),
                     )
                   ],
                 )
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 14,
           ),
           Container(
@@ -88,21 +84,21 @@ class _DetailWakilKepalaState extends State<DetailWakilKepala> {
                     color: Colors.black.withOpacity(0.1))
               ],
             ),
-            margin: EdgeInsets.symmetric(horizontal: 22),
-            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+            margin: const EdgeInsets.symmetric(horizontal: 22),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
             child: Row(
               children: [
                 Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
-                      color: Color(0xffCCCCCC)),
-                  padding: EdgeInsets.all(10),
+                      color: AppColors.secondaryWhite),
+                  padding: const EdgeInsets.all(10),
                   child: Image.asset(
                     'assets/images/profilcivitas.png',
                     width: 50,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 16,
                 ),
                 Column(
@@ -113,15 +109,12 @@ class _DetailWakilKepalaState extends State<DetailWakilKepala> {
                       style: GoogleFonts.poppins(
                           fontSize: 14, fontWeight: FontWeight.w700),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 2,
                     ),
                     Text(
                       'Wakil Kepala Bagian Kesiswaan',
-                      style: GoogleFonts.poppins(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                          height: 1.3),
+                      style: AppTextStyle.appTitlew400s12h13(),
                     )
                   ],
                 )

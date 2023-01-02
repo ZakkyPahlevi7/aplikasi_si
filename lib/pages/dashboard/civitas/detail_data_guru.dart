@@ -1,5 +1,5 @@
-// ignore_for_file: prefer_const_constructors
-
+import 'package:aplikasi_si/theme/app_colors.dart';
+import 'package:aplikasi_si/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -22,7 +22,7 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
         children: [
           Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 17,
               ),
               Container(
@@ -36,21 +36,21 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -61,22 +61,19 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'Guru Bahasa Indonesia',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -90,21 +87,21 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -115,22 +112,19 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'Guru Ipa',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -144,21 +138,21 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -169,22 +163,19 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'Guru Matematika',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -198,21 +189,21 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -223,22 +214,19 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'Guru Ips',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -252,21 +240,21 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -277,22 +265,19 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'Guru Pai',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -306,21 +291,21 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -331,22 +316,19 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'Guru Matematika',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -360,21 +342,21 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -385,22 +367,19 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'Guru PPKN',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -414,21 +393,21 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -439,22 +418,19 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'Guru Bahasa Inggris',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -468,21 +444,21 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -493,22 +469,19 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'Guru Bahasa Arab',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -522,21 +495,21 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -547,22 +520,19 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'Guru Al-Quran',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -576,21 +546,21 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -601,22 +571,19 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'Guru Al-Quran',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -630,21 +597,21 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -655,22 +622,19 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'Guru Al-Quran',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Container(
@@ -684,21 +648,21 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                         color: Colors.black.withOpacity(0.1))
                   ],
                 ),
-                margin: EdgeInsets.symmetric(horizontal: 22),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+                margin: const EdgeInsets.symmetric(horizontal: 22),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                 child: Row(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Color(0xffCCCCCC)),
-                      padding: EdgeInsets.all(10),
+                          color: AppColors.secondaryWhite),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'assets/images/profilcivitas.png',
                         width: 50,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
@@ -709,22 +673,19 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                           style: GoogleFonts.poppins(
                               fontSize: 14, fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'Guru Al-quran',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              height: 1.3),
+                          style: AppTextStyle.appTitlew400s12h13(),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               )
             ],

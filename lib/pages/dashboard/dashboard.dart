@@ -1,9 +1,8 @@
-import 'package:aplikasi_si/component/CarouselWithDotsPage.dart';
+import 'package:aplikasi_si/theme/app_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../main.dart';
+import '../../main.dart';
 import 'package:flutter/material.dart';
-import 'page.dart';
-import 'civitas/civitas.dart';
+import '../page.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -37,20 +36,20 @@ class _DashboardPageState extends State<DashboardPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                margin: EdgeInsets.only(left: 34, right: 34, top: 10),
+                margin: const EdgeInsets.only(left: 34, right: 34, top: 10),
                 child: Row(
                   children: [
                     Image.asset(
                       'assets/images/logo.png',
                       width: 80,
                     ),
-                    Spacer(),
+                    const Spacer(),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ProfilePage()));
+                                builder: (context) => const ProfilePage()));
                       },
                       child: Image.asset(
                         'assets/images/profile.png',
@@ -60,7 +59,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               CarouselWithDotsPage(imgList: imgList),
@@ -76,7 +75,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   itemCount: images.length,
                   itemBuilder: (context, index) {
                     return Padding(
-                      padding: EdgeInsets.only(
+                      padding: const EdgeInsets.only(
                           left: 28, bottom: 0, right: 28, top: 20),
                       child: SizedBox(
                         width: double.infinity,
@@ -90,7 +89,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   },
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Row(
@@ -101,10 +100,10 @@ class _DashboardPageState extends State<DashboardPage> {
                 ],
               ),
               Container(
-                margin: EdgeInsets.only(top: 12, left: 36),
+                margin: const EdgeInsets.only(top: 12, left: 36),
                 child: myText('Civitas'),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
               Row(
@@ -112,15 +111,15 @@ class _DashboardPageState extends State<DashboardPage> {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => DetailKepalaSekolah()));
+                          MaterialPageRoute(builder: (context) => const DetailKepalaSekolah()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(6.0),
-                          border: Border.all(color: Color(0xff00DB8C))),
-                      margin: EdgeInsets.only(left: 36),
+                          border: Border.all(color: AppColors.primaryColor)),
+                      margin: const EdgeInsets.only(left: 36),
                       padding:
-                          EdgeInsets.symmetric(horizontal: 19.5, vertical: 4),
+                          const EdgeInsets.symmetric(horizontal: 19.5, vertical: 4),
                       child: Column(
                         children: [
                           Image.asset(
@@ -136,19 +135,19 @@ class _DashboardPageState extends State<DashboardPage> {
                       ),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => DetailWakilKepala()));
+                          MaterialPageRoute(builder: (context) => const DetailWakilKepala()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(6.0),
-                          border: Border.all(color: Color(0xff00DB8C))),
-                      margin: EdgeInsets.only(right: 36),
+                          border: Border.all(color: AppColors.primaryColor)),
+                      margin: const EdgeInsets.only(right: 36),
                       padding:
-                          EdgeInsets.symmetric(horizontal: 27.5, vertical: 4),
+                          const EdgeInsets.symmetric(horizontal: 27.5, vertical: 4),
                       child: Column(
                         children: [
                           Image.asset(
@@ -166,7 +165,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Row(
@@ -174,15 +173,15 @@ class _DashboardPageState extends State<DashboardPage> {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => DetailDataGuru()));
+                          MaterialPageRoute(builder: (context) => const DetailDataGuru()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(6.0),
-                          border: Border.all(color: Color(0xff00DB8C))),
-                      margin: EdgeInsets.only(left: 36),
+                          border: Border.all(color: AppColors.primaryColor)),
+                      margin: const EdgeInsets.only(left: 36),
                       padding:
-                          EdgeInsets.symmetric(horizontal: 35.2, vertical: 4),
+                          const EdgeInsets.symmetric(horizontal: 35.2, vertical: 4),
                       child: Column(
                         children: [
                           Image.asset(
@@ -198,19 +197,19 @@ class _DashboardPageState extends State<DashboardPage> {
                       ),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => DetailWaliKelas()));
+                          MaterialPageRoute(builder: (context) => const DetailWaliKelas()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(6.0),
-                          border: Border.all(color: Color(0xff00DB8C))),
-                      margin: EdgeInsets.only(right: 36),
+                          border: Border.all(color: AppColors.primaryColor)),
+                      margin: const EdgeInsets.only(right: 36),
                       padding:
-                          EdgeInsets.symmetric(horizontal: 35.5, vertical: 4),
+                          const EdgeInsets.symmetric(horizontal: 35.5, vertical: 4),
                       child: Column(
                         children: [
                           Image.asset(
@@ -228,7 +227,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Row(
@@ -238,15 +237,15 @@ class _DashboardPageState extends State<DashboardPage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: ((context) => DetaiDataStaff())));
+                              builder: ((context) => const DetaiDataStaff())));
                     },
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(6.0),
-                          border: Border.all(color: Color(0xff00DB8C))),
-                      margin: EdgeInsets.only(left: 36),
+                          border: Border.all(color: AppColors.primaryColor)),
+                      margin: const EdgeInsets.only(left: 36),
                       padding:
-                          EdgeInsets.symmetric(horizontal: 35.7, vertical: 4),
+                          const EdgeInsets.symmetric(horizontal: 35.7, vertical: 4),
                       child: Column(
                         children: [
                           Image.asset(
@@ -262,19 +261,19 @@ class _DashboardPageState extends State<DashboardPage> {
                       ),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => DetailDataSiswa()));
+                          MaterialPageRoute(builder: (context) => const DetailDataSiswa()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(6.0),
-                          border: Border.all(color: Color(0xff00DB8C))),
-                      margin: EdgeInsets.only(right: 36),
+                          border: Border.all(color: AppColors.primaryColor)),
+                      margin: const EdgeInsets.only(right: 36),
                       padding:
-                          EdgeInsets.symmetric(horizontal: 32.5, vertical: 4),
+                          const EdgeInsets.symmetric(horizontal: 32.5, vertical: 4),
                       child: Column(
                         children: [
                           Image.asset(
@@ -292,11 +291,11 @@ class _DashboardPageState extends State<DashboardPage> {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 18,
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 36),
+                margin: const EdgeInsets.symmetric(horizontal: 36),
                 child: Row(
                   children: [
                     Text(
@@ -304,33 +303,33 @@ class _DashboardPageState extends State<DashboardPage> {
                       style: GoogleFonts.poppins(
                           fontWeight: FontWeight.bold, fontSize: 18),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ListPrestasiPage()));
+                                builder: (context) => const ListPrestasiPage()));
                       },
                       child: Text(
                         'Lihat Semua',
                         style: GoogleFonts.poppins(
-                            color: Color.fromRGBO(0, 0, 0, 0.5), fontSize: 13),
+                            color: const Color.fromRGBO(0, 0, 0, 0.5), fontSize: 13),
                       ),
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               SingleChildScrollView(
-                padding: EdgeInsets.symmetric(vertical: 4),
+                padding: const EdgeInsets.symmetric(vertical: 4),
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
                     Container(
-                      margin: EdgeInsets.only(left: 36),
+                      margin: const EdgeInsets.only(left: 36),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(7.0),
                         color: Colors.white,
@@ -342,18 +341,18 @@ class _DashboardPageState extends State<DashboardPage> {
                         ],
                       ),
                       padding:
-                          EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                          const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            margin: EdgeInsets.only(top: 4),
+                            margin: const EdgeInsets.only(top: 4),
                             child: Image.asset(
                               'assets/images/medali1.png',
                               width: 36,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 6,
                           ),
                           Column(
@@ -383,7 +382,7 @@ class _DashboardPageState extends State<DashboardPage> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 16),
+                      margin: const EdgeInsets.only(left: 16),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(7.0),
                         color: Colors.white,
@@ -395,18 +394,18 @@ class _DashboardPageState extends State<DashboardPage> {
                         ],
                       ),
                       padding:
-                          EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                          const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            margin: EdgeInsets.only(top: 4),
+                            margin: const EdgeInsets.only(top: 4),
                             child: Image.asset(
                               'assets/images/medali2.png',
                               width: 36,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 6,
                           ),
                           Column(
@@ -436,7 +435,7 @@ class _DashboardPageState extends State<DashboardPage> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 16),
+                      margin: const EdgeInsets.only(left: 16),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(7.0),
                         color: Colors.white,
@@ -448,18 +447,18 @@ class _DashboardPageState extends State<DashboardPage> {
                         ],
                       ),
                       padding:
-                          EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                          const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            margin: EdgeInsets.only(top: 4),
+                            margin: const EdgeInsets.only(top: 4),
                             child: Image.asset(
                               'assets/images/medali1.png',
                               width: 36,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 6,
                           ),
                           Column(
@@ -489,7 +488,7 @@ class _DashboardPageState extends State<DashboardPage> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 16),
+                      margin: const EdgeInsets.only(left: 16),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(7.0),
                         color: Colors.white,
@@ -501,18 +500,18 @@ class _DashboardPageState extends State<DashboardPage> {
                         ],
                       ),
                       padding:
-                          EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                          const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            margin: EdgeInsets.only(top: 4),
+                            margin: const EdgeInsets.only(top: 4),
                             child: Image.asset(
                               'assets/images/medali2.png',
                               width: 36,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 6,
                           ),
                           Column(
@@ -541,24 +540,24 @@ class _DashboardPageState extends State<DashboardPage> {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 38,
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 18,
               ),
               Container(
-                margin: EdgeInsets.only(left: 36),
+                margin: const EdgeInsets.only(left: 36),
                 child: Text(
                   'Extrakurikuler',
                   style: GoogleFonts.poppins(
                       fontWeight: FontWeight.bold, fontSize: 18),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               SingleChildScrollView(
@@ -568,14 +567,14 @@ class _DashboardPageState extends State<DashboardPage> {
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(7.0),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image: AssetImage('assets/images/basket.png'),
                               fit: BoxFit.cover)),
                       margin: EdgeInsets.only(left: 34, top: 6),
                       padding: EdgeInsets.symmetric(horizontal: 9, vertical: 8),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           SizedBox(
                             height: 80,
                           ),
@@ -602,14 +601,14 @@ class _DashboardPageState extends State<DashboardPage> {
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(7.0),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image: AssetImage('assets/images/pramuka.png'),
                               fit: BoxFit.cover)),
-                      margin: EdgeInsets.only(left: 16, top: 6),
-                      padding: EdgeInsets.symmetric(horizontal: 9, vertical: 8),
+                      margin: const EdgeInsets.only(left: 16, top: 6),
+                      padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 8),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           SizedBox(
                             height: 80,
                           ),
@@ -636,14 +635,14 @@ class _DashboardPageState extends State<DashboardPage> {
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(7.0),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image: AssetImage('assets/images/voli.png'),
                               fit: BoxFit.cover)),
-                      margin: EdgeInsets.only(left: 16, top: 6),
-                      padding: EdgeInsets.symmetric(horizontal: 9, vertical: 8),
+                      margin: const EdgeInsets.only(left: 16, top: 6),
+                      padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 8),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           SizedBox(
                             height: 80,
                           ),
@@ -670,14 +669,14 @@ class _DashboardPageState extends State<DashboardPage> {
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(7.0),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image: AssetImage('assets/images/tari.png'),
                               fit: BoxFit.cover)),
-                      margin: EdgeInsets.only(left: 16, top: 6),
-                      padding: EdgeInsets.symmetric(horizontal: 9, vertical: 8),
+                      margin: const EdgeInsets.only(left: 16, top: 6),
+                      padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 8),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           SizedBox(
                             height: 80,
                           ),
@@ -701,17 +700,17 @@ class _DashboardPageState extends State<DashboardPage> {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 38,
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 18,
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 36),
+                margin: const EdgeInsets.symmetric(horizontal: 36),
                 child: Row(
                   children: [
                     Text(
@@ -719,30 +718,30 @@ class _DashboardPageState extends State<DashboardPage> {
                       style: GoogleFonts.poppins(
                           fontWeight: FontWeight.bold, fontSize: 18),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => DenahPage()));
+                                builder: (context) => const DenahPage()));
                       },
                       child: Text(
                         'Lihat Denah',
                         style: GoogleFonts.poppins(
-                            color: Color.fromRGBO(0, 0, 0, 0.5), fontSize: 13),
+                            color: const Color.fromRGBO(0, 0, 0, 0.5), fontSize: 13),
                       ),
                     )
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
               Container(
-                  margin: EdgeInsets.symmetric(horizontal: 28),
+                  margin: const EdgeInsets.symmetric(horizontal: 28),
                   child: Image.asset('assets/images/mapsnya.png')),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],
@@ -754,12 +753,12 @@ class _DashboardPageState extends State<DashboardPage> {
 
   Widget buildIndicator(bool isSelected) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 4),
+      margin: const EdgeInsets.symmetric(horizontal: 4),
       height: isSelected ? 9 : 9,
       width: isSelected ? 9 : 9,
       decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: isSelected ? Color(0xff00DB8C) : Colors.grey),
+          color: isSelected ? AppColors.primaryColor : Colors.grey),
     );
   }
 }

@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:aplikasi_si/bottom_navbar.dart';
@@ -19,21 +17,20 @@ class _DenahPageState extends State<DenahPage> {
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 30, left: 33),
+            margin: const EdgeInsets.only(top: 30, left: 33),
             child: Row(
-              // ignore: prefer_const_constructors
               children: [
                 GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => BottomNavbar()));
+                          MaterialPageRoute(builder: (context) => const BottomNavbar()));
                     },
-                    child: Icon(
+                    child: const Icon(
                       Icons.arrow_back_ios,
                       color: Colors.black,
                       size: 26,
                     )),
-                SizedBox(
+                const SizedBox(
                   width: 6,
                 ),
                 Text(

@@ -1,8 +1,6 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore, avoid_unnecessary_containers
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'page.dart';
+import '../page.dart';
 
 class EditProfilePage extends StatefulWidget {
   const EditProfilePage({Key? key}) : super(key: key);
@@ -19,7 +17,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 30, left: 33),
+            margin: const EdgeInsets.only(top: 30, left: 33),
             child: Row(
               // ignore: prefer_const_constructors
               children: [
@@ -28,14 +26,14 @@ class _EditProfilePageState extends State<EditProfilePage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ProfilePage()));
+                              builder: (context) => const ProfilePage()));
                     },
-                    child: Icon(
+                    child: const Icon(
                       Icons.arrow_back_ios,
                       color: Colors.black,
                       size: 26,
                     )),
-                SizedBox(
+                const SizedBox(
                   width: 6,
                 ),
                 Text(
@@ -49,18 +47,18 @@ class _EditProfilePageState extends State<EditProfilePage> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 40),
-            decoration: BoxDecoration(
+            margin: const EdgeInsets.only(top: 40),
+            decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('assets/images/editgambar.png'),
                     fit: BoxFit.contain)),
             child: Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 top: 110,
               ),
               child: Row(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 210,
                   ),
                   Image.asset(
@@ -72,8 +70,8 @@ class _EditProfilePageState extends State<EditProfilePage> {
             ),
           ),
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 33),
-            child: TextField(
+            margin: const EdgeInsets.symmetric(horizontal: 33),
+            child: const TextField(
               decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(width: 3, color: Colors.black))),
