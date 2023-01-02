@@ -58,8 +58,7 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                       children: [
                         Text(
                           'Isman RUsan Farhani, S.Pd',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14()
                         ),
                         const SizedBox(
                           height: 2,
@@ -109,8 +108,7 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                       children: [
                         Text(
                           'Dian Santri Prihatin, S.Pd',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
                           height: 2,
@@ -160,8 +158,7 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                       children: [
                         Text(
                           'Susanto, M.Pd',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
                           height: 2,
@@ -211,8 +208,7 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                       children: [
                         Text(
                           'Lutfi Akip Alfian, M.Pd',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
                           height: 2,
@@ -262,8 +258,7 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                       children: [
                         Text(
                           'M.Syukri Ghozali, S.Pd.I',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
                           height: 2,
@@ -313,8 +308,7 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                       children: [
                         Text(
                           'Indah Nurfaedah, S.Pd',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
                           height: 2,
@@ -364,8 +358,7 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                       children: [
                         Text(
                           'Lina Herlina, S.Pd',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
                           height: 2,
@@ -415,8 +408,7 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                       children: [
                         Text(
                           'Faiz Daroin, S.Pd',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
                           height: 2,
@@ -466,8 +458,7 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                       children: [
                         Text(
                           'Muharar, S.Ag',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
                           height: 2,
@@ -517,8 +508,7 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                       children: [
                         Text(
                           'Dede Yusuf Maulana, S.Ag',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
                           height: 2,
@@ -568,8 +558,7 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                       children: [
                         Text(
                           'Rosi Indah Santri, ST',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
                           height: 2,
@@ -619,8 +608,7 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                       children: [
                         Text(
                           "Muhammad Irfa Rifa'i",
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
                           height: 2,
@@ -670,8 +658,7 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                       children: [
                         Text(
                           'Abdul Hamid, S.Pd',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w700),
+                          style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
                           height: 2,

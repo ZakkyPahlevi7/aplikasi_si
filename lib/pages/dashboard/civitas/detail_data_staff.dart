@@ -55,8 +55,7 @@ class _DetaiDataStaffState extends State<DetaiDataStaff> {
                   children: [
                     Text(
                       'Isyana Nurul Khasanah',
-                      style: GoogleFonts.poppins(
-                          fontSize: 14, fontWeight: FontWeight.w700),
+                      style: AppTextStyle.appTitlew700s14(),
                     ),
                     const SizedBox(
                       height: 2,
@@ -106,8 +105,7 @@ class _DetaiDataStaffState extends State<DetaiDataStaff> {
                   children: [
                     Text(
                       'Anah Muawanah',
-                      style: GoogleFonts.poppins(
-                          fontSize: 14, fontWeight: FontWeight.w700),
+                      style: AppTextStyle.appTitlew700s14(),
                     ),
                     const SizedBox(
                       height: 2,
@@ -157,8 +155,7 @@ class _DetaiDataStaffState extends State<DetaiDataStaff> {
                   children: [
                     Text(
                       'Agus Salim',
-                      style: GoogleFonts.poppins(
-                          fontSize: 14, fontWeight: FontWeight.w700),
+                      style: AppTextStyle.appTitlew700s14(),
                     ),
                     const SizedBox(
                       height: 2,
@@ -208,8 +205,7 @@ class _DetaiDataStaffState extends State<DetaiDataStaff> {
                   children: [
                     Text(
                       'Ahmad',
-                      style: GoogleFonts.poppins(
-                          fontSize: 14, fontWeight: FontWeight.w700),
+                      style: AppTextStyle.appTitlew700s14(),
                     ),
                     const SizedBox(
                       height: 2,
