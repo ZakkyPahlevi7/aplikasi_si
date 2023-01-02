@@ -1,21 +1,20 @@
-// ignore_for_file: unused_local_variable, unnecessary_const, camel_case_types, prefer_const_constructors
-
-import 'package:aplikasi_si/dashboard.dart';
+import 'package:aplikasi_si/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:aplikasi_si/bottom_navbar.dart';
 
-class onboardingpage extends StatefulWidget {
-  const onboardingpage({Key? key}) : super(key: key);
+class OnBoardingPage extends StatefulWidget {
+  const OnBoardingPage({Key? key}) : super(key: key);
 
   @override
-  State<onboardingpage> createState() => _onboardingpageState();
+  State<OnBoardingPage> createState() => _OnBoardingPageState();
 }
 
-class _onboardingpageState extends State<onboardingpage> {
+class _OnBoardingPageState extends State<OnBoardingPage> {
   @override
   Widget build(BuildContext context) {
-    const pageDecoration = const PageDecoration(
+    const pageDecoration = PageDecoration(
         contentMargin: EdgeInsets.only(left: 14, right: 14),
         titlePadding: EdgeInsets.only(top: 38),
         imagePadding: EdgeInsets.only(top: 38),
@@ -59,13 +58,11 @@ class _onboardingpageState extends State<onboardingpage> {
               footer: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       padding:
-                          EdgeInsets.symmetric(horizontal: 118, vertical: 10),
-                      primary: Color(0xff39623C)),
+                          const EdgeInsets.symmetric(horizontal: 118, vertical: 10),
+                      backgroundColor: AppColors.darkGreenTextColor),
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => dashboardpage()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const BottomNavbar()));
                   },
                   child: Text(
                     'AYO MULAI!',
@@ -78,31 +75,31 @@ class _onboardingpageState extends State<onboardingpage> {
         showNextButton: true,
         showDoneButton: true,
         showBackButton: false,
-        back: Icon(Icons.arrow_back),
+        back: const Icon(Icons.arrow_back),
         skip: Text(
           'Skip',
           style: GoogleFonts.poppins(
               fontWeight: FontWeight.bold,
               fontSize: 16,
-              color: Color(0xff39623C)),
+              color: AppColors.darkGreenTextColor),
         ),
         next: Text(
           'Next',
           style: GoogleFonts.poppins(
               fontWeight: FontWeight.bold,
               fontSize: 16,
-              color: Color(0xff39623C)),
+              color: AppColors.darkGreenTextColor),
         ),
-        done: Text(
+        done: const Text(
           'Done',
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         dotsDecorator: DotsDecorator(
-            activeColor: Color(0xff39623C),
-            size: Size(10, 10),
+            activeColor: AppColors.darkGreenTextColor,
+            size: const Size(10, 10),
             color: Colors.grey,
-            activeSize: Size(22, 10),
-            activeShape: RoundedRectangleBorder(
+            activeSize: const Size(22, 10),
+            activeShape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(25)))),
       ),
     );
