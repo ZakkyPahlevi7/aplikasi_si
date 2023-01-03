@@ -10,7 +10,6 @@ A new Flutter project.
 - flutter clean
 - flutter pub get
 - working on your code
-==========================================
 - git checkout -b "new branch name"
 - git add .
 - git commit -m "your commit comment"
