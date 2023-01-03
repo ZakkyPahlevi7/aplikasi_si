@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../theme/app_text_styles.dart';
+
 class EventPage extends StatefulWidget {
   const EventPage({Key? key}) : super(key: key);
 
@@ -22,8 +24,7 @@ class _EventPageState extends State<EventPage> {
                   margin: const EdgeInsets.only(top: 30, left: 32, bottom: 20),
                   child: Text(
                     'Event yang akan datang',
-                    style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.bold, fontSize: 20),
+                    style: AppTextStyle.appTitlew800s20(Colors.black),
                   )),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -34,22 +35,18 @@ class _EventPageState extends State<EventPage> {
                           color: const Color(0xffEDCC5D),
                           borderRadius: BorderRadius.circular(8.0)),
                       margin: const EdgeInsets.only(left: 33),
-                      padding:
-                          const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 16, horizontal: 16),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             'Camping',
-                            style: GoogleFonts.poppins(
-                                fontSize: 20, fontWeight: FontWeight.w500),
+                            style: AppTextStyle.appTitlew500s20(Colors.black),
                           ),
                           Text(
                             'Kelas 7-9',
-                            style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 12,
-                                color: Colors.black54),
+                            style: AppTextStyle.appTitlew400s12(Colors.black45),
                           ),
                           const SizedBox(
                             height: 24,
@@ -83,8 +80,8 @@ class _EventPageState extends State<EventPage> {
                               ),
                               Text(
                                 '12 Oktober 2022',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 10, fontWeight: FontWeight.w400),
+                                style:
+                                    AppTextStyle.appTitlew400s10(Colors.black),
                               )
                             ],
                           ),
@@ -100,8 +97,8 @@ class _EventPageState extends State<EventPage> {
                               ),
                               Text(
                                 'Halaman Sekolah',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 10, fontWeight: FontWeight.w400),
+                                style:
+                                    AppTextStyle.appTitlew400s10(Colors.black),
                               )
                             ],
                           )
@@ -113,22 +110,18 @@ class _EventPageState extends State<EventPage> {
                           color: const Color(0xff93E396),
                           borderRadius: BorderRadius.circular(8.0)),
                       margin: const EdgeInsets.only(left: 20),
-                      padding:
-                          const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 16, horizontal: 16),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             'Live Musik',
-                            style: GoogleFonts.poppins(
-                                fontSize: 20, fontWeight: FontWeight.w500),
+                            style: AppTextStyle.appTitlew500s20(Colors.black),
                           ),
                           Text(
                             'Seluruh siswa',
-                            style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 12,
-                                color: Colors.black54),
+                            style: AppTextStyle.appTitlew400s12(Colors.black45),
                           ),
                           const SizedBox(
                             height: 24,
@@ -162,8 +155,8 @@ class _EventPageState extends State<EventPage> {
                               ),
                               Text(
                                 '12 September 2022',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 10, fontWeight: FontWeight.w400),
+                                style:
+                                    AppTextStyle.appTitlew400s10(Colors.black),
                               )
                             ],
                           ),
@@ -179,8 +172,8 @@ class _EventPageState extends State<EventPage> {
                               ),
                               Text(
                                 'Studio Sekolah',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 10, fontWeight: FontWeight.w400),
+                                style:
+                                    AppTextStyle.appTitlew400s10(Colors.black),
                               )
                             ],
                           )
@@ -192,22 +185,18 @@ class _EventPageState extends State<EventPage> {
                           color: const Color(0xff85B6FF),
                           borderRadius: BorderRadius.circular(8.0)),
                       margin: const EdgeInsets.only(left: 20),
-                      padding:
-                          const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 16, horizontal: 16),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             'Cosplay',
-                            style: GoogleFonts.poppins(
-                                fontSize: 20, fontWeight: FontWeight.w500),
+                            style: AppTextStyle.appTitlew500s20(Colors.black),
                           ),
                           Text(
                             'Seluruh siswa',
-                            style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 12,
-                                color: Colors.black54),
+                            style: AppTextStyle.appTitlew400s12(Colors.black45),
                           ),
                           const SizedBox(
                             height: 24,
@@ -241,8 +230,8 @@ class _EventPageState extends State<EventPage> {
                               ),
                               Text(
                                 '10 November 2022',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 10, fontWeight: FontWeight.w400),
+                                style:
+                                    AppTextStyle.appTitlew400s10(Colors.black),
                               )
                             ],
                           ),
@@ -258,8 +247,8 @@ class _EventPageState extends State<EventPage> {
                               ),
                               Text(
                                 'Halaman Sekolah',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 10, fontWeight: FontWeight.w400),
+                                style:
+                                    AppTextStyle.appTitlew400s10(Colors.black),
                               )
                             ],
                           )
@@ -271,22 +260,18 @@ class _EventPageState extends State<EventPage> {
                           color: const Color(0xffFF9790),
                           borderRadius: BorderRadius.circular(8.0)),
                       margin: const EdgeInsets.only(left: 20),
-                      padding:
-                          const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 16, horizontal: 16),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             'Teater',
-                            style: GoogleFonts.poppins(
-                                fontSize: 20, fontWeight: FontWeight.w500),
+                            style: AppTextStyle.appTitlew500s20(Colors.black),
                           ),
                           Text(
                             'Seluruh siswa',
-                            style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 12,
-                                color: Colors.black54),
+                            style: AppTextStyle.appTitlew400s12(Colors.black45),
                           ),
                           const SizedBox(
                             height: 24,
@@ -320,8 +305,8 @@ class _EventPageState extends State<EventPage> {
                               ),
                               Text(
                                 '25 November 2022',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 10, fontWeight: FontWeight.w400),
+                                style:
+                                    AppTextStyle.appTitlew400s10(Colors.black),
                               )
                             ],
                           ),
@@ -337,8 +322,8 @@ class _EventPageState extends State<EventPage> {
                               ),
                               Text(
                                 'Aula Sekolah',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 10, fontWeight: FontWeight.w400),
+                                style:
+                                    AppTextStyle.appTitlew400s10(Colors.black),
                               )
                             ],
                           )
@@ -355,8 +340,7 @@ class _EventPageState extends State<EventPage> {
                   margin: const EdgeInsets.only(top: 26, left: 32, bottom: 20),
                   child: Text(
                     'Event yang telah berlalu',
-                    style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.bold, fontSize: 20),
+                    style: AppTextStyle.appTitlew800s20(Colors.black),
                   )),
               Row(
                 children: [
@@ -365,26 +349,21 @@ class _EventPageState extends State<EventPage> {
                         color: const Color(0xffFF9790),
                         borderRadius: BorderRadius.circular(8.0)),
                     margin: const EdgeInsets.only(left: 33),
-                    padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 13),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 13, horizontal: 13),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'Masak \nTradisional',
-                          style: GoogleFonts.poppins(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                              height: 1.2),
+                          style: AppTextStyle.appTitlew500s12(),
                         ),
                         const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'Seluruh kelas 7, 8 dan 9',
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 7,
-                              color: Colors.black54),
+                          style: AppTextStyle.appTitlew400s7(Colors.black45),
                         ),
                         const SizedBox(
                           height: 12,
@@ -418,8 +397,7 @@ class _EventPageState extends State<EventPage> {
                             ),
                             Text(
                               '04 Oktober 2022',
-                              style: GoogleFonts.poppins(
-                                  fontSize: 8, fontWeight: FontWeight.w400),
+                              style: AppTextStyle.appTitlew400s8(Colors.black),
                             )
                           ],
                         ),
@@ -435,8 +413,7 @@ class _EventPageState extends State<EventPage> {
                             ),
                             Text(
                               'Aula Sekolah',
-                              style: GoogleFonts.poppins(
-                                  fontSize: 8, fontWeight: FontWeight.w400),
+                              style: AppTextStyle.appTitlew400s8(Colors.black),
                             )
                           ],
                         )
@@ -449,26 +426,21 @@ class _EventPageState extends State<EventPage> {
                         color: const Color(0xffEDCC5D),
                         borderRadius: BorderRadius.circular(8.0)),
                     margin: const EdgeInsets.only(right: 33),
-                    padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 13),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 13, horizontal: 13),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'Pameran \nKelas 9',
-                          style: GoogleFonts.poppins(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                              height: 1.2),
+                          style: AppTextStyle.appTitlew500s13h12(Colors.black),
                         ),
                         const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'Seluruh kelas 7, 8 dan 9',
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 7,
-                              color: Colors.black54),
+                          style: AppTextStyle.appTitlew400s7(Colors.black45),
                         ),
                         const SizedBox(
                           height: 12,
@@ -502,8 +474,8 @@ class _EventPageState extends State<EventPage> {
                             ),
                             Text(
                               '26 September 2022',
-                              style: GoogleFonts.poppins(
-                                  fontSize: 8, fontWeight: FontWeight.w400),
+                              style:
+                                  AppTextStyle.appTitlew400s8(Colors.black45),
                             )
                           ],
                         ),
@@ -519,8 +491,7 @@ class _EventPageState extends State<EventPage> {
                             ),
                             Text(
                               'Studio Sekolah',
-                              style: GoogleFonts.poppins(
-                                  fontSize: 8, fontWeight: FontWeight.w400),
+                              style: AppTextStyle.appTitlew400s8(Colors.black),
                             )
                           ],
                         )
@@ -539,26 +510,21 @@ class _EventPageState extends State<EventPage> {
                         color: const Color(0xff85B6FF),
                         borderRadius: BorderRadius.circular(8.0)),
                     margin: const EdgeInsets.only(left: 33),
-                    padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 13),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 13, horizontal: 13),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'Seminar & \nKonfrensi',
-                          style: GoogleFonts.poppins(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                              height: 1.2),
+                          style: AppTextStyle.appTitlew500s13h12(Colors.black),
                         ),
                         const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'Seluruh kelas 7, 8 dan 9',
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 7,
-                              color: Colors.black54),
+                          style: AppTextStyle.appTitlew400s7(Colors.black45),
                         ),
                         const SizedBox(
                           height: 12,
@@ -592,8 +558,7 @@ class _EventPageState extends State<EventPage> {
                             ),
                             Text(
                               '29 Agustus 2022',
-                              style: GoogleFonts.poppins(
-                                  fontSize: 8, fontWeight: FontWeight.w400),
+                              style: AppTextStyle.appTitlew400s8(Colors.black),
                             )
                           ],
                         ),
@@ -609,8 +574,7 @@ class _EventPageState extends State<EventPage> {
                             ),
                             Text(
                               'Studio Sekolah',
-                              style: GoogleFonts.poppins(
-                                  fontSize: 8, fontWeight: FontWeight.w400),
+                              style: AppTextStyle.appTitlew400s8(Colors.black),
                             )
                           ],
                         )
@@ -623,27 +587,20 @@ class _EventPageState extends State<EventPage> {
                         color: const Color(0xff93E396),
                         borderRadius: BorderRadius.circular(8.0)),
                     margin: const EdgeInsets.only(right: 33),
-                    padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 13),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 13, horizontal: 13),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'Bazaar \nPakaian Adat',
-                          style: GoogleFonts.poppins(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                              height: 1.2),
+                          style: AppTextStyle.appTitlew500s13h12(Colors.black),
                         ),
                         const SizedBox(
                           height: 2,
                         ),
-                        Text(
-                          'Seluruh kelas 7, 8 dan 9',
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 7,
-                              color: Colors.black54),
-                        ),
+                        Text('Seluruh kelas 7, 8 dan 9',
+                            style: AppTextStyle.appTitlew400s7(Colors.black45)),
                         const SizedBox(
                           height: 12,
                         ),
@@ -676,8 +633,7 @@ class _EventPageState extends State<EventPage> {
                             ),
                             Text(
                               '25 Agustus 2022',
-                              style: GoogleFonts.poppins(
-                                  fontSize: 8, fontWeight: FontWeight.w400),
+                              style: AppTextStyle.appTitlew400s8(Colors.black),
                             )
                           ],
                         ),
@@ -693,8 +649,7 @@ class _EventPageState extends State<EventPage> {
                             ),
                             Text(
                               'Lapangan Sekolah',
-                              style: GoogleFonts.poppins(
-                                  fontSize: 8, fontWeight: FontWeight.w400),
+                              style: AppTextStyle.appTitlew400s8(Colors.black),
                             )
                           ],
                         )
@@ -713,26 +668,21 @@ class _EventPageState extends State<EventPage> {
                         color: const Color(0xffEDCC5D),
                         borderRadius: BorderRadius.circular(8.0)),
                     margin: const EdgeInsets.only(left: 33),
-                    padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 13),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 13, horizontal: 13),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'Olahraga \nSenam Pagi',
-                          style: GoogleFonts.poppins(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                              height: 1.2),
+                          style: AppTextStyle.appTitlew500s13h12(Colors.black),
                         ),
                         const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'Seluruh kelas 7, 8 dan 9',
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 7,
-                              color: Colors.black54),
+                          style: AppTextStyle.appTitlew400s7(Colors.black45),
                         ),
                         const SizedBox(
                           height: 12,
@@ -766,8 +716,7 @@ class _EventPageState extends State<EventPage> {
                             ),
                             Text(
                               '18 Agustus 2022',
-                              style: GoogleFonts.poppins(
-                                  fontSize: 8, fontWeight: FontWeight.w400),
+                              style: AppTextStyle.appTitlew400s8(Colors.black),
                             )
                           ],
                         ),
@@ -783,8 +732,7 @@ class _EventPageState extends State<EventPage> {
                             ),
                             Text(
                               'Halaman Sekolah',
-                              style: GoogleFonts.poppins(
-                                  fontSize: 8, fontWeight: FontWeight.w400),
+                              style: AppTextStyle.appTitlew400s8(Colors.black),
                             )
                           ],
                         )
@@ -797,26 +745,21 @@ class _EventPageState extends State<EventPage> {
                         color: const Color(0xffFF9790),
                         borderRadius: BorderRadius.circular(8.0)),
                     margin: const EdgeInsets.only(right: 33),
-                    padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 13),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 13, horizontal: 13),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'Lomba \nKemerdekaan',
-                          style: GoogleFonts.poppins(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                              height: 1.2),
+                          style: AppTextStyle.appTitlew500s13h12(Colors.black),
                         ),
                         const SizedBox(
                           height: 2,
                         ),
                         Text(
                           'Seluruh kelas 7, 8 dan 9',
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 7,
-                              color: Colors.black54),
+                          style: AppTextStyle.appTitlew400s7(Colors.black45),
                         ),
                         const SizedBox(
                           height: 12,
@@ -850,8 +793,7 @@ class _EventPageState extends State<EventPage> {
                             ),
                             Text(
                               '17 Agustus 2022',
-                              style: GoogleFonts.poppins(
-                                  fontSize: 8, fontWeight: FontWeight.w400),
+                              style: AppTextStyle.appTitlew400s8(Colors.black),
                             )
                           ],
                         ),
@@ -867,8 +809,7 @@ class _EventPageState extends State<EventPage> {
                             ),
                             Text(
                               'Halaman Sekolah',
-                              style: GoogleFonts.poppins(
-                                  fontSize: 8, fontWeight: FontWeight.w400),
+                              style: AppTextStyle.appTitlew400s8(Colors.black),
                             )
                           ],
                         )
