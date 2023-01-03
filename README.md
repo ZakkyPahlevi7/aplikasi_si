@@ -10,10 +10,10 @@ A new Flutter project.
 - flutter clean
 - flutter pub get
 - working on your code
-===============================================================
-- git checkout -b <new branch name>
+==========================================
+- git checkout -b "new branch name"
 - git add .
-- git commit -m "<your commit comment>"
+- git commit -m "your commit comment"
 - git push origin <your new branch name>
 
 A few resources to get you started if this is your first Flutter project:
