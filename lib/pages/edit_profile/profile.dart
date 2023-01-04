@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:aplikasi_si/theme/app_colors.dart';
 import 'package:aplikasi_si/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
@@ -60,17 +62,12 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               Text(
                 'User',
-                style: GoogleFonts.poppins(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.white),
+                style: AppTextStyle.appTitlew700s18(Colors.white),
               ),
               Text(
                 'zakkyganteng@gmail.com',
-                style: GoogleFonts.poppins(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white.withOpacity(0.5)),
+                style: AppTextStyle.appTitlew600s14(
+                    Color.fromRGBO(255, 255, 255, 0.5)),
               ),
             ],
           ),
@@ -91,7 +88,10 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const EditProfilePage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const EditProfilePage()));
                   },
                   child: Row(
                     children: [
@@ -111,8 +111,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       ),
                       Text(
                         'Edit Profile',
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w500, fontSize: 16),
+                        style: AppTextStyle.appTitlew500s16(),
                       ),
                       const Spacer(),
                       const Icon(Icons.arrow_forward_ios)
@@ -124,7 +123,10 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const WebsiteKamiPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const WebsiteKamiPage()));
                   },
                   child: Row(
                     children: [
@@ -144,8 +146,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       ),
                       Text(
                         'Website Kami',
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w500, fontSize: 16),
+                        style: AppTextStyle.appTitlew500s16(),
                       ),
                       const Spacer(),
                       const Icon(Icons.arrow_forward_ios)
@@ -157,7 +158,10 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const AboutAppsPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const AboutAppsPage()));
                   },
                   child: Row(
                     children: [
@@ -177,8 +181,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       ),
                       Text(
                         'Tentang Aplikasi',
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w500, fontSize: 16),
+                        style: AppTextStyle.appTitlew500s16(),
                       ),
                       const Spacer(),
                       const Icon(Icons.arrow_forward_ios)
@@ -206,8 +209,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     Text(
                       'Keluar',
-                      style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w500, fontSize: 16),
+                      style: AppTextStyle.appTitlew500s16(),
                     ),
                     const Spacer(),
                     const Icon(Icons.arrow_forward_ios)

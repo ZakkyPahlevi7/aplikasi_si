@@ -1,7 +1,10 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:aplikasi_si/theme/app_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../main.dart';
 import 'package:flutter/material.dart';
+import '../../theme/app_text_styles.dart';
 import '../page.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -18,13 +21,6 @@ class _DashboardPageState extends State<DashboardPage> {
     'assets/images/misiskolah.png',
     'assets/images/visitujuan.png'
   ];
-
-  Widget myText(String textnya) {
-    return Text(
-      textnya,
-      style: GoogleFonts.poppins(fontWeight: FontWeight.w400, fontSize: 18),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -101,7 +97,8 @@ class _DashboardPageState extends State<DashboardPage> {
               ),
               Container(
                 margin: const EdgeInsets.only(top: 12, left: 36),
-                child: myText('Civitas'),
+                child: Text('Civitas',
+                    style: AppTextStyle.appTitlew400s18(Colors.black)),
               ),
               const SizedBox(
                 height: 12,
@@ -110,27 +107,27 @@ class _DashboardPageState extends State<DashboardPage> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const DetailKepalaSekolah()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const DetailKepalaSekolah()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(6.0),
                           border: Border.all(color: AppColors.primaryColor)),
                       margin: const EdgeInsets.only(left: 36),
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 19.5, vertical: 4),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 19.5, vertical: 4),
                       child: Column(
                         children: [
                           Image.asset(
                             'assets/images/profilks.png',
                             width: 22,
                           ),
-                          Text(
-                            'Kepala Sekolah',
-                            style: GoogleFonts.poppins(
-                                fontSize: 12, fontWeight: FontWeight.w500),
-                          )
+                          Text('Kepala Sekolah',
+                              style: AppTextStyle.appTitlew500s12())
                         ],
                       ),
                     ),
@@ -138,27 +135,26 @@ class _DashboardPageState extends State<DashboardPage> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const DetailWakilKepala()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DetailWakilKepala()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(6.0),
                           border: Border.all(color: AppColors.primaryColor)),
                       margin: const EdgeInsets.only(right: 36),
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 27.5, vertical: 4),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 27.5, vertical: 4),
                       child: Column(
                         children: [
                           Image.asset(
                             'assets/images/profilwk.png',
                             width: 22,
                           ),
-                          Text(
-                            'Wakil Kepala',
-                            style: GoogleFonts.poppins(
-                                fontSize: 12, fontWeight: FontWeight.w500),
-                          )
+                          Text('Wakil Kepala',
+                              style: AppTextStyle.appTitlew500s12())
                         ],
                       ),
                     ),
@@ -172,27 +168,26 @@ class _DashboardPageState extends State<DashboardPage> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const DetailDataGuru()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DetailDataGuru()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(6.0),
                           border: Border.all(color: AppColors.primaryColor)),
                       margin: const EdgeInsets.only(left: 36),
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 35.2, vertical: 4),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 35.2, vertical: 4),
                       child: Column(
                         children: [
                           Image.asset(
                             'assets/images/profildg.png',
                             width: 22,
                           ),
-                          Text(
-                            'Data Guru',
-                            style: GoogleFonts.poppins(
-                                fontSize: 12, fontWeight: FontWeight.w500),
-                          )
+                          Text('Data Guru',
+                              style: AppTextStyle.appTitlew500s12())
                         ],
                       ),
                     ),
@@ -200,27 +195,26 @@ class _DashboardPageState extends State<DashboardPage> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const DetailWaliKelas()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DetailWaliKelas()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(6.0),
                           border: Border.all(color: AppColors.primaryColor)),
                       margin: const EdgeInsets.only(right: 36),
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 35.5, vertical: 4),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 35.5, vertical: 4),
                       child: Column(
                         children: [
                           Image.asset(
                             'assets/images/profilkw.png',
                             width: 22,
                           ),
-                          Text(
-                            'Wali Kelas',
-                            style: GoogleFonts.poppins(
-                                fontSize: 12, fontWeight: FontWeight.w500),
-                          )
+                          Text('Wali Kelas',
+                              style: AppTextStyle.appTitlew500s12())
                         ],
                       ),
                     ),
@@ -244,19 +238,16 @@ class _DashboardPageState extends State<DashboardPage> {
                           borderRadius: BorderRadius.circular(6.0),
                           border: Border.all(color: AppColors.primaryColor)),
                       margin: const EdgeInsets.only(left: 36),
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 35.7, vertical: 4),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 35.7, vertical: 4),
                       child: Column(
                         children: [
                           Image.asset(
                             'assets/images/profilds.png',
                             width: 22,
                           ),
-                          Text(
-                            'Data Staff',
-                            style: GoogleFonts.poppins(
-                                fontSize: 12, fontWeight: FontWeight.w500),
-                          )
+                          Text('Data Staff',
+                              style: AppTextStyle.appTitlew500s12())
                         ],
                       ),
                     ),
@@ -264,27 +255,26 @@ class _DashboardPageState extends State<DashboardPage> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const DetailDataSiswa()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DetailDataSiswa()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(6.0),
                           border: Border.all(color: AppColors.primaryColor)),
                       margin: const EdgeInsets.only(right: 36),
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 32.5, vertical: 4),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 32.5, vertical: 4),
                       child: Column(
                         children: [
                           Image.asset(
                             'assets/images/profilwk.png',
                             width: 22,
                           ),
-                          Text(
-                            'Data Siswa',
-                            style: GoogleFonts.poppins(
-                                fontSize: 12, fontWeight: FontWeight.w500),
-                          )
+                          Text('Data Siswa',
+                              style: AppTextStyle.appTitlew500s12())
                         ],
                       ),
                     ),
@@ -298,24 +288,18 @@ class _DashboardPageState extends State<DashboardPage> {
                 margin: const EdgeInsets.symmetric(horizontal: 36),
                 child: Row(
                   children: [
-                    Text(
-                      'Prestasi',
-                      style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.bold, fontSize: 18),
-                    ),
+                    Text('Prestasi', style: AppTextStyle.appTitlew800s18()),
                     const Spacer(),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const ListPrestasiPage()));
+                                builder: (context) =>
+                                    const ListPrestasiPage()));
                       },
-                      child: Text(
-                        'Lihat Semua',
-                        style: GoogleFonts.poppins(
-                            color: const Color.fromRGBO(0, 0, 0, 0.5), fontSize: 13),
-                      ),
+                      child: Text('Lihat Semua',
+                          style: AppTextStyle.appTitlew400s13(Colors.black)),
                     )
                   ],
                 ),
@@ -340,8 +324,8 @@ class _DashboardPageState extends State<DashboardPage> {
                               color: Colors.black.withOpacity(0.2))
                         ],
                       ),
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 8),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -360,22 +344,19 @@ class _DashboardPageState extends State<DashboardPage> {
                             children: [
                               Text(
                                 'Juara 1 Nasional',
-                                style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w700, fontSize: 10),
+                                style: AppTextStyle.appTitlew700s10(),
                               ),
                               Text(
                                 'Maulana Zakky Pahlevi',
-                                style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w400, fontSize: 10),
+                                style:
+                                    AppTextStyle.appTitlew400s10(Colors.black),
                               ),
                               Text('Juara 1 Lomba',
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 10)),
+                                  style: AppTextStyle.appTitlew400s10(
+                                      Colors.black)),
                               Text('Ketampanan 2022',
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 10))
+                                  style: AppTextStyle.appTitlew400s10(
+                                      Colors.black))
                             ],
                           )
                         ],
@@ -393,8 +374,8 @@ class _DashboardPageState extends State<DashboardPage> {
                               color: Colors.black.withOpacity(0.2))
                         ],
                       ),
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 8),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -413,22 +394,19 @@ class _DashboardPageState extends State<DashboardPage> {
                             children: [
                               Text(
                                 'Juara 2 Nasional',
-                                style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w700, fontSize: 10),
+                                style: AppTextStyle.appTitlew700s10(),
                               ),
                               Text(
                                 'Maulana Zakky Pahlevi',
-                                style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w400, fontSize: 10),
+                                style:
+                                    AppTextStyle.appTitlew400s10(Colors.black),
                               ),
                               Text('Juara 2 Lomba',
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 10)),
+                                  style: AppTextStyle.appTitlew400s10(
+                                      Colors.black)),
                               Text('Anak Terajin 2022',
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 10))
+                                  style: AppTextStyle.appTitlew400s10(
+                                      Colors.black))
                             ],
                           )
                         ],
@@ -446,8 +424,8 @@ class _DashboardPageState extends State<DashboardPage> {
                               color: Colors.black.withOpacity(0.2))
                         ],
                       ),
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 8),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -466,22 +444,19 @@ class _DashboardPageState extends State<DashboardPage> {
                             children: [
                               Text(
                                 'Juara 1 Nasional',
-                                style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w700, fontSize: 10),
+                                style: AppTextStyle.appTitlew700s10(),
                               ),
                               Text(
                                 'Maulana Zakky Pahlevi',
-                                style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w400, fontSize: 10),
+                                style:
+                                    AppTextStyle.appTitlew400s10(Colors.black),
                               ),
                               Text('Juara 1 Lomba',
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 10)),
+                                  style: AppTextStyle.appTitlew400s10(
+                                      Colors.black)),
                               Text('Keberanian 2022',
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 10))
+                                  style: AppTextStyle.appTitlew400s10(
+                                      Colors.black))
                             ],
                           )
                         ],
@@ -499,8 +474,8 @@ class _DashboardPageState extends State<DashboardPage> {
                               color: Colors.black.withOpacity(0.2))
                         ],
                       ),
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 8),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -519,22 +494,19 @@ class _DashboardPageState extends State<DashboardPage> {
                             children: [
                               Text(
                                 'Juara 2 Nasional',
-                                style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w700, fontSize: 10),
+                                style: AppTextStyle.appTitlew700s10(),
                               ),
                               Text(
                                 'Maulana Zakky Pahlevi',
-                                style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w400, fontSize: 10),
+                                style:
+                                    AppTextStyle.appTitlew400s10(Colors.black),
                               ),
                               Text('Juara 2 Lomba',
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 10)),
+                                  style: AppTextStyle.appTitlew400s10(
+                                      Colors.black)),
                               Text('Anak Terkuat 2022',
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 10))
+                                  style: AppTextStyle.appTitlew400s10(
+                                      Colors.black))
                             ],
                           ),
                         ],
@@ -553,8 +525,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 margin: const EdgeInsets.only(left: 36),
                 child: Text(
                   'Extrakurikuler',
-                  style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.bold, fontSize: 18),
+                  style: AppTextStyle.appTitlew800s18(),
                 ),
               ),
               const SizedBox(
@@ -574,23 +545,17 @@ class _DashboardPageState extends State<DashboardPage> {
                       padding: EdgeInsets.symmetric(horizontal: 9, vertical: 8),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           SizedBox(
                             height: 80,
                           ),
                           Text(
                             'Extrakurikuler Basket',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w600),
+                            style: AppTextStyle.appTitlew600s12(Colors.white),
                           ),
                           Text(
                             'Setiap Hari Senin 15:00 - 17:00',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 10,
-                                fontWeight: FontWeight.w400),
+                            style: AppTextStyle.appTitlew400s10(Colors.white),
                           ),
                           SizedBox(
                             width: 210,
@@ -605,26 +570,21 @@ class _DashboardPageState extends State<DashboardPage> {
                               image: AssetImage('assets/images/pramuka.png'),
                               fit: BoxFit.cover)),
                       margin: const EdgeInsets.only(left: 16, top: 6),
-                      padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 9, vertical: 8),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           SizedBox(
                             height: 80,
                           ),
                           Text(
                             'Extrakurikuler Pramuka',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w600),
+                            style: AppTextStyle.appTitlew600s12(Colors.white),
                           ),
                           Text(
                             'Setiap Hari Senin 14:00 - 16:00',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 10,
-                                fontWeight: FontWeight.w400),
+                            style: AppTextStyle.appTitlew400s10(Colors.white),
                           ),
                           SizedBox(
                             width: 210,
@@ -639,26 +599,21 @@ class _DashboardPageState extends State<DashboardPage> {
                               image: AssetImage('assets/images/voli.png'),
                               fit: BoxFit.cover)),
                       margin: const EdgeInsets.only(left: 16, top: 6),
-                      padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 9, vertical: 8),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           SizedBox(
                             height: 80,
                           ),
                           Text(
                             'Extrakurikuler Volly',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w600),
+                            style: AppTextStyle.appTitlew600s12(Colors.white),
                           ),
                           Text(
                             'Setiap Hari Senin 15:00 - 17:00',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 10,
-                                fontWeight: FontWeight.w400),
+                            style: AppTextStyle.appTitlew400s10(Colors.white),
                           ),
                           SizedBox(
                             width: 210,
@@ -673,26 +628,21 @@ class _DashboardPageState extends State<DashboardPage> {
                               image: AssetImage('assets/images/tari.png'),
                               fit: BoxFit.cover)),
                       margin: const EdgeInsets.only(left: 16, top: 6),
-                      padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 9, vertical: 8),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           SizedBox(
                             height: 80,
                           ),
                           Text(
                             'Extrakurikuler Tari',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w600),
+                            style: AppTextStyle.appTitlew600s12(Colors.white),
                           ),
                           Text(
                             'Setiap Hari Senin 14:00 - 15:00',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 10,
-                                fontWeight: FontWeight.w400),
+                            style: AppTextStyle.appTitlew400s10(Colors.white),
                           ),
                           SizedBox(
                             width: 210,
@@ -715,8 +665,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   children: [
                     Text(
                       'Lokasi',
-                      style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.bold, fontSize: 18),
+                      style: AppTextStyle.appTitlew800s18(),
                     ),
                     const Spacer(),
                     GestureDetector(
@@ -728,8 +677,8 @@ class _DashboardPageState extends State<DashboardPage> {
                       },
                       child: Text(
                         'Lihat Denah',
-                        style: GoogleFonts.poppins(
-                            color: const Color.fromRGBO(0, 0, 0, 0.5), fontSize: 13),
+                        style: AppTextStyle.appTitlew400s13(
+                            Color.fromRGBO(0, 0, 0, 0.5)),
                       ),
                     )
                   ],

@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:aplikasi_si/bottom_navbar.dart';
 
+import '../../theme/app_text_styles.dart';
+
 class OnBoardingPage extends StatefulWidget {
   const OnBoardingPage({Key? key}) : super(key: key);
 
@@ -57,12 +59,14 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
               decoration: pageDecoration,
               footer: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 118, vertical: 10),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 118, vertical: 10),
                       backgroundColor: AppColors.darkGreenTextColor),
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const BottomNavbar()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const BottomNavbar()));
                   },
                   child: Text(
                     'AYO MULAI!',
@@ -78,17 +82,11 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
         back: const Icon(Icons.arrow_back),
         skip: Text(
           'Skip',
-          style: GoogleFonts.poppins(
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
-              color: AppColors.darkGreenTextColor),
+          style: AppTextStyle.appTitlew800s16(AppColors.darkGreenTextColor),
         ),
         next: Text(
           'Next',
-          style: GoogleFonts.poppins(
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
-              color: AppColors.darkGreenTextColor),
+          style: AppTextStyle.appTitlew800s16(AppColors.darkGreenTextColor),
         ),
         done: const Text(
           'Done',

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:aplikasi_si/bottom_navbar.dart';
 
+import '../../theme/app_text_styles.dart';
+
 class DenahPage extends StatefulWidget {
   const DenahPage({Key? key}) : super(key: key);
 
@@ -22,8 +24,10 @@ class _DenahPageState extends State<DenahPage> {
               children: [
                 GestureDetector(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const BottomNavbar()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const BottomNavbar()));
                     },
                     child: const Icon(
                       Icons.arrow_back_ios,
@@ -35,10 +39,7 @@ class _DenahPageState extends State<DenahPage> {
                 ),
                 Text(
                   'Denah MTsN 1 Pati',
-                  style: GoogleFonts.poppins(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black),
+                  style: AppTextStyle.appTitlew600s18(Colors.black),
                 )
               ],
             ),
