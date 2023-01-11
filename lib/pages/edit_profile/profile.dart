@@ -1,9 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:aplikasi_si/theme/app_colors.dart';
-import 'package:aplikasi_si/theme/app_text_styles.dart';
+import 'package:aplikasi_si/theme/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:aplikasi_si/bottom_navbar.dart';
 import 'package:aplikasi_si/pages/page.dart';
 
@@ -26,7 +24,6 @@ class _ProfilePageState extends State<ProfilePage> {
               Container(
                 margin: const EdgeInsets.only(top: 30, left: 33),
                 child: Row(
-                  // ignore: prefer_const_constructors
                   children: [
                     GestureDetector(
                         onTap: () {
