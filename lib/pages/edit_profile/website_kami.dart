@@ -1,7 +1,6 @@
-import 'package:aplikasi_si/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:aplikasi_si/pages/page.dart';
+import 'package:aplikasi_si/theme/theme.dart';
 
 class WebsiteKamiPage extends StatefulWidget {
   const WebsiteKamiPage({Key? key}) : super(key: key);

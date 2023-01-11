@@ -1,7 +1,6 @@
 import 'package:aplikasi_si/theme/app_colors.dart';
 import 'package:aplikasi_si/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class DetailDataGuru extends StatefulWidget {
   const DetailDataGuru({Key? key}) : super(key: key);

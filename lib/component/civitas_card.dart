@@ -1,6 +1,9 @@
+// ignore_for_file: prefer_typing_uninitialized_variables
+
 import 'package:aplikasi_si/theme/theme.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CivitasCard extends StatelessWidget {
   var pageRoute;
   String text;
@@ -9,7 +12,7 @@ class CivitasCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  GestureDetector(
+    return GestureDetector(
       onTap: () {
         Navigator.push(
             context,
