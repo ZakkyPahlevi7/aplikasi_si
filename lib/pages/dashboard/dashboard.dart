@@ -1,11 +1,7 @@
-// ignore_for_file: prefer_const_constructors
-
-import 'package:aplikasi_si/theme/app_colors.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../../main.dart';
 import 'package:flutter/material.dart';
-import '../../theme/app_text_styles.dart';
 import '../page.dart';
+import 'package:aplikasi_si/theme/theme.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -15,13 +11,6 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
-  int currentIndex = 0;
-
-  List<String> images = [
-    'assets/images/misiskolah.png',
-    'assets/images/visitujuan.png'
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,255 +20,76 @@ class _DashboardPageState extends State<DashboardPage> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                margin: const EdgeInsets.only(left: 34, right: 34, top: 10),
-                child: Row(
-                  children: [
-                    Image.asset(
-                      'assets/images/logo.png',
-                      width: 80,
-                    ),
-                    const Spacer(),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const ProfilePage()));
-                      },
-                      child: Image.asset(
-                        'assets/images/profile.png',
-                        width: 45,
-                      ),
-                    )
-                  ],
-                ),
-              ),
+              const DashboardHeader(),
               const SizedBox(
                 height: 5,
               ),
               CarouselWithDotsPage(imgList: imgList),
-              SizedBox(
-                height: 300,
-                width: double.infinity,
-                child: PageView.builder(
-                  onPageChanged: (index) {
-                    setState(() {
-                      currentIndex = index;
-                    });
-                  },
-                  itemCount: images.length,
-                  itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.only(
-                          left: 28, bottom: 0, right: 28, top: 20),
-                      child: SizedBox(
-                        width: double.infinity,
-                        child: Image.asset(
-                          images[index % images.length],
-                          fit: BoxFit.fill,
-                          width: 200,
-                        ),
-                      ),
-                    );
-                  },
-                ),
-              ),
+              const VisiMisiCard(),
               const SizedBox(
                 height: 5,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  for (var i = 0; i < images.length; i++)
-                    buildIndicator(currentIndex == i)
-                ],
-              ),
               Container(
-                margin: const EdgeInsets.only(top: 12, left: 36),
-                child: Text('Civitas',
-                    style: AppTextStyle.appTitlew400s18(Colors.black)),
-              ),
-              const SizedBox(
-                height: 12,
-              ),
-              Row(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const DetailKepalaSekolah()));
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(6.0),
-                          border: Border.all(color: AppColors.primaryColor)),
-                      margin: const EdgeInsets.only(left: 36),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 19.5, vertical: 4),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            'assets/images/profilks.png',
-                            width: 22,
-                          ),
-                          Text('Kepala Sekolah',
-                              style: AppTextStyle.appTitlew500s12())
-                        ],
-                      ),
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 36, vertical: 12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Civitas',
+                        style: AppTextStyle.appTitlew400s18(Colors.black)),
+                    const SizedBox(
+                      height: 12,
                     ),
-                  ),
-                  const Spacer(),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const DetailWakilKepala()));
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(6.0),
-                          border: Border.all(color: AppColors.primaryColor)),
-                      margin: const EdgeInsets.only(right: 36),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 27.5, vertical: 4),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            'assets/images/profilwk.png',
-                            width: 22,
-                          ),
-                          Text('Wakil Kepala',
-                              style: AppTextStyle.appTitlew500s12())
-                        ],
-                      ),
-                    ),
-                  )
-                ],
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Row(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const DetailDataGuru()));
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(6.0),
-                          border: Border.all(color: AppColors.primaryColor)),
-                      margin: const EdgeInsets.only(left: 36),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 35.2, vertical: 4),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            'assets/images/profildg.png',
-                            width: 22,
-                          ),
-                          Text('Data Guru',
-                              style: AppTextStyle.appTitlew500s12())
-                        ],
-                      ),
-                    ),
-                  ),
-                  const Spacer(),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const DetailWaliKelas()));
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(6.0),
-                          border: Border.all(color: AppColors.primaryColor)),
-                      margin: const EdgeInsets.only(right: 36),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 35.5, vertical: 4),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            'assets/images/profilkw.png',
-                            width: 22,
-                          ),
-                          Text('Wali Kelas',
-                              style: AppTextStyle.appTitlew500s12())
-                        ],
-                      ),
-                    ),
-                  )
-                ],
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Row(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: ((context) => const DetaiDataStaff())));
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(6.0),
-                          border: Border.all(color: AppColors.primaryColor)),
-                      margin: const EdgeInsets.only(left: 36),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 35.7, vertical: 4),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            'assets/images/profilds.png',
-                            width: 22,
-                          ),
-                          Text('Data Staff',
-                              style: AppTextStyle.appTitlew500s12())
-                        ],
-                      ),
-                    ),
-                  ),
-                  const Spacer(),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const DetailDataSiswa()));
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(6.0),
-                          border: Border.all(color: AppColors.primaryColor)),
-                      margin: const EdgeInsets.only(right: 36),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 32.5, vertical: 4),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            'assets/images/profilwk.png',
-                            width: 22,
-                          ),
-                          Text('Data Siswa',
-                              style: AppTextStyle.appTitlew500s12())
-                        ],
-                      ),
-                    ),
-                  )
-                ],
+                    GridView.count(
+                      physics: NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      crossAxisSpacing: 15,
+                      mainAxisSpacing: 15,
+                      crossAxisCount: 2,
+                      childAspectRatio: 2.7,
+                      clipBehavior: Clip.hardEdge,
+                        children: List.generate(
+                          6,
+                          (index) {
+                            return CivitasCard(
+                                img: index == 0
+                                    ? 'assets/images/profilks.png'
+                                    : index == 1
+                                        ? 'assets/images/profilwk.png'
+                                        : index == 2
+                                            ? 'assets/images/profildg.png'
+                                            : index == 3
+                                                ? 'assets/images/profilkw.png'
+                                                : index == 4
+                                                    ? 'assets/images/profilds.png'
+                                                    : 'assets/images/profilwk.png',
+                                text: index == 0
+                                    ? 'Kepala Sekolah'
+                                    : index == 1
+                                        ? 'Wakil Kepala'
+                                        : index == 2
+                                            ? 'Data Guru'
+                                            : index == 3
+                                                ? 'Wali Kelas'
+                                                : index == 4
+                                                    ? 'Data Staff'
+                                                    : 'Data Siswa',
+                                pageRoute: index == 0
+                                    ? const DetailKepalaSekolah()
+                                    : index == 1
+                                        ? const DetailWakilKepala()
+                                        : index == 2
+                                            ? const DetailDataGuru()
+                                            : index == 3
+                                                ? const DetailWaliKelas()
+                                                : index == 4
+                                                    ? const DetaiDataStaff()
+                                                    : const DetailDataSiswa());
+                          },
+                        ),
+                    )
+                  ],
+                ),
               ),
               const SizedBox(
                 height: 18,
