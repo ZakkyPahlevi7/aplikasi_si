@@ -8,3 +8,7 @@ export 'extra_card.dart';
 export 'civitas_section.dart';
 export 'prestasi_section.dart';
 export 'extra_section.dart';
+export 'eventcs_card.dart';
+export 'eventcs_section.dart';
+export 'eventex_card.dart';
+export 'eventex_section.dart';
