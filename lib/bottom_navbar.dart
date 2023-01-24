@@ -11,7 +11,12 @@ class BottomNavbar extends StatefulWidget {
 
 class _BottomNavbarState extends State<BottomNavbar> {
   int currentIndex = 0;
-  final screens = [const DashboardPage(), const EventPage(), const PpdbPage(), const ContactUsPage()];
+  final screens = [
+    const DashboardPage(),
+    const EventPage(),
+    const PpdbPage(),
+    const ContactUsPage()
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,8 +31,8 @@ class _BottomNavbarState extends State<BottomNavbar> {
           ],
         ),
         child: BottomNavigationBar(
-            unselectedItemColor: AppColors.primaryColor,
-            fixedColor: AppColors.primaryColor,
+            unselectedItemColor: const Color(0xff0962E0),
+            fixedColor: const Color(0xff0962E0),
             // type: BottomNavigationBarType.fixed,
             currentIndex: currentIndex,
             onTap: (index) => setState(() => currentIndex = index),

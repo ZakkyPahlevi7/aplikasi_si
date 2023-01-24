@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 import '../pages/page.dart';
@@ -21,8 +23,7 @@ class PrestasiSection extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) =>
-                          const ListPrestasiPage()));
+                          builder: (context) => const ListPrestasiPage()));
                 },
                 child: Text('Lihat Semua',
                     style: AppTextStyle.appTitlew400s13(Colors.black)),
@@ -40,10 +41,29 @@ class PrestasiSection extends StatelessWidget {
             margin: const EdgeInsets.only(left: 36),
             child: Row(
               children: [
-                CardPrestasi(img: 'assets/images/medali1.png', juara: 'Juara 1 Nasional', nama: 'Maulana Zakky Pahlevi', kategori: 'Juara 1 Lomba Gonta-Ganti Hp'),
-                CardPrestasi(img: 'assets/images/medali2.png' , juara: 'Juara 2 Nasional', nama: 'Maulana Zakky Pahlevi', kategori: 'Juara 2 Lomba Anak Tidak Rajin'),
-                CardPrestasi(img: 'assets/images/medali1.png', juara: 'Juara 1 Nasional', nama: 'Maulana Zakky Pahlevi', kategori: 'Juara 1 Lomba Mengapel'),
-                CardPrestasi(img: 'assets/images/medali2.png', juara: 'Juara 2 Nasional', nama: 'Maulana Zakky Pahlevi', kategori: 'Juara 2 Lomba Anak Kuat'),
+                CardPrestasi(
+                    img: 'assets/images/medali1.png',
+                    juara: 'Juara 1 Nasional',
+                    nama: 'Maulana Zakky Pahlevi',
+                    kategori: 'Juara 1 Lomba Gonta-Ganti Hp'),
+                CardPrestasi(
+                    img: 'assets/images/medali2.png',
+                    juara: 'Juara 2 Nasional',
+                    nama: 'Maulana Zakky Pahlevi',
+                    kategori: 'Juara 2 Lomba Anak Tidak Rajin'),
+                CardPrestasi(
+                    img: 'assets/images/medali1.png',
+                    juara: 'Juara 1 Nasional',
+                    nama: 'Maulana Zakky Pahlevi',
+                    kategori: 'Juara 1 Lomba Mengapel'),
+                CardPrestasi(
+                    img: 'assets/images/medali2.png',
+                    juara: 'Juara 2 Nasional',
+                    nama: 'Maulana Zakky Pahlevi',
+                    kategori: 'Juara 2 Lomba Anak Kuat'),
+                SizedBox(
+                  width: 26,
+                )
               ],
             ),
           ),

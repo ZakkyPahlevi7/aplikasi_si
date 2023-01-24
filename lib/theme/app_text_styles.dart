@@ -23,11 +23,12 @@ class AppTextStyle {
 
   static appTitlew400s12h12() {
     return GoogleFonts.poppins(
-        fontSize: 12, fontWeight: FontWeight.w400, height: 1.2);
+        fontSize: 12, fontWeight: FontWeight.w400, height: 1.6);
   }
 
-  static appTitlew500s12() {
-    return GoogleFonts.poppins(fontSize: 12, fontWeight: FontWeight.w500);
+  static appTitlew500s12(Color color) {
+    return GoogleFonts.poppins(
+        fontSize: 12, fontWeight: FontWeight.w500, color: color);
   }
 
   static appTitlew800s18() {
@@ -103,6 +104,7 @@ class AppTextStyle {
       color: color,
     );
   }
+
   static appTitlew400s8(Color color) {
     return GoogleFonts.poppins(
       fontSize: 8,
@@ -110,6 +112,7 @@ class AppTextStyle {
       color: color,
     );
   }
+
   static appTitlew800s16(Color color) {
     return GoogleFonts.poppins(
       fontSize: 16,

@@ -4,7 +4,7 @@ class AppColors {
   static Color primarywhite = const Color(0xffFFFFFF);
   static Color primaryColor = const Color(0xff00DB8C);
   static Color secondaryColor = const Color(0xff49B666);
-  static Color contactUsIconColor = const Color(0xff00FFA3);
+  static Color contactUsIconColor = const Color(0xff0962E0);
   static Color backgroundSplash = const Color(0xffC0FFE8);
   static Color darkGreenTextColor = const Color(0xff39623C);
   static Color lightPink = const Color(0xffF5DDEA);

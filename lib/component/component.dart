@@ -10,5 +10,5 @@ export 'prestasi_section.dart';
 export 'extra_section.dart';
 export 'eventcs_card.dart';
 export 'eventcs_section.dart';
-export 'eventex_card.dart';
 export 'eventex_section.dart';
+export 'visi_misi_section.dart';

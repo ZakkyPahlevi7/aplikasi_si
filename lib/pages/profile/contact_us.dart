@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:aplikasi_si/theme/app_colors.dart';
 import 'package:aplikasi_si/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +23,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
             decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(
-                      "assets/images/kontakkamibg.png",
+                      "assets/images/kontakkamibg2.png",
                     ),
                     fit: BoxFit.cover)),
             child: Column(
@@ -41,7 +43,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
                     children: [
                       Icon(
                         Icons.location_on,
-                        color: AppColors.contactUsIconColor,
+                        color: Color(0xff0962E0),
                         size: 32,
                       ),
                       const Spacer(),
@@ -65,7 +67,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
                     children: [
                       Icon(
                         Icons.mail,
-                        color: AppColors.contactUsIconColor,
+                        color: Color(0xff0962E0),
                         size: 30,
                       ),
                       const Spacer(),
@@ -92,7 +94,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
                     children: [
                       Icon(
                         Icons.call,
-                        color: AppColors.contactUsIconColor,
+                        color: Color(0xff0962E0),
                         size: 30,
                       ),
                       const Spacer(),
@@ -141,12 +143,12 @@ class _ContactUsPageState extends State<ContactUsPage> {
                       blurStyle: BlurStyle.normal,
                       offset: Offset(0, 2))
                 ],
-                color: const Color(0xffE6FFF6),
+                color: const Color(0xffCFECFC),
                 borderRadius: BorderRadius.circular(30.0)),
             padding: const EdgeInsets.all(15),
             child: Icon(
               Icons.chat,
-              color: AppColors.contactUsIconColor,
+              color: Color(0xff0962E0),
               size: 30,
             ),
           ),

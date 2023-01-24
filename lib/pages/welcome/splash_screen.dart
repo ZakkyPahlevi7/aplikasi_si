@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'dart:async';
 
 import 'package:aplikasi_si/pages/welcome/onboarding.dart';
@@ -25,7 +27,7 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      backgroundColor: AppColors.backgroundSplash,
+      backgroundColor: Color(0xff0962E0),
       body: Center(
         child: Image.asset(
           'assets/images/logo.png',
