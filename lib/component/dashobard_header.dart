@@ -18,19 +18,17 @@ class _DashboardHeaderState extends State<DashboardHeader> {
         children: [
           Image.asset(
             'assets/images/logo.png',
-            width: 80,
+            width: 60,
           ),
           const Spacer(),
           GestureDetector(
             onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ProfilePage()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const ProfilePage()));
             },
             child: Image.asset(
               'assets/images/profile.png',
-              width: 45,
+              width: 58,
             ),
           )
         ],

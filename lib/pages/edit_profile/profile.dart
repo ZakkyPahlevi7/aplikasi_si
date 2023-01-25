@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:aplikasi_si/pages/edit_profile/tentangaplikasi.dart';
 import 'package:aplikasi_si/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:aplikasi_si/bottom_navbar.dart';
@@ -16,7 +17,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.secondaryColor,
+      backgroundColor: Color(0xff0962E0),
       body: Column(
         children: [
           Column(
@@ -158,7 +159,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const AboutAppsPage()));
+                            builder: (context) => const tentangaplikasi()));
                   },
                   child: Row(
                     children: [

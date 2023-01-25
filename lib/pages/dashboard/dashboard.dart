@@ -1,3 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
 import '../../main.dart';
 import 'package:flutter/material.dart';
 import '../page.dart';
@@ -25,9 +29,12 @@ class _DashboardPageState extends State<DashboardPage> {
                 height: 5,
               ),
               CarouselWithDotsPage(imgList: imgList),
-              const VisiMisiCard(),
               const SizedBox(
-                height: 5,
+                height: 18,
+              ),
+              const visiMisiSection(),
+              SizedBox(
+                height: 18,
               ),
               const CivitasSection(),
               const SizedBox(

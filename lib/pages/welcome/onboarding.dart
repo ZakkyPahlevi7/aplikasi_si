@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:aplikasi_si/pages/dashboard/dashboard.dart';
 import 'package:aplikasi_si/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,10 +17,11 @@ class OnBoardingPage extends StatefulWidget {
 }
 
 class _OnBoardingPageState extends State<OnBoardingPage> {
+  int indexPage = 0;
   @override
   Widget build(BuildContext context) {
     const pageDecoration = PageDecoration(
-        contentMargin: EdgeInsets.only(left: 14, right: 14),
+        contentMargin: EdgeInsets.only(left: 30, right: 30),
         titlePadding: EdgeInsets.only(top: 38),
         imagePadding: EdgeInsets.only(top: 38),
         titleTextStyle: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
@@ -49,51 +53,44 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
               ),
               decoration: pageDecoration),
           PageViewModel(
-              title: 'Informasi Terupdate',
-              body:
-                  "Informasi yang kami berikan selalu terupdate dan fresh. Jadi pengguna tidak akan khawatir kelewatan dalam mengikuti informasi-informasi yang berkaitan dengan sekolah kita",
-              image: Image.asset(
-                'assets/images/gambar3.png',
-                width: 300,
-              ),
-              decoration: pageDecoration,
-              footer: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 118, vertical: 10),
-                      backgroundColor: AppColors.darkGreenTextColor),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const BottomNavbar()));
-                  },
-                  child: Text(
-                    'AYO MULAI!',
-                    style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.bold, fontSize: 14),
-                  ))),
+            title: 'Informasi Terupdate',
+            body:
+                "Informasi yang kami berikan selalu terupdate dan fresh. Jadi pengguna tidak akan khawatir kelewatan dalam mengikuti informasi-informasi yang berkaitan dengan sekolah kita",
+            image: Image.asset(
+              'assets/images/gambar3.png',
+              width: 300,
+            ),
+            decoration: pageDecoration,
+          ),
         ],
+        onChange: (value) {
+          indexPage = value;
+        },
         onDone: () {},
         showSkipButton: true,
         showNextButton: true,
         showDoneButton: true,
         showBackButton: false,
-        back: const Icon(Icons.arrow_back),
         skip: Text(
           'Skip',
-          style: AppTextStyle.appTitlew800s16(AppColors.darkGreenTextColor),
+          style: AppTextStyle.appTitlew800s16(const Color(0xff0962E0)),
         ),
         next: Text(
           'Next',
-          style: AppTextStyle.appTitlew800s16(AppColors.darkGreenTextColor),
+          style: AppTextStyle.appTitlew800s16(const Color(0xff0962E0)),
         ),
-        done: const Text(
-          'Done',
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+        done: GestureDetector(
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => BottomNavbar()));
+          },
+          child: Text(
+            'Masuk',
+            style: AppTextStyle.appTitlew800s16(Color(0xff0962E0)),
+          ),
         ),
         dotsDecorator: DotsDecorator(
-            activeColor: AppColors.darkGreenTextColor,
+            activeColor: Color(0xff0962E0),
             size: const Size(10, 10),
             color: Colors.grey,
             activeSize: const Size(22, 10),

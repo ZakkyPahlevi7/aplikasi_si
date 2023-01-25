@@ -8,22 +8,25 @@ class CivitasCard extends StatelessWidget {
   var pageRoute;
   String text;
   String img;
-  CivitasCard({Key? key,required this.img, required this.text, required this.pageRoute, }) : super(key: key);
+  CivitasCard({
+    Key? key,
+    required this.img,
+    required this.text,
+    required this.pageRoute,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => pageRoute));
+            context, MaterialPageRoute(builder: (context) => pageRoute));
       },
       child: Container(
         width: 160,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(6.0),
-            border: Border.all(color: AppColors.primaryColor)),
+            color: const Color(0xff0962E0)),
         padding: const EdgeInsets.symmetric(vertical: 4),
         child: Column(
           children: [
@@ -31,8 +34,7 @@ class CivitasCard extends StatelessWidget {
               img,
               width: 22,
             ),
-            Text(text,
-                style: AppTextStyle.appTitlew500s12())
+            Text(text, style: AppTextStyle.appTitlew500s12(Colors.white))
           ],
         ),
       ),

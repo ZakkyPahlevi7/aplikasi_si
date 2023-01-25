@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 
 class CarouselWithDotsPage extends StatefulWidget {
   final List<String> imgList;
-  const CarouselWithDotsPage({Key? key, required this.imgList}) : super(key: key);
+  const CarouselWithDotsPage({Key? key, required this.imgList})
+      : super(key: key);
   @override
   State<CarouselWithDotsPage> createState() => _CarouselWithDotsPageState();
 }
@@ -54,14 +55,14 @@ class _CarouselWithDotsPageState extends State<CarouselWithDotsPage> {
           children: widget.imgList.map((url) {
             int index = imgList.indexOf(url);
             return Container(
-              width: 8,
-              height: 8,
+              width: 10,
+              height: 10,
               margin: const EdgeInsets.symmetric(vertical: 0, horizontal: 3),
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: _current == index
-                      ? const Color.fromRGBO(0, 0, 0, 0.9)
-                      : const Color.fromRGBO(0, 0, 0, 0.4)),
+                      ? const Color(0xff0962E0)
+                      : const Color(0xffD9D9D9)),
             );
           }).toList(),
         ),
