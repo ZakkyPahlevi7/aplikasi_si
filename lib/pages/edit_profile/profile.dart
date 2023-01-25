@@ -5,6 +5,8 @@ import 'package:aplikasi_si/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:aplikasi_si/bottom_navbar.dart';
 import 'package:aplikasi_si/pages/page.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -14,6 +16,15 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+  _launchURL() async {
+    const url = 'https://darojaatululuum.sch.id';
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -121,10 +132,9 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const WebsiteKamiPage()));
+                    setState(() {
+                      _launchURL();
+                    });
                   },
                   child: Row(
                     children: [
@@ -169,7 +179,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             color: const Color(0xffFEE4D2)),
                         padding: const EdgeInsets.all(9),
                         child: const Icon(
-                          Icons.call,
+                          Icons.info_outline,
                           color: Color(0xffEE701C),
                           size: 36,
                         ),

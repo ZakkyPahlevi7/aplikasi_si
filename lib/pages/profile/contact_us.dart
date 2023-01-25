@@ -16,6 +16,12 @@ class _ContactUsPageState extends State<ContactUsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+        backgroundColor: const Color(0xffCFECFC),
+        elevation: 3,
+        child: Image.asset('assets/icon/chat.png', width: 30,),
+      ),
       backgroundColor: Colors.white,
       body: Column(
         children: [
@@ -41,11 +47,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
                   margin: const EdgeInsets.symmetric(horizontal: 30),
                   child: Row(
                     children: [
-                      Icon(
-                        Icons.location_on,
-                        color: Color(0xff0962E0),
-                        size: 32,
-                      ),
+                      Image.asset('assets/icon/maps.png'),
                       const Spacer(),
                       Text(
                         'Jl. Raya Winong-Pucakwangi Km 02, Desa \nPekalongan, Kec. Winong, Pekalongan, \nKec. Pati, Kabupaten Pati, Jawa Tengah \n59181',
@@ -65,11 +67,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
                   margin: const EdgeInsets.only(left: 30, right: 119),
                   child: Row(
                     children: [
-                      Icon(
-                        Icons.mail,
-                        color: Color(0xff0962E0),
-                        size: 30,
-                      ),
+                     Image.asset('assets/icon/email.png'),
                       const Spacer(),
                       Text(
                         'mtsnegeri1pati@gmail.com',
@@ -92,11 +90,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
                   margin: const EdgeInsets.only(left: 30, right: 194),
                   child: Row(
                     children: [
-                      Icon(
-                        Icons.call,
-                        color: Color(0xff0962E0),
-                        size: 30,
-                      ),
+                      Image.asset('assets/icon/phone.png'),
                       const Spacer(),
                       Text(
                         '085228424485',
@@ -132,29 +126,6 @@ class _ContactUsPageState extends State<ContactUsPage> {
               ],
             ),
           ),
-          const Spacer(),
-          Container(
-            margin: const EdgeInsets.only(left: 260),
-            decoration: BoxDecoration(
-                boxShadow: const [
-                  BoxShadow(
-                      color: Colors.black26,
-                      blurRadius: 5.0,
-                      blurStyle: BlurStyle.normal,
-                      offset: Offset(0, 2))
-                ],
-                color: const Color(0xffCFECFC),
-                borderRadius: BorderRadius.circular(30.0)),
-            padding: const EdgeInsets.all(15),
-            child: Icon(
-              Icons.chat,
-              color: Color(0xff0962E0),
-              size: 30,
-            ),
-          ),
-          const SizedBox(
-            height: 20,
-          )
         ],
       ),
     );

@@ -4,6 +4,7 @@ export 'dashobard_header.dart';
 export 'visi_misi_card.dart';
 export 'card_prestasi.dart';
 export 'extra_card.dart';
+export 'text_field.dart';
 
 export 'civitas_section.dart';
 export 'prestasi_section.dart';
