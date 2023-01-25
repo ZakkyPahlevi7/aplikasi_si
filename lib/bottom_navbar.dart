@@ -1,6 +1,7 @@
 import 'package:aplikasi_si/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:aplikasi_si/pages/page.dart';
+import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class BottomNavbar extends StatefulWidget {
   const BottomNavbar({Key? key}) : super(key: key);
@@ -21,42 +22,35 @@ class _BottomNavbarState extends State<BottomNavbar> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: screens[currentIndex],
-      bottomNavigationBar: Container(
-        decoration: const BoxDecoration(
-          boxShadow: <BoxShadow>[
-            BoxShadow(
-              color: Colors.black12,
-              blurRadius: 10,
-            ),
-          ],
-        ),
-        child: BottomNavigationBar(
-            unselectedItemColor: const Color(0xff0962E0),
-            fixedColor: const Color(0xff0962E0),
-            // type: BottomNavigationBarType.fixed,
-            currentIndex: currentIndex,
-            onTap: (index) => setState(() => currentIndex = index),
-            items: const [
-              BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.home,
-                  ),
-                  label: 'Home',
-                  backgroundColor: Colors.white),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.celebration),
-                  label: 'Event',
-                  backgroundColor: Colors.white),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.dynamic_form),
-                  label: 'PPDB',
-                  backgroundColor: Colors.white),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.person),
-                  label: 'Profile',
-                  backgroundColor: Colors.white)
-            ]),
-      ),
+      bottomNavigationBar: SalomonBottomBar(
+        currentIndex: currentIndex,
+        onTap: (index) => setState(() => currentIndex = index),
+        items: [
+          SalomonBottomBarItem(
+              icon: ImageIcon(const AssetImage('assets/icon/home.png'), color: AppColors.contactUsIconColor),
+              selectedColor: AppColors.contactUsIconColor,
+              unselectedColor: AppColors.contactUsIconColor,
+              title: Text('Home', style: TextStyle(color: AppColors.contactUsIconColor),)),
+
+          SalomonBottomBarItem(
+              icon: ImageIcon(const AssetImage('assets/icon/event.png'), color: AppColors.contactUsIconColor),
+              selectedColor: AppColors.contactUsIconColor,
+              unselectedColor: AppColors.contactUsIconColor,
+              title: Text('Event', style: TextStyle(color: AppColors.contactUsIconColor),)),
+
+          SalomonBottomBarItem(
+              icon: ImageIcon(const AssetImage('assets/icon/ppdb.png'), color: AppColors.contactUsIconColor),
+              selectedColor: AppColors.contactUsIconColor,
+              unselectedColor: AppColors.contactUsIconColor,
+              title: Text('Ppdb', style: TextStyle(color: AppColors.contactUsIconColor))),
+
+          SalomonBottomBarItem(
+              icon: ImageIcon(const AssetImage('assets/icon/contact.png'), color: AppColors.contactUsIconColor),
+              selectedColor: AppColors.contactUsIconColor,
+              unselectedColor: AppColors.contactUsIconColor,
+              title: Text('Contact', style: TextStyle(color: AppColors.contactUsIconColor))),
+        ],
+      )
     );
   }
 }
