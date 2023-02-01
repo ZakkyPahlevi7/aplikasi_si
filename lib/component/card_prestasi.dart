@@ -9,11 +9,17 @@ class CardPrestasi extends StatelessWidget {
   String nama;
   String kategori;
 
-  CardPrestasi({Key? key, required this.img, required this.juara, required this.nama, required this.kategori}) : super(key: key);
+  CardPrestasi(
+      {Key? key,
+      required this.img,
+      required this.juara,
+      required this.nama,
+      required this.kategori})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return Container(
       margin: const EdgeInsets.only(right: 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(7.0),
@@ -25,8 +31,7 @@ class CardPrestasi extends StatelessWidget {
               color: Colors.black.withOpacity(0.2))
         ],
       ),
-      padding: const EdgeInsets.symmetric(
-          horizontal: 16, vertical: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -45,16 +50,14 @@ class CardPrestasi extends StatelessWidget {
             children: [
               Text(
                 juara,
+                overflow: TextOverflow.clip,
                 style: AppTextStyle.appTitlew700s10(),
               ),
               Text(
                 nama,
-                style:
-                AppTextStyle.appTitlew400s10(Colors.black),
+                style: AppTextStyle.appTitlew400s10(Colors.black),
               ),
-              Text(kategori,
-                  style: AppTextStyle.appTitlew400s10(
-                      Colors.black)),
+              Text(kategori, style: AppTextStyle.appTitlew400s10(Colors.black)),
             ],
           )
         ],

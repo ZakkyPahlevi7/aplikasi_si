@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_unnecessary_containers, unused_import
+// ignore_for_file: avoid_unnecessary_containers, unused_import, prefer_const_constructors
 
 import 'package:aplikasi_si/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
@@ -380,7 +380,7 @@ class _ListPrestasiPageState extends State<ListPrestasiPage> {
                       ),
                     ),
                     SizedBox(
-                      width: 28,
+                      width: 24,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -480,7 +480,7 @@ class _ListPrestasiPageState extends State<ListPrestasiPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Juara 2 Jagat Arsy Festival',
+                          'Juara 2 Jagat Arsy \nFestival',
                           style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(
@@ -621,7 +621,7 @@ class _ListPrestasiPageState extends State<ListPrestasiPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Juara 1 Jagat Arsy Festival',
+                          'Juara 1 Jagat Arsy \nFestival',
                           style: AppTextStyle.appTitlew700s14(),
                         ),
                         const SizedBox(

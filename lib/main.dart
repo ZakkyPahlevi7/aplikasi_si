@@ -1,6 +1,8 @@
+import 'package:aplikasi_si/pages/edit_profile/loginuser.dart';
 import 'package:aplikasi_si/pages/welcome/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 void main() async {
   SystemChrome.setSystemUIOverlayStyle(
