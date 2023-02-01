@@ -28,76 +28,73 @@ class EventexCard extends StatelessWidget {
       margin: const EdgeInsets.only(
         left: 28,
       ),
-      child: CustomPaint(
-        painter: RPSCustomPainter(),
-        size: Size(100, (100 * 1.6935483870967742).toDouble()),
-        child: Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(8.0)),
-          padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 13),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: AppTextStyle.appTitlew500s12(Colors.white),
-              ),
-              const SizedBox(
-                height: 2,
-              ),
-              Text(
-                peserta,
-                style: AppTextStyle.appTitlew400s7(Colors.white70),
-              ),
-              const SizedBox(
-                height: 12,
-              ),
-              Image.asset(
-                imgex,
-                width: 110,
-              ),
-              const SizedBox(
-                height: 8,
-              ),
-              const SizedBox(
-                height: 8,
-              ),
-              Row(
-                children: [
-                  const Icon(
-                    Icons.calendar_month,
-                    size: 12,
-                    color: Colors.white,
-                  ),
-                  const SizedBox(
-                    width: 4,
-                  ),
-                  Text(
-                    day,
-                    style: AppTextStyle.appTitlew400s8(Colors.white),
-                  )
-                ],
-              ),
-              const SizedBox(
-                height: 4,
-              ),
-              Row(
-                children: [
-                  const Icon(
-                    Icons.location_on,
-                    size: 12,
-                    color: Colors.white,
-                  ),
-                  const SizedBox(
-                    width: 4,
-                  ),
-                  Text(
-                    location,
-                    style: AppTextStyle.appTitlew400s8(Colors.white),
-                  )
-                ],
-              )
-            ],
-          ),
+      child: Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8.0), color: Color(0xff0962E0)),
+        padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 13),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              title,
+              style: AppTextStyle.appTitlew500s12(Colors.white),
+            ),
+            const SizedBox(
+              height: 2,
+            ),
+            Text(
+              peserta,
+              style: AppTextStyle.appTitlew400s7(Colors.white70),
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+            Image.asset(
+              imgex,
+              width: 110,
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            Row(
+              children: [
+                const Icon(
+                  Icons.calendar_month,
+                  size: 12,
+                  color: Colors.white,
+                ),
+                const SizedBox(
+                  width: 4,
+                ),
+                Text(
+                  day,
+                  style: AppTextStyle.appTitlew400s8(Colors.white),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 4,
+            ),
+            Row(
+              children: [
+                const Icon(
+                  Icons.location_on,
+                  size: 12,
+                  color: Colors.white,
+                ),
+                const SizedBox(
+                  width: 4,
+                ),
+                Text(
+                  location,
+                  style: AppTextStyle.appTitlew400s8(Colors.white),
+                )
+              ],
+            )
+          ],
         ),
       ),
     );

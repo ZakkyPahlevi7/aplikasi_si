@@ -1,3 +1,4 @@
+import 'package:aplikasi_si/pages/edit_profile/loginuser.dart';
 import 'package:flutter/material.dart';
 
 import '../pages/page.dart';
@@ -24,7 +25,7 @@ class _DashboardHeaderState extends State<DashboardHeader> {
           GestureDetector(
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const ProfilePage()));
+                  MaterialPageRoute(builder: (context) => const LoginPage()));
             },
             child: Image.asset(
               'assets/images/profile.png',

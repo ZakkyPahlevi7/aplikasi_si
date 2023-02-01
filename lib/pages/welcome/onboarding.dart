@@ -85,7 +85,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                 MaterialPageRoute(builder: (context) => BottomNavbar()));
           },
           child: Text(
-            'Masuk',
+            'Ayo Mulai',
             style: AppTextStyle.appTitlew800s16(Color(0xff0962E0)),
           ),
         ),
