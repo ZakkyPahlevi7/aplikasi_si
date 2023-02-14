@@ -1,5 +1,10 @@
+import 'package:aplikasi_si/bottom_navbar.dart';
 import 'package:aplikasi_si/component/extra_card.dart';
+import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_badminton.dart';
 import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_basket.dart';
+import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_futsal.dart';
+import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_naghdam.dart';
+import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_paskibra.dart';
 import 'package:flutter/material.dart';
 
 import '../theme/theme.dart';
@@ -27,6 +32,62 @@ class _ExtraSectionState extends State<ExtraSection> {
         const SizedBox(
           height: 10,
         ),
+        // ListView.builder(
+        //   clipBehavior: Clip.hardEdge,
+        //   scrollDirection: Axis.horizontal,
+        //   itemBuilder: (BuildContext context, int index) {
+        //     return ExtraCard(
+        //       img: index == 0
+        //           ? 'assets/images/basket.png'
+        //           : index == 1
+        //               ? 'assets/images/pramuka.png'
+        //               : index == 2
+        //                   ? 'assets/images/voli.png'
+        //                   : index == 3
+        //                       ? 'assets/images/tari.png'
+        //                       : index == 4
+        //                           ? 'assets/images/tari.png'
+        //                           : 'assets/images/tari.png',
+        //       name: index == 0
+        //           ? 'Kepala Sekolah'
+        //           : index == 1
+        //               ? 'Wakil Kepala'
+        //               : index == 2
+        //                   ? 'Data Guru'
+        //                   : index == 3
+        //                       ? 'Wali Kelas'
+        //                       : index == 4
+        //                           ? 'Data Staff'
+        //                           : 'Data Siswa',
+        //       jadwal: index == 0
+        //           ? 'Kepala Sekolah'
+        //           : index == 1
+        //               ? 'Wakil Kepala'
+        //               : index == 2
+        //                   ? 'Data Guru'
+        //                   : index == 3
+        //                       ? 'Wali Kelas'
+        //                       : index == 4
+        //                           ? 'Data Staff'
+        //                           : 'Data Siswa',
+        // pageRouteE: index == 0
+        //     ? const DetailExtraBadminton()
+        //     : index == 1
+        //         ? const DetailExtraBasket()
+        //         : index == 2
+        //             ? const DetailExtraFutsal()
+        //             : index == 3
+        //                 ? const DetailExtraNaghdam()
+        //                 : index == 4
+        //                     ? const DetailExtraPaskibra()
+        //                     : const BottomNavbar()
+        //     );
+        //   },
+        //   itemCount: 5,
+        // )
+        // List.generate(5, (index) {
+        //   return ExtraCard(img: index == 0, name: index == 0, jadwal: index == 0, pageRouteE: index == 0);
+        // })
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Container(

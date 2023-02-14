@@ -46,7 +46,7 @@ class _DashboardPageState extends State<DashboardPage> {
               child: CircularProgressIndicator(),
             )
           : ListView.builder(
-              itemCount: terserah.length,
+              itemCount: 1,
               itemBuilder: (BuildContext context, int index) {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,8 +57,8 @@ class _DashboardPageState extends State<DashboardPage> {
                     ),
                     CarouselWithDotsPage(
                       gambarheader: terserah,
-                        // imgList: imgList,
-                        ),
+                      // imgList: imgList,
+                    ),
                     const SizedBox(
                       height: 18,
                     ),
