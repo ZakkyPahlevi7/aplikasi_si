@@ -1,12 +1,15 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:aplikasi_si/pages/edit_profile/google_sign_in.dart';
 import 'package:aplikasi_si/pages/edit_profile/loginuser.dart';
 import 'package:aplikasi_si/pages/edit_profile/tentangaplikasi.dart';
 import 'package:aplikasi_si/theme/theme.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:aplikasi_si/bottom_navbar.dart';
 import 'package:aplikasi_si/pages/page.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:aplikasi_si/main.dart';
 
@@ -30,6 +33,8 @@ class _ProfilePageState extends State<ProfilePage> {
 
   @override
   Widget build(BuildContext context) {
+    final user = FirebaseAuth.instance.currentUser!;
+
     return Scaffold(
       backgroundColor: Color(0xff0962E0),
       body: Column(
@@ -45,7 +50,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const BottomNavbar()));
+                                  builder: (context) => BottomNavbar()));
                         },
                         child: const Icon(
                           Icons.arrow_back_ios,
@@ -202,7 +207,37 @@ class _ProfilePageState extends State<ProfilePage> {
                 const SizedBox(
                   height: 10,
                 ),
-                logoutfungsi(),
+                GestureDetector(
+                  onTap: () {
+                    final provider = Provider.of<GoogleSignInProvider>(context,
+                        listen: false);
+                    provider.logout();
+                  },
+                  child: Row(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(14.0),
+                            color: const Color(0xffD1D1D1)),
+                        padding: const EdgeInsets.all(9),
+                        child: const Icon(
+                          Icons.logout,
+                          color: Colors.black,
+                          size: 36,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 22,
+                      ),
+                      Text(
+                        'Keluar',
+                        style: AppTextStyle.appTitlew500s16(),
+                      ),
+                      const Spacer(),
+                      const Icon(Icons.arrow_forward_ios)
+                    ],
+                  ),
+                ),
                 const SizedBox(
                   height: 17,
                 )

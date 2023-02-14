@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "727081225951",
-    "project_id": "aplikasi-ta-8e587",
-    "storage_bucket": "aplikasi-ta-8e587.appspot.com"
+    "project_number": "977269895015",
+    "project_id": "signin-ta",
+    "storage_bucket": "signin-ta.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:727081225951:android:d1067cb953b90b17c5636a",
+        "mobilesdk_app_id": "1:977269895015:android:0b3294f294a69c085989c2",
         "android_client_info": {
           "package_name": "com.example.aplikasi_si"
         }
       },
       "oauth_client": [
         {
-          "client_id": "727081225951-kksk2v6msdftf28p3oidjknf0serkqs0.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.aplikasi_si",
-            "certificate_hash": "248c2393d9602be42d28a6dbc7a9a813cd19888e"
-          }
-        },
-        {
-          "client_id": "727081225951-msmpd1bu5asf7kiso4hhrq1md4kvlccd.apps.googleusercontent.com",
+          "client_id": "977269895015-ashi56hn728q8gu6ka4s16jjets09jsl.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBD-RqX02zyt2slNE2Hgy6Y-l9gUGp8FdY"
+          "current_key": "AIzaSyBu4cvzgAykahs38xCdGUHT424tuQfn0Yc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "727081225951-l8nm98esub6nvajl5qjq3i1o8t3pa8gt.apps.googleusercontent.com",
+              "client_id": "977269895015-7jruoaq72hl6p1amcmr88kv7nch78mpi.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
