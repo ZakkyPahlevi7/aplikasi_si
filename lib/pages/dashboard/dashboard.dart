@@ -5,7 +5,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../generateapi.dart';
 import '../../main.dart';
 import 'package:flutter/material.dart';
-import '../../model.dart';
+import '../../model/model_header.dart';
 import '../page.dart';
 import 'package:aplikasi_si/theme/theme.dart';
 

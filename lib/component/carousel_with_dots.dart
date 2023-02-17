@@ -4,7 +4,7 @@ import 'package:aplikasi_si/main.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-import '../model.dart';
+import '../model/model_header.dart';
 
 class CarouselWithDotsPage extends StatefulWidget {
   final List<Datum> gambarheader;
