@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:aplikasi_si/urlconfig.dart';
 import 'package:http/http.dart' as http;
 
-import 'model.dart';
+import 'model/model_header.dart';
 
 class generateapi {
   Future<Fotoheader> getapi() async {
