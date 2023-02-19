@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class DetailExtraBasket extends StatefulWidget {
-  const DetailExtraBasket({super.key});
+class DetailExtraPage extends StatefulWidget {
+  const DetailExtraPage({super.key});
 
   @override
-  State<DetailExtraBasket> createState() => _DetailExtraBasketState();
+  State<DetailExtraPage> createState() => _DetailExtraPageState();
 }
 
-class _DetailExtraBasketState extends State<DetailExtraBasket> {
+class _DetailExtraPageState extends State<DetailExtraPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(

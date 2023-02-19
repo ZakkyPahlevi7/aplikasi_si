@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:aplikasi_si/component/component.dart';
+import 'package:aplikasi_si/pages/event/detail_event.dart';
 import 'package:flutter/material.dart';
 
 import '../theme/app_text_styles.dart';
@@ -29,6 +30,7 @@ class EventexSection extends StatelessWidget {
               time: '09:00 - 11:00',
               day: '04 Oktober 2022',
               location: 'Halaman Sekolah',
+              pageRouteE: DetailEventPage(),
             ),
             Spacer(),
             Container(
@@ -40,6 +42,7 @@ class EventexSection extends StatelessWidget {
                 time: '09:00 - 11:00',
                 day: '04 Oktober 2022',
                 location: 'Halaman Sekolah',
+                pageRouteE: DetailEventPage(),
               ),
             )
           ],
@@ -56,6 +59,7 @@ class EventexSection extends StatelessWidget {
               time: '09:00 - 11:00',
               day: '04 Oktober 2022',
               location: 'Halaman Sekolah',
+              pageRouteE: DetailEventPage(),
             ),
             Spacer(),
             Container(
@@ -67,6 +71,7 @@ class EventexSection extends StatelessWidget {
                 time: '09:00 - 11:00',
                 day: '04 Oktober 2022',
                 location: 'Halaman Sekolah',
+                pageRouteE: DetailEventPage(),
               ),
             )
           ],
@@ -83,6 +88,7 @@ class EventexSection extends StatelessWidget {
               time: '09:00 - 11:00',
               day: '04 Oktober 2022',
               location: 'Halaman Sekolah',
+              pageRouteE: DetailEventPage(),
             ),
             Spacer(),
             Container(
@@ -94,6 +100,7 @@ class EventexSection extends StatelessWidget {
                 time: '09:00 - 11:00',
                 day: '04 Oktober 2022',
                 location: 'Halaman Sekolah',
+                pageRouteE: DetailEventPage(),
               ),
             ),
           ],

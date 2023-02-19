@@ -7,47 +7,47 @@
 import 'package:meta/meta.dart';
 import 'dart:convert';
 
-Fotoheader fotoheaderFromJson(String str) =>
-    Fotoheader.fromJson(json.decode(str));
+HeaderModel fotoheaderFromJson(String str) =>
+    HeaderModel.fromJson(json.decode(str));
 
-String fotoheaderToJson(Fotoheader data) => json.encode(data.toJson());
+String fotoheaderToJson(HeaderModel data) => json.encode(data.toJson());
 
-class Fotoheader {
-  Fotoheader({
-    required this.status,
-    required this.data,
+class HeaderModel {
+  HeaderModel({
+    this.status,
+    this.data,
   });
 
-  String status;
-  List<Datum> data;
+  String? status;
+  List<HeaderData>? data;
 
-  factory Fotoheader.fromJson(Map<String, dynamic> json) => Fotoheader(
+  factory HeaderModel.fromJson(Map<String, dynamic> json) => HeaderModel(
         status: json["status"],
-        data: List<Datum>.from(json["data"].map((x) => Datum.fromJson(x))),
+        data: List<HeaderData>.from(json["data"].map((x) => HeaderData.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
         "status": status,
-        "data": List<dynamic>.from(data.map((x) => x.toJson())),
+        "data": List<dynamic>.from(data!.map((x) => x.toJson())),
       };
 }
 
-class Datum {
-  Datum({
-    required this.id,
-    required this.foto,
-    required this.createdAt,
-    required this.updatedAt,
-    required this.deletedAt,
+class HeaderData {
+  HeaderData({
+    this.id,
+    this.foto,
+    this.createdAt,
+    this.updatedAt,
+    this.deletedAt,
   });
 
-  int id;
-  String foto;
+  int? id;
+  String? foto;
   dynamic createdAt;
   dynamic updatedAt;
   dynamic deletedAt;
 
-  factory Datum.fromJson(Map<String, dynamic> json) => Datum(
+  factory HeaderData.fromJson(Map<String, dynamic> json) => HeaderData(
         id: json["id"],
         foto: json["foto"],
         createdAt: json["created_at"] == null ? '' : json["created_at"],

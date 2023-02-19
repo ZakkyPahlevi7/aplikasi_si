@@ -7,10 +7,10 @@ import 'package:http/http.dart' as http;
 import 'model/model_header.dart';
 
 class generateapi {
-  Future<Fotoheader> getapi() async {
-    final rest = await http.get(Uri.parse(UrlConfig.besturl));
+  Future<HeaderModel> getapi() async {
+    final rest = await http.get(Uri.parse(UrlConfig.baseUrl()+'sekolah'));
     if (rest.statusCode == 200) {
-      return Fotoheader.fromJson(jsonDecode(rest.body));
+      return HeaderModel.fromJson(jsonDecode(rest.body));
     } else {
       print(rest.statusCode);
       throw HttpException('ERROR COK');

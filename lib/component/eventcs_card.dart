@@ -11,6 +11,7 @@ class EventcsCard extends StatelessWidget {
   String time;
   String day;
   String location;
+  var pageRouteE;
 
   EventcsCard({
     Key? key,
@@ -20,78 +21,85 @@ class EventcsCard extends StatelessWidget {
     required this.time,
     required this.day,
     required this.location,
+    required this.pageRouteE
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(left: 28),
-      child: CustomPaint(
-        painter: RPSCustomPainter(),
-        size: Size(100, (100 * 1.6935483870967742).toDouble()),
-        child: Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(8.0)),
-          padding: const EdgeInsets.symmetric(vertical: 34, horizontal: 16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: AppTextStyle.appTitlew500s20(Colors.white),
-              ),
-              Text(
-                peserta,
-                style: AppTextStyle.appTitlew400s12(Colors.white70),
-              ),
-              const SizedBox(
-                height: 24,
-              ),
-              Image.asset(
-                img,
-                width: 160,
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              const SizedBox(
-                height: 12,
-              ),
-              Row(
-                children: [
-                  const Icon(
-                    Icons.calendar_month,
-                    size: 12,
-                    color: Colors.white,
-                  ),
-                  const SizedBox(
-                    width: 4,
-                  ),
-                  Text(
-                    day,
-                    style: AppTextStyle.appTitlew400s10(Colors.white),
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 4,
-              ),
-              Row(
-                children: [
-                  const Icon(
-                    Icons.location_on,
-                    size: 12,
-                    color: Colors.white,
-                  ),
-                  const SizedBox(
-                    width: 4,
-                  ),
-                  Text(
-                    location,
-                    style: AppTextStyle.appTitlew400s10(Colors.white),
-                  )
-                ],
-              )
-            ],
+      child: GestureDetector(
+        onTap: (){
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => pageRouteE));
+        },
+        child: CustomPaint(
+          painter: RPSCustomPainter(),
+          size: Size(100, (100 * 1.6935483870967742).toDouble()),
+          child: Container(
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(8.0)),
+            padding: const EdgeInsets.symmetric(vertical: 34, horizontal: 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: AppTextStyle.appTitlew500s20(Colors.white),
+                ),
+                Text(
+                  peserta,
+                  style: AppTextStyle.appTitlew400s12(Colors.white70),
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                Image.asset(
+                  img,
+                  width: 160,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const SizedBox(
+                  height: 12,
+                ),
+                Row(
+                  children: [
+                    const Icon(
+                      Icons.calendar_month,
+                      size: 12,
+                      color: Colors.white,
+                    ),
+                    const SizedBox(
+                      width: 4,
+                    ),
+                    Text(
+                      day,
+                      style: AppTextStyle.appTitlew400s10(Colors.white),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 4,
+                ),
+                Row(
+                  children: [
+                    const Icon(
+                      Icons.location_on,
+                      size: 12,
+                      color: Colors.white,
+                    ),
+                    const SizedBox(
+                      width: 4,
+                    ),
+                    Text(
+                      location,
+                      style: AppTextStyle.appTitlew400s10(Colors.white),
+                    )
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ),

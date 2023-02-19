@@ -18,33 +18,6 @@ class DashboardHeader extends StatefulWidget {
 }
 
 class _DashboardHeaderState extends State<DashboardHeader> {
-  // final GoogleSignIn _googleSignIn = GoogleSignIn();
-
-  // @override
-  // void initState() {
-  //   super.initState();
-
-  // }
-
-  // void _checkLoginStatus() {
-  //   print('ERROR COK' + _googleSignIn.toString());
-
-  //   if (_googleSignIn.currentUser != null) {
-  //     Navigator.push(
-  //       context,
-  //       MaterialPageRoute(
-  //         builder: (context) => ProfilePage(),
-  //       ),
-  //     );
-  //   } else {
-  //     Navigator.push(
-  //       context,
-  //       MaterialPageRoute(
-  //         builder: (context) => LoginPage(),
-  //       ),
-  //     );
-  //   }
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -57,14 +30,16 @@ class _DashboardHeaderState extends State<DashboardHeader> {
             width: 60,
           ),
           const Spacer(),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const StreamPage()));
-            },
-            child: Image.asset(
-              'assets/images/profile.png',
-              width: 58,
+          CircleAvatar(
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const StreamPage()));
+              },
+              child: Image.asset(
+                'assets/images/profile.png',
+                width: 58,
+              ),
             ),
           )
         ],

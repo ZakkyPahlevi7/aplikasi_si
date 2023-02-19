@@ -29,6 +29,7 @@ class CivitasCard extends StatelessWidget {
             color: const Color(0xff0962E0)),
         padding: const EdgeInsets.symmetric(vertical: 4),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
               img,
