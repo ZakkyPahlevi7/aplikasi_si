@@ -4,7 +4,7 @@ import '../theme/theme.dart';
 
 // ignore: must_be_immutable
 class ExtraCard extends StatelessWidget {
-  // var pageRouteE;
+  var pageRouteE;
   String img;
   String name;
   String jadwal;
@@ -13,15 +13,15 @@ class ExtraCard extends StatelessWidget {
     required this.img,
     required this.name,
     required this.jadwal,
-    // required this.pageRouteE
+    required this.pageRouteE
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Navigator.push(
-        //     context, MaterialPageRoute(builder: (context) => pageRouteE));
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => pageRouteE));
       },
       child: Container(
         decoration: BoxDecoration(

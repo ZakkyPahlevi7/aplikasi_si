@@ -6,22 +6,23 @@ import 'package:aplikasi_si/model/model_civitas_kelas8b.dart';
 import 'package:aplikasi_si/model/model_civitas_kelas9a.dart';
 import 'package:aplikasi_si/model/model_civitas_kelas9b.dart';
 import 'package:aplikasi_si/model/model_civitas_kepala.dart';
+import 'package:aplikasi_si/model/model_civitas_wakilkepala.dart';
 import 'package:get/get.dart';
 
 import '../model/model_civitas_kelas7b.dart';
 import '../urlconfig.dart';
 
-class KepalaController extends GetxController{
+class WakilKepalaController extends GetxController{
   var isLoading = true.obs;
-  var kepala = <KepalaData>[].obs;
+  var wakilKepala = <WakilKepalaData>[].obs;
 
   loadData({bool withLoading = false}) async {
     try {
       isLoading.value = true;
-      var response = await apiConfig.get(UrlConfig.baseUrl()+'kepala');
+      var response = await apiConfig.get(UrlConfig.baseUrl()+'wakilkepala');
       //debugPrint('response notes : $response');
       if(response!='error' && response!='fatal'){
-        kepala.value = KepalaModel.fromJson(jsonDecode(response.toString())).data!;
+        wakilKepala.value = WakilKepalaModel.fromJson(jsonDecode(response.toString())).data!;
         isLoading.value=false;
       }else{
         isLoading.value=false;

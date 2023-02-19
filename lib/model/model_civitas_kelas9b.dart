@@ -5,51 +5,51 @@
 import 'package:meta/meta.dart';
 import 'dart:convert';
 
-ApiKelas9B apiKelas9BFromJson(String str) =>
-    ApiKelas9B.fromJson(json.decode(str));
+Siswa9BModel apiKelas9BFromJson(String str) =>
+    Siswa9BModel.fromJson(json.decode(str));
 
-String apiKelas9BToJson(ApiKelas9B data) => json.encode(data.toJson());
+String apiKelas9BToJson(Siswa9BModel data) => json.encode(data.toJson());
 
-class ApiKelas9B {
-  ApiKelas9B({
-    required this.status,
-    required this.data,
+class Siswa9BModel {
+  Siswa9BModel({
+    this.status,
+    this.data,
   });
 
-  String status;
-  List<Datum> data;
+  String? status;
+  List<Siswa9BData>? data;
 
-  factory ApiKelas9B.fromJson(Map<String, dynamic> json) => ApiKelas9B(
+  factory Siswa9BModel.fromJson(Map<String, dynamic> json) => Siswa9BModel(
         status: json["status"],
-        data: List<Datum>.from(json["data"].map((x) => Datum.fromJson(x))),
+        data: List<Siswa9BData>.from(json["data"].map((x) => Siswa9BData.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
         "status": status,
-        "data": List<dynamic>.from(data.map((x) => x.toJson())),
+        "data": List<dynamic>.from(data!.map((x) => x.toJson())),
       };
 }
 
-class Datum {
-  Datum({
-    required this.id,
-    required this.foto,
-    required this.nama,
-    required this.kelas,
-    required this.createdAt,
-    required this.updatedAt,
-    required this.deletedAt,
+class Siswa9BData {
+  Siswa9BData({
+    this.id,
+    this.foto,
+    this.nama,
+    this.kelas,
+    this.createdAt,
+    this.updatedAt,
+    this.deletedAt,
   });
 
-  int id;
-  String foto;
-  String nama;
-  String kelas;
-  DateTime createdAt;
-  DateTime updatedAt;
+  int? id;
+  String? foto;
+  String? nama;
+  String? kelas;
+  DateTime? createdAt;
+  DateTime? updatedAt;
   dynamic deletedAt;
 
-  factory Datum.fromJson(Map<String, dynamic> json) => Datum(
+  factory Siswa9BData.fromJson(Map<String, dynamic> json) => Siswa9BData(
         id: json["id"],
         foto: json["foto"],
         nama: json["nama"],
@@ -64,8 +64,8 @@ class Datum {
         "foto": foto,
         "nama": nama,
         "kelas": kelas,
-        "created_at": createdAt.toIso8601String(),
-        "updated_at": updatedAt.toIso8601String(),
+        "created_at": createdAt!.toIso8601String(),
+        "updated_at": updatedAt!.toIso8601String(),
         "deleted_at": deletedAt,
       };
 }

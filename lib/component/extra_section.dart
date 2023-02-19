@@ -97,19 +97,27 @@ class _ExtraSectionState extends State<ExtraSection> {
                 ExtraCard(
                     img: 'assets/images/basket.png',
                     name: 'Extrakurikuler Basket',
-                    jadwal: 'Setiap Hari Senin 15:00 - 17:00'),
+                    jadwal: 'Setiap Hari Senin 15:00 - 17:00',
+                  pageRouteE: const DetailExtraPage(),
+                ),
                 ExtraCard(
                     img: 'assets/images/pramuka.png',
                     name: 'Extrakurikuler Pramuka',
-                    jadwal: 'Setiap Hari Senin 14:00 - 16:00'),
+                    jadwal: 'Setiap Hari Senin 14:00 - 16:00',
+                  pageRouteE: const DetailExtraPaskibra(),
+                ),
                 ExtraCard(
                     img: 'assets/images/voli.png',
                     name: 'Extrakurikuler Volly',
-                    jadwal: 'Setiap Hari Senin 15:00 - 17:00'),
+                    jadwal: 'Setiap Hari Senin 15:00 - 17:00',
+                  pageRouteE: const DetailExtraBadminton(),
+                ),
                 ExtraCard(
                     img: 'assets/images/tari.png',
                     name: 'Extrakurikuler Tari',
-                    jadwal: 'Setiap Hari Senin 14:00 - 15:00'),
+                    jadwal: 'Setiap Hari Senin 14:00 - 15:00',
+                  pageRouteE: const DetailExtraNaghdam(),
+                ),
                 const SizedBox(
                   width: 26,
                 )
