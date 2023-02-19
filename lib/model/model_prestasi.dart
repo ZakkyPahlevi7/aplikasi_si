@@ -5,50 +5,50 @@
 import 'package:meta/meta.dart';
 import 'dart:convert';
 
-Apiprestasi apiprestasiFromJson(String str) => Apiprestasi.fromJson(json.decode(str));
+PrestasiModel apiprestasiFromJson(String str) => PrestasiModel.fromJson(json.decode(str));
 
-String apiprestasiToJson(Apiprestasi data) => json.encode(data.toJson());
+String apiprestasiToJson(PrestasiModel data) => json.encode(data.toJson());
 
-class Apiprestasi {
-    Apiprestasi({
-        required this.status,
-        required this.data,
+class PrestasiModel {
+    PrestasiModel({
+        this.status,
+        this.data,
     });
 
-    String status;
-    List<Datum> data;
+    String? status;
+    List<PrestasiData>? data;
 
-    factory Apiprestasi.fromJson(Map<String, dynamic> json) => Apiprestasi(
+    factory PrestasiModel.fromJson(Map<String, dynamic> json) => PrestasiModel(
         status: json["status"],
-        data: List<Datum>.from(json["data"].map((x) => Datum.fromJson(x))),
+        data: List<PrestasiData>.from(json["data"].map((x) => PrestasiData.fromJson(x))),
     );
 
     Map<String, dynamic> toJson() => {
         "status": status,
-        "data": List<dynamic>.from(data.map((x) => x.toJson())),
+        "data": List<dynamic>.from(data!.map((x) => x.toJson())),
     };
 }
 
-class Datum {
-    Datum({
-        required this.id,
-        required this.tingkat,
-        required this.lomba,
-        required this.juaraId,
-        required this.createdAt,
-        required this.updatedAt,
-        required this.deletedAt,
+class PrestasiData {
+    PrestasiData({
+        this.id,
+        this.tingkat,
+        this.lomba,
+        this.juaraId,
+        this.createdAt,
+        this.updatedAt,
+        this.deletedAt,
     });
 
-    int id;
-    String tingkat;
-    String lomba;
-    int juaraId;
-    DateTime createdAt;
-    DateTime updatedAt;
+    int? id;
+    String? tingkat;
+    String? lomba;
+    int? juaraId;
+    DateTime? createdAt;
+    DateTime? updatedAt;
     dynamic deletedAt;
 
-    factory Datum.fromJson(Map<String, dynamic> json) => Datum(
+    factory PrestasiData.fromJson(Map<String, dynamic> json) => PrestasiData(
         id: json["id"],
         tingkat: json["tingkat"],
         lomba: json["lomba"],
@@ -63,8 +63,8 @@ class Datum {
         "tingkat": tingkat,
         "lomba": lomba,
         "juara_id": juaraId,
-        "created_at": createdAt.toIso8601String(),
-        "updated_at": updatedAt.toIso8601String(),
+        "created_at": createdAt!.toIso8601String(),
+        "updated_at": updatedAt!.toIso8601String(),
         "deleted_at": deletedAt,
     };
 }

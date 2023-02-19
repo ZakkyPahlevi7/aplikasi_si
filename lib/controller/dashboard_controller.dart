@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:aplikasi_si/component/component.dart';
 import 'package:aplikasi_si/model/model_header.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -6,14 +9,15 @@ import '../urlconfig.dart';
 
 class DashboardController extends GetxController{
   var isLoading = true.obs;
-  var notes = FotoHeaderModel().obs;
-  loadData() async {
+  var header = <HeaderData>[].obs;
+
+  loadData({bool withLoading = false}) async {
     try {
       isLoading.value = true;
-      var response = await apiConfig.get(apiConfig.baseUrl()+'v2/crm/project/notes/0');
+      var response = await apiConfig.get(UrlConfig.baseUrl()+'sekolah');
       //debugPrint('response notes : $response');
       if(response!='error' && response!='fatal'){
-        notes.value = NotesModel.fromJson(jsonDecode(response));
+        header.value = HeaderModel.fromJson(jsonDecode(response.toString())).data!;
         isLoading.value=false;
       }else{
         isLoading.value=false;

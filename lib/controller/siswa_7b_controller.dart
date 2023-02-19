@@ -15,7 +15,7 @@ class Siswa7AController extends GetxController{
       var response = await apiConfig.get(UrlConfig.baseUrl()+'kelas7a');
       //debugPrint('response notes : $response');
       if(response!='error' && response!='fatal'){
-        siswa_7a.value = Siswa7AModel.fromJson(jsonDecode(response.toString())).data;
+        siswa_7a.value = Siswa7AModel.fromJson(jsonDecode(response.toString())).data!;
         isLoading.value=false;
       }else{
         isLoading.value=false;

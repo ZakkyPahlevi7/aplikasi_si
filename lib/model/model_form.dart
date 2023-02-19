@@ -5,48 +5,48 @@
 import 'package:meta/meta.dart';
 import 'dart:convert';
 
-Apiform apiformFromJson(String str) => Apiform.fromJson(json.decode(str));
+FormModel apiformFromJson(String str) => FormModel.fromJson(json.decode(str));
 
-String apiformToJson(Apiform data) => json.encode(data.toJson());
+String apiformToJson(FormModel data) => json.encode(data.toJson());
 
-class Apiform {
-    Apiform({
-        required this.status,
-        required this.data,
+class FormModel {
+    FormModel({
+        this.status,
+        this.data,
     });
 
-    String status;
-    List<Datum> data;
+    String? status;
+    List<FormsData>? data;
 
-    factory Apiform.fromJson(Map<String, dynamic> json) => Apiform(
+    factory FormModel.fromJson(Map<String, dynamic> json) => FormModel(
         status: json["status"],
-        data: List<Datum>.from(json["data"].map((x) => Datum.fromJson(x))),
+        data: List<FormsData>.from(json["data"].map((x) => FormsData.fromJson(x))),
     );
 
     Map<String, dynamic> toJson() => {
         "status": status,
-        "data": List<dynamic>.from(data.map((x) => x.toJson())),
+        "data": List<dynamic>.from(data!.map((x) => x.toJson())),
     };
 }
 
-class Datum {
-    Datum({
-        required this.id,
-        required this.createdAt,
-        required this.updatedAt,
-        required this.judul,
-        required this.file,
-        required this.deletedAt,
+class FormsData {
+    FormsData({
+       this.id,
+       this.createdAt,
+       this.updatedAt,
+       this.judul,
+       this.file,
+       this.deletedAt,
     });
 
-    int id;
-    DateTime createdAt;
-    DateTime updatedAt;
-    String judul;
-    String file;
+    int? id;
+    DateTime? createdAt;
+    DateTime? updatedAt;
+    String? judul;
+    String? file;
     dynamic deletedAt;
 
-    factory Datum.fromJson(Map<String, dynamic> json) => Datum(
+    factory FormsData.fromJson(Map<String, dynamic> json) => FormsData(
         id: json["id"],
         createdAt: DateTime.parse(json["created_at"]),
         updatedAt: DateTime.parse(json["updated_at"]),
@@ -57,8 +57,8 @@ class Datum {
 
     Map<String, dynamic> toJson() => {
         "id": id,
-        "created_at": createdAt.toIso8601String(),
-        "updated_at": updatedAt.toIso8601String(),
+        "created_at": createdAt!.toIso8601String(),
+        "updated_at": updatedAt!.toIso8601String(),
         "judul": judul,
         "file": file,
         "deleted_at": deletedAt,

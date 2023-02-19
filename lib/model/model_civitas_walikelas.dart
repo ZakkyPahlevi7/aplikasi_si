@@ -5,50 +5,50 @@
 import 'package:meta/meta.dart';
 import 'dart:convert';
 
-ApiCivitasWaliKelas apiCivitasWaliKelasFromJson(String str) => ApiCivitasWaliKelas.fromJson(json.decode(str));
+WaliKelasModel apiCivitasWaliKelasFromJson(String str) => WaliKelasModel.fromJson(json.decode(str));
 
-String apiCivitasWaliKelasToJson(ApiCivitasWaliKelas data) => json.encode(data.toJson());
+String apiCivitasWaliKelasToJson(WaliKelasModel data) => json.encode(data.toJson());
 
-class ApiCivitasWaliKelas {
-    ApiCivitasWaliKelas({
-        required this.status,
-        required this.data,
+class WaliKelasModel {
+    WaliKelasModel({
+        this.status,
+        this.data,
     });
 
-    String status;
-    List<Datum> data;
+    String? status;
+    List<WaliKelasData>? data;
 
-    factory ApiCivitasWaliKelas.fromJson(Map<String, dynamic> json) => ApiCivitasWaliKelas(
+    factory WaliKelasModel.fromJson(Map<String, dynamic> json) => WaliKelasModel(
         status: json["status"],
-        data: List<Datum>.from(json["data"].map((x) => Datum.fromJson(x))),
+        data: List<WaliKelasData>.from(json["data"].map((x) => WaliKelasData.fromJson(x))),
     );
 
     Map<String, dynamic> toJson() => {
         "status": status,
-        "data": List<dynamic>.from(data.map((x) => x.toJson())),
+        "data": List<dynamic>.from(data!.map((x) => x.toJson())),
     };
 }
 
-class Datum {
-    Datum({
-        required this.id,
-        required this.foto,
-        required this.nama,
-        required this.kelas,
-        required this.createdAt,
-        required this.updatedAt,
-        required this.deletedAt,
+class WaliKelasData {
+    WaliKelasData({
+        this.id,
+        this.foto,
+        this.nama,
+        this.kelas,
+        this.createdAt,
+        this.updatedAt,
+        this.deletedAt,
     });
 
-    int id;
-    String foto;
-    String nama;
-    String kelas;
-    DateTime createdAt;
-    DateTime updatedAt;
+    int? id;
+    String? foto;
+    String? nama;
+    String? kelas;
+    DateTime? createdAt;
+    DateTime? updatedAt;
     dynamic deletedAt;
 
-    factory Datum.fromJson(Map<String, dynamic> json) => Datum(
+    factory WaliKelasData.fromJson(Map<String, dynamic> json) => WaliKelasData(
         id: json["id"],
         foto: json["foto"],
         nama: json["nama"],
@@ -63,8 +63,8 @@ class Datum {
         "foto": foto,
         "nama": nama,
         "kelas": kelas,
-        "created_at": createdAt.toIso8601String(),
-        "updated_at": updatedAt.toIso8601String(),
+        "created_at": createdAt!.toIso8601String(),
+        "updated_at": updatedAt!.toIso8601String(),
         "deleted_at": deletedAt,
     };
 }

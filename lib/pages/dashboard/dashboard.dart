@@ -18,15 +18,15 @@ class DashboardPage extends StatefulWidget {
 
 class _DashboardPageState extends State<DashboardPage> {
   bool isloading = false;
-  List<Datum> terserah = [];
+  List<HeaderData> terserah = [];
 
   Future getApi() async {
     setState(() {
       isloading = true;
     });
-    Fotoheader apa = await generateapi().getapi();
+    HeaderModel apa = await generateapi().getapi();
     setState(() {
-      terserah = apa.data;
+      terserah = apa.data!;
       isloading = false;
     });
   }

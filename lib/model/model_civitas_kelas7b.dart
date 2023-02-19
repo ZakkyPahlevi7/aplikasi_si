@@ -5,50 +5,50 @@
 import 'package:meta/meta.dart';
 import 'dart:convert';
 
-ApiKelas7B apiKelas7BFromJson(String str) => ApiKelas7B.fromJson(json.decode(str));
+Siswa7BModel apiKelas7BFromJson(String str) => Siswa7BModel.fromJson(json.decode(str));
 
-String apiKelas7BToJson(ApiKelas7B data) => json.encode(data.toJson());
+String apiKelas7BToJson(Siswa7BModel data) => json.encode(data.toJson());
 
-class ApiKelas7B {
-    ApiKelas7B({
-        required this.status,
-        required this.data,
+class Siswa7BModel {
+    Siswa7BModel({
+      this.status,
+      this.data,
     });
 
-    String status;
-    List<Datum> data;
+    String? status;
+    List<Siswa7BData>? data;
 
-    factory ApiKelas7B.fromJson(Map<String, dynamic> json) => ApiKelas7B(
+    factory Siswa7BModel.fromJson(Map<String, dynamic> json) => Siswa7BModel(
         status: json["status"],
-        data: List<Datum>.from(json["data"].map((x) => Datum.fromJson(x))),
+        data: List<Siswa7BData>.from(json["data"].map((x) => Siswa7BData.fromJson(x))),
     );
 
     Map<String, dynamic> toJson() => {
         "status": status,
-        "data": List<dynamic>.from(data.map((x) => x.toJson())),
+        "data": List<dynamic>.from(data!.map((x) => x.toJson())),
     };
 }
 
-class Datum {
-    Datum({
-        required this.id,
-        required this.foto,
-        required this.nama,
-        required this.kelas,
-        required this.createdAt,
-        required this.updatedAt,
-        required this.deletedAt,
+class Siswa7BData {
+    Siswa7BData({
+        this.id,
+        this.foto,
+        this.nama,
+        this.kelas,
+        this.createdAt,
+        this.updatedAt,
+        this.deletedAt,
     });
 
-    int id;
-    String foto;
-    String nama;
-    String kelas;
-    DateTime createdAt;
-    DateTime updatedAt;
+    int? id;
+    String? foto;
+    String? nama;
+    String? kelas;
+    DateTime? createdAt;
+    DateTime? updatedAt;
     dynamic deletedAt;
 
-    factory Datum.fromJson(Map<String, dynamic> json) => Datum(
+    factory Siswa7BData.fromJson(Map<String, dynamic> json) => Siswa7BData(
         id: json["id"],
         foto: json["foto"],
         nama: json["nama"],
@@ -63,8 +63,8 @@ class Datum {
         "foto": foto,
         "nama": nama,
         "kelas": kelas,
-        "created_at": createdAt.toIso8601String(),
-        "updated_at": updatedAt.toIso8601String(),
+        "created_at": createdAt!.toIso8601String(),
+        "updated_at": updatedAt!.toIso8601String(),
         "deleted_at": deletedAt,
     };
 }
