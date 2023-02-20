@@ -1,17 +1,24 @@
-import 'package:aplikasi_si/controller/wali_kelas_controller.dart';
+import 'package:aplikasi_si/controller/siswa_7a_controller.dart';
+import 'package:aplikasi_si/controller/siswa_7b_controller.dart';
+import 'package:aplikasi_si/controller/siswa_8a_controller.dart';
+import 'package:aplikasi_si/controller/siswa_8b_controller.dart';
+import 'package:aplikasi_si/controller/siswa_9a_controller.dart';
+import 'package:aplikasi_si/controller/siswa_9b_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:aplikasi_si/theme/theme.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import 'package:get/get.dart';
 
-class DetailWaliKelas extends StatefulWidget {
-  const DetailWaliKelas({Key? key}) : super(key: key);
+import '../../../theme/app_colors.dart';
+import '../../../theme/app_text_styles.dart';
+
+class Detail9B extends StatefulWidget {
+  const Detail9B({Key? key}) : super(key: key);
 
   @override
-  State<DetailWaliKelas> createState() => _DetailWaliKelasState();
+  State<Detail9B> createState() => _Detail9BState();
 }
 
-class _DetailWaliKelasState extends State<DetailWaliKelas> {
-  final WaliKelasController _waliKelasController = WaliKelasController();
+class _Detail9BState extends State<Detail9B> {
+  final Siswa9BController _siswa9bController = Siswa9BController();
 
   @override
   void initState() {
@@ -25,21 +32,21 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
   }
 
   Future<Null> _initData() async {
-    await _waliKelasController.loadData(withLoading: true);
+    await _siswa9bController.loadData(withLoading: true);
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.contactUsIconColor,
-        title: const Text('Wali Kelas'),
+        title: const Text('Kelas 9B'),
       ),
       backgroundColor: Colors.white,
       body: RefreshIndicator(
         onRefresh: onRefresh,
-        child: Obx(() => _waliKelasController.isLoading.value ? Center(child: CircularProgressIndicator()) :
+        child: Obx(() => _siswa9bController.isLoading.value ? Center(child: CircularProgressIndicator()) :
         ListView.builder(
-          itemCount: _waliKelasController.waliKelas.length,
+          itemCount: _siswa9bController.siswa_9b.length,
           itemBuilder: (BuildContext context, index){
             return Container(
               decoration: BoxDecoration(
@@ -73,14 +80,14 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        _waliKelasController.waliKelas[index].nama!,
+                        _siswa9bController.siswa_9b[index].nama!,
                         style: AppTextStyle.appTitlew700s14(),
                       ),
                       const SizedBox(
                         height: 2,
                       ),
                       Text(
-                        _waliKelasController.waliKelas[index].kelas!,
+                        _siswa9bController.siswa_9b[index].kelas!,
                         style: AppTextStyle.appTitlew400s12h13(),
                       )
                     ],
@@ -92,6 +99,5 @@ class _DetailWaliKelasState extends State<DetailWaliKelas> {
         ),
         ),
       ),
-    );
-  }
+    );  }
 }

@@ -6,15 +6,16 @@ import '../theme/theme.dart';
 class CardPrestasi extends StatelessWidget {
   String img;
   String juara;
-  String nama;
-  String kategori;
+  // String nama;
+  // String kategori;
 
   CardPrestasi(
       {Key? key,
       required this.img,
       required this.juara,
-      required this.nama,
-      required this.kategori})
+      // required this.nama,
+      // required this.kategori
+      })
       : super(key: key);
 
   @override
@@ -53,11 +54,11 @@ class CardPrestasi extends StatelessWidget {
                 overflow: TextOverflow.clip,
                 style: AppTextStyle.appTitlew700s10(),
               ),
-              Text(
-                nama,
-                style: AppTextStyle.appTitlew400s10(Colors.black),
-              ),
-              Text(kategori, style: AppTextStyle.appTitlew400s10(Colors.black)),
+              // Text(
+              //   nama,
+              //   style: AppTextStyle.appTitlew400s10(Colors.black),
+              // ),
+              // Text(kategori, style: AppTextStyle.appTitlew400s10(Colors.black)),
             ],
           )
         ],
