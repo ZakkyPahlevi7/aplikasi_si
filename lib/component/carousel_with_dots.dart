@@ -12,11 +12,12 @@ import '../model/model_header.dart';
 class CarouselWithDotsPage extends StatefulWidget {
   final List<HeaderData>? gambarheader;
   final DashboardController? dashboardController;
-  // final List<String> imgList;
+  final List<String> imgList;
   const CarouselWithDotsPage(
       {Key? key,
-      // required this.imgList,
-      this.gambarheader, this.dashboardController})
+      required this.imgList,
+      this.gambarheader,
+      this.dashboardController})
       : super(key: key);
   @override
   State<CarouselWithDotsPage> createState() => _CarouselWithDotsPageState();
@@ -41,7 +42,7 @@ class _CarouselWithDotsPageState extends State<CarouselWithDotsPage> {
     return Column(
       children: [
         CarouselSlider.builder(
-            itemCount: widget.gambarheader!.length,
+            itemCount: imgList.length,
             itemBuilder: (BuildContext context, int index, i) {
               return Container(
                 margin: const EdgeInsets.only(
@@ -53,9 +54,10 @@ class _CarouselWithDotsPageState extends State<CarouselWithDotsPage> {
                   ),
                   child: Stack(
                     children: [
-                      Image.network(
+                      Image.asset(
                         // _controller.header[index].foto!,
-                        widget.gambarheader![index].foto!,
+                        // widget.gambarheader![index].foto!,
+                        imgList[index],
                         fit: BoxFit.contain,
                         width: 900,
                       ),

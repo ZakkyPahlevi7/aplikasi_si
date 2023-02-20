@@ -1,10 +1,10 @@
 import 'package:aplikasi_si/bottom_navbar.dart';
 import 'package:aplikasi_si/component/extra_card.dart';
-import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_badminton.dart';
+import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_volly.dart';
 import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_basket.dart';
 import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_futsal.dart';
-import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_naghdam.dart';
-import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_paskibra.dart';
+import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_tari.dart';
+import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_pramuka.dart';
 import 'package:flutter/material.dart';
 
 import '../theme/theme.dart';
@@ -95,28 +95,34 @@ class _ExtraSectionState extends State<ExtraSection> {
             child: Row(
               children: [
                 ExtraCard(
-                    img: 'assets/images/basket.png',
-                    name: 'Extrakurikuler Basket',
-                    jadwal: 'Setiap Hari Senin 15:00 - 17:00',
+                  img: 'assets/images/basket.png',
+                  name: 'Extrakurikuler Basket',
+                  jadwal: 'Setiap Hari Senin 15:00 - 17:00',
                   pageRouteE: const DetailExtraPage(),
                 ),
                 ExtraCard(
-                    img: 'assets/images/pramuka.png',
-                    name: 'Extrakurikuler Pramuka',
-                    jadwal: 'Setiap Hari Senin 14:00 - 16:00',
-                  pageRouteE: const DetailExtraPaskibra(),
+                  img: 'assets/images/pramuka.png',
+                  name: 'Extrakurikuler Pramuka',
+                  jadwal: 'Setiap Hari Senin 14:00 - 16:00',
+                  pageRouteE: const DetailExtraPramuka(),
                 ),
                 ExtraCard(
-                    img: 'assets/images/voli.png',
-                    name: 'Extrakurikuler Volly',
-                    jadwal: 'Setiap Hari Senin 15:00 - 17:00',
-                  pageRouteE: const DetailExtraBadminton(),
+                  img: 'assets/images/badmintoon.png',
+                  name: 'Extrakurikuler Badmintoon',
+                  jadwal: 'Setiap Hari Senin 15:00 - 17:00',
+                  pageRouteE: const DetailExtraVolly(),
                 ),
                 ExtraCard(
-                    img: 'assets/images/tari.png',
-                    name: 'Extrakurikuler Tari',
-                    jadwal: 'Setiap Hari Senin 14:00 - 15:00',
-                  pageRouteE: const DetailExtraNaghdam(),
+                  img: 'assets/images/tari.png',
+                  name: 'Extrakurikuler Tari',
+                  jadwal: 'Setiap Hari Senin 14:00 - 15:00',
+                  pageRouteE: const DetailExtraTari(),
+                ),
+                ExtraCard(
+                  img: 'assets/images/futsal.png',
+                  name: 'Extrakurikuler Futsal',
+                  jadwal: 'Setiap Hari Senin 14:00 - 15:00',
+                  pageRouteE: const DetailExtraFutsal(),
                 ),
                 const SizedBox(
                   width: 26,
