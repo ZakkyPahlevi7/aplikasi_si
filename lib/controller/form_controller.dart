@@ -14,7 +14,7 @@ import 'package:get/get.dart';
 import '../model/model_civitas_kelas7b.dart';
 import '../urlconfig.dart';
 
-class KepalaController extends GetxController{
+class FormController extends GetxController{
   var isLoading = true.obs;
   var form = <FormsData>[].obs;
 

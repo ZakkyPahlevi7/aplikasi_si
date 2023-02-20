@@ -1,20 +1,21 @@
 import 'package:aplikasi_si/controller/siswa_7a_controller.dart';
 import 'package:aplikasi_si/controller/siswa_7b_controller.dart';
+import 'package:aplikasi_si/controller/siswa_8a_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../theme/app_colors.dart';
 import '../../../theme/app_text_styles.dart';
 
-class Detail7B extends StatefulWidget {
-  const Detail7B({Key? key}) : super(key: key);
+class Detail8A extends StatefulWidget {
+  const Detail8A({Key? key}) : super(key: key);
 
   @override
-  State<Detail7B> createState() => _Detail7BState();
+  State<Detail8A> createState() => _Detail8AState();
 }
 
-class _Detail7BState extends State<Detail7B> {
-  final Siswa7BController _siswa7bController = Siswa7BController();
+class _Detail8AState extends State<Detail8A> {
+  final Siswa8AController _siswa8aController = Siswa8AController();
 
   @override
   void initState() {
@@ -28,21 +29,21 @@ class _Detail7BState extends State<Detail7B> {
   }
 
   Future<Null> _initData() async {
-    await _siswa7bController.loadData(withLoading: true);
+    await _siswa8aController.loadData(withLoading: true);
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.contactUsIconColor,
-        title: const Text('Kelas 7B'),
+        title: const Text('Kelas 8A'),
       ),
       backgroundColor: Colors.white,
       body: RefreshIndicator(
         onRefresh: onRefresh,
-        child: Obx(() => _siswa7bController.isLoading.value ? Center(child: CircularProgressIndicator()) :
+        child: Obx(() => _siswa8aController.isLoading.value ? Center(child: CircularProgressIndicator()) :
         ListView.builder(
-          itemCount: _siswa7bController.siswa_7b.length,
+          itemCount: _siswa8aController.siswa_8a.length,
           itemBuilder: (BuildContext context, index){
             return Container(
               decoration: BoxDecoration(
@@ -76,14 +77,14 @@ class _Detail7BState extends State<Detail7B> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        _siswa7bController.siswa_7b[index].nama!,
+                        _siswa8aController.siswa_8a[index].nama!,
                         style: AppTextStyle.appTitlew700s14(),
                       ),
                       const SizedBox(
                         height: 2,
                       ),
                       Text(
-                        _siswa7bController.siswa_7b[index].kelas!,
+                        _siswa8aController.siswa_8a[index].kelas!,
                         style: AppTextStyle.appTitlew400s12h13(),
                       )
                     ],

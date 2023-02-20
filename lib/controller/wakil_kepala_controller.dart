@@ -27,6 +27,8 @@ class WakilKepalaController extends GetxController{
       }else{
         isLoading.value=false;
       }
+      print('ini ' + wakilKepala.length.toString());
+      print(UrlConfig.baseUrl()+'wakilkepala');
     } catch (e) {
       // //debugPrint('error notes => : $e');
     }

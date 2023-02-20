@@ -2,21 +2,22 @@ import 'package:aplikasi_si/controller/siswa_7a_controller.dart';
 import 'package:aplikasi_si/controller/siswa_7b_controller.dart';
 import 'package:aplikasi_si/controller/siswa_8a_controller.dart';
 import 'package:aplikasi_si/controller/siswa_8b_controller.dart';
+import 'package:aplikasi_si/controller/siswa_9a_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../theme/app_colors.dart';
 import '../../../theme/app_text_styles.dart';
 
-class Detail8B extends StatefulWidget {
-  const Detail8B({Key? key}) : super(key: key);
+class Detail9A extends StatefulWidget {
+  const Detail9A({Key? key}) : super(key: key);
 
   @override
-  State<Detail8B> createState() => _Detail8BState();
+  State<Detail9A> createState() => _Detail9AState();
 }
 
-class _Detail8BState extends State<Detail8B> {
-  final Siswa8BController _siswa8bController = Siswa8BController();
+class _Detail9AState extends State<Detail9A> {
+  final Siswa9AController _siswa9aController = Siswa9AController();
 
   @override
   void initState() {
@@ -30,21 +31,21 @@ class _Detail8BState extends State<Detail8B> {
   }
 
   Future<Null> _initData() async {
-    await _siswa8bController.loadData(withLoading: true);
+    await _siswa9aController.loadData(withLoading: true);
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.contactUsIconColor,
-        title: const Text('Kelas 7B'),
+        title: const Text('Kelas 9A'),
       ),
       backgroundColor: Colors.white,
       body: RefreshIndicator(
         onRefresh: onRefresh,
-        child: Obx(() => _siswa8bController.isLoading.value ? Center(child: CircularProgressIndicator()) :
+        child: Obx(() => _siswa9aController.isLoading.value ? Center(child: CircularProgressIndicator()) :
         ListView.builder(
-          itemCount: _siswa8bController.siswa_8b.length,
+          itemCount: _siswa9aController.siswa_9a.length,
           itemBuilder: (BuildContext context, index){
             return Container(
               decoration: BoxDecoration(
@@ -78,14 +79,14 @@ class _Detail8BState extends State<Detail8B> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        _siswa8bController.siswa_8b[index].nama!,
+                        _siswa9aController.siswa_9a[index].nama!,
                         style: AppTextStyle.appTitlew700s14(),
                       ),
                       const SizedBox(
                         height: 2,
                       ),
                       Text(
-                        _siswa8bController.siswa_8b[index].kelas!,
+                        _siswa9aController.siswa_9a[index].kelas!,
                         style: AppTextStyle.appTitlew400s12h13(),
                       )
                     ],

@@ -13,7 +13,7 @@ import 'package:get/get.dart';
 import '../model/model_civitas_kelas7b.dart';
 import '../urlconfig.dart';
 
-class KepalaController extends GetxController{
+class EventController extends GetxController{
   var isLoading = true.obs;
   var event = <EventData>[].obs;
 

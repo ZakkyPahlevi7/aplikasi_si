@@ -1,19 +1,20 @@
 import 'package:aplikasi_si/controller/siswa_7a_controller.dart';
+import 'package:aplikasi_si/controller/siswa_7b_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../theme/app_colors.dart';
 import '../../../theme/app_text_styles.dart';
 
-class Detail7A extends StatefulWidget {
-  const Detail7A({Key? key}) : super(key: key);
+class Detail7B extends StatefulWidget {
+  const Detail7B({Key? key}) : super(key: key);
 
   @override
-  State<Detail7A> createState() => _Detail7AState();
+  State<Detail7B> createState() => _Detail7BState();
 }
 
-class _Detail7AState extends State<Detail7A> {
-  final Siswa7AController _siswa7aController = Siswa7AController();
+class _Detail7BState extends State<Detail7B> {
+  final Siswa7BController _siswa7bController = Siswa7BController();
 
   @override
   void initState() {
@@ -27,21 +28,21 @@ class _Detail7AState extends State<Detail7A> {
   }
 
   Future<Null> _initData() async {
-    await _siswa7aController.loadData(withLoading: true);
+    await _siswa7bController.loadData(withLoading: true);
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.contactUsIconColor,
-        title: const Text('Kelas 7A'),
+        title: const Text('Kelas 7B'),
       ),
       backgroundColor: Colors.white,
       body: RefreshIndicator(
         onRefresh: onRefresh,
-        child: Obx(() => _siswa7aController.isLoading.value ? Center(child: CircularProgressIndicator()) :
+        child: Obx(() => _siswa7bController.isLoading.value ? Center(child: CircularProgressIndicator()) :
         ListView.builder(
-          itemCount: _siswa7aController.siswa_7a.length,
+          itemCount: _siswa7bController.siswa_7b.length,
           itemBuilder: (BuildContext context, index){
             return Container(
               decoration: BoxDecoration(
@@ -75,14 +76,14 @@ class _Detail7AState extends State<Detail7A> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        _siswa7aController.siswa_7a[index].nama!,
+                        _siswa7bController.siswa_7b[index].nama!,
                         style: AppTextStyle.appTitlew700s14(),
                       ),
                       const SizedBox(
                         height: 2,
                       ),
                       Text(
-                        _siswa7aController.siswa_7a[index].kelas!,
+                        _siswa7bController.siswa_7b[index].kelas!,
                         style: AppTextStyle.appTitlew400s12h13(),
                       )
                     ],

@@ -15,7 +15,7 @@ class CivitasSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text('Civitas',
-              style: AppTextStyle.appTitlew400s18(Colors.black)),
+              style: AppTextStyle.appTitlew800s18()),
           const SizedBox(
             height: 12,
           ),

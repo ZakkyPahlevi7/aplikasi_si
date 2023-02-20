@@ -26,6 +26,8 @@ class KepalaController extends GetxController{
       }else{
         isLoading.value=false;
       }
+      print('ini ' + kepala.length.toString());
+      print(UrlConfig.baseUrl()+'kepala');
     } catch (e) {
       // //debugPrint('error notes => : $e');
     }
