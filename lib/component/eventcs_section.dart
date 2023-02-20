@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
-import 'package:aplikasi_si/pages/event/detail_event.dart';
+import 'package:aplikasi_si/pages/event/detail_eventcs.dart';
 import 'package:flutter/material.dart';
 
 import '../theme/app_text_styles.dart';
@@ -31,7 +31,7 @@ class EventcsSection extends StatelessWidget {
                 time: '12.00 - 00.00',
                 day: '12 Oktober 2022',
                 location: 'Halaman Sekolah',
-                pageRouteE: DetailEventPage(),
+                pageRouteE: DetailEventCsPage(),
               ),
               EventcsCard(
                 title: 'Camping',
@@ -40,7 +40,7 @@ class EventcsSection extends StatelessWidget {
                 time: '12.00 - 00.00',
                 day: '12 Oktober 2022',
                 location: 'Halaman Sekolah',
-                pageRouteE: DetailEventPage(),
+                pageRouteE: DetailEventCsPage(),
               ),
               EventcsCard(
                 title: 'Camping',
@@ -49,7 +49,7 @@ class EventcsSection extends StatelessWidget {
                 time: '12.00 - 00.00',
                 day: '12 Oktober 2022',
                 location: 'Halaman Sekolah',
-                pageRouteE: DetailEventPage(),
+                pageRouteE: DetailEventCsPage(),
               ),
               EventcsCard(
                 title: 'Camping',
@@ -58,7 +58,7 @@ class EventcsSection extends StatelessWidget {
                 time: '12.00 - 00.00',
                 day: '12 Oktober 2022',
                 location: 'Halaman Sekolah',
-                pageRouteE: DetailEventPage(),
+                pageRouteE: DetailEventCsPage(),
               ),
               EventcsCard(
                 title: 'Camping',
@@ -67,7 +67,7 @@ class EventcsSection extends StatelessWidget {
                 time: '12.00 - 00.00',
                 day: '12 Oktober 2022',
                 location: 'Halaman Sekolah',
-                pageRouteE: DetailEventPage(),
+                pageRouteE: DetailEventCsPage(),
               ),
               SizedBox(
                 width: 28,

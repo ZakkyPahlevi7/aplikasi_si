@@ -49,64 +49,64 @@ class _ContactUsPageState extends State<ContactUsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          showModalBottomSheet(
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(10),
-                    topRight: Radius.circular(10))),
-            context: context,
-            builder: (context) => Container(
-              margin: EdgeInsets.only(top: 10),
-              height: 210,
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 6,
-                  ),
-                  Image.asset(
-                    'assets/images/popuplogin.png',
-                    width: 80,
-                  ),
-                  SizedBox(
-                    height: 8,
-                  ),
-                  Container(
-                    alignment: Alignment.center,
-                    margin: EdgeInsets.symmetric(horizontal: 20),
-                    child: Text(
-                      "Login terlebih dahulu untuk bergabung di Form Diskusi",
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.poppins(
-                          fontSize: 16, fontWeight: FontWeight.w400),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 8,
-                  ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Login',
-                      style: GoogleFonts.poppins(
-                          fontSize: 14, fontWeight: FontWeight.w500),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(horizontal: 40)),
-                  )
-                ],
-              ),
-            ),
-          );
-        },
-        backgroundColor: const Color(0xffCFECFC),
-        elevation: 3,
-        child: Image.asset(
-          'assets/icon/chat.png',
-          width: 30,
-        ),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     showModalBottomSheet(
+      //       shape: RoundedRectangleBorder(
+      //           borderRadius: BorderRadius.only(
+      //               topLeft: Radius.circular(10),
+      //               topRight: Radius.circular(10))),
+      //       context: context,
+      //       builder: (context) => Container(
+      //         margin: EdgeInsets.only(top: 10),
+      //         height: 210,
+      //         child: Column(
+      //           children: [
+      //             SizedBox(
+      //               height: 6,
+      //             ),
+      //             Image.asset(
+      //               'assets/images/popuplogin.png',
+      //               width: 80,
+      //             ),
+      //             SizedBox(
+      //               height: 8,
+      //             ),
+      //             Container(
+      //               alignment: Alignment.center,
+      //               margin: EdgeInsets.symmetric(horizontal: 20),
+      //               child: Text(
+      //                 "Login terlebih dahulu untuk bergabung di Form Diskusi",
+      //                 textAlign: TextAlign.center,
+      //                 style: GoogleFonts.poppins(
+      //                     fontSize: 16, fontWeight: FontWeight.w400),
+      //               ),
+      //             ),
+      //             SizedBox(
+      //               height: 8,
+      //             ),
+      //             ElevatedButton(
+      //               onPressed: () {},
+      //               child: Text(
+      //                 'Login',
+      //                 style: GoogleFonts.poppins(
+      //                     fontSize: 14, fontWeight: FontWeight.w500),
+      //               ),
+      //               style: ElevatedButton.styleFrom(
+      //                   padding: EdgeInsets.symmetric(horizontal: 40)),
+      //             )
+      //           ],
+      //         ),
+      //       ),
+      //     );
+      //   },
+      //   backgroundColor: const Color(0xffCFECFC),
+      //   elevation: 3,
+      //   child: Image.asset(
+      //     'assets/icon/chat.png',
+      //     width: 30,
+      //   ),
+      // ),
       backgroundColor: Colors.white,
       body: Column(
         children: [

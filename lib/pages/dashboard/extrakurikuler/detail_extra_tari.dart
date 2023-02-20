@@ -3,14 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class DetailExtraFutsal extends StatefulWidget {
-  const DetailExtraFutsal({super.key});
+class DetailExtraTari extends StatefulWidget {
+  const DetailExtraTari({super.key});
 
   @override
-  State<DetailExtraFutsal> createState() => _DetailExtraFutsalState();
+  State<DetailExtraTari> createState() => _DetailExtraTariState();
 }
 
-class _DetailExtraFutsalState extends State<DetailExtraFutsal> {
+class _DetailExtraTariState extends State<DetailExtraTari> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -44,7 +44,7 @@ class _DetailExtraFutsalState extends State<DetailExtraFutsal> {
                     Container(
                       margin: EdgeInsets.only(left: 26, top: 88),
                       child: Text(
-                        'Extrakurikuler Futsal',
+                        'Extrakurikuler Tari',
                         style: GoogleFonts.poppins(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,

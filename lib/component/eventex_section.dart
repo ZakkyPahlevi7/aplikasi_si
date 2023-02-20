@@ -1,9 +1,10 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:aplikasi_si/component/component.dart';
-import 'package:aplikasi_si/pages/event/detail_event.dart';
+import 'package:aplikasi_si/pages/event/detail_eventcs.dart';
 import 'package:flutter/material.dart';
 
+import '../pages/event/detail_eventex.dart';
 import '../theme/app_text_styles.dart';
 import 'eventex_card.dart';
 
@@ -30,7 +31,7 @@ class EventexSection extends StatelessWidget {
               time: '09:00 - 11:00',
               day: '04 Oktober 2022',
               location: 'Halaman Sekolah',
-              pageRouteE: DetailEventPage(),
+              pageRouteE: DetailEventExPage(),
             ),
             Spacer(),
             Container(
@@ -42,7 +43,7 @@ class EventexSection extends StatelessWidget {
                 time: '09:00 - 11:00',
                 day: '04 Oktober 2022',
                 location: 'Halaman Sekolah',
-                pageRouteE: DetailEventPage(),
+                pageRouteE: DetailEventExPage(),
               ),
             )
           ],
@@ -59,7 +60,7 @@ class EventexSection extends StatelessWidget {
               time: '09:00 - 11:00',
               day: '04 Oktober 2022',
               location: 'Halaman Sekolah',
-              pageRouteE: DetailEventPage(),
+              pageRouteE: DetailEventExPage(),
             ),
             Spacer(),
             Container(
@@ -71,7 +72,7 @@ class EventexSection extends StatelessWidget {
                 time: '09:00 - 11:00',
                 day: '04 Oktober 2022',
                 location: 'Halaman Sekolah',
-                pageRouteE: DetailEventPage(),
+                pageRouteE: DetailEventExPage(),
               ),
             )
           ],
@@ -88,7 +89,7 @@ class EventexSection extends StatelessWidget {
               time: '09:00 - 11:00',
               day: '04 Oktober 2022',
               location: 'Halaman Sekolah',
-              pageRouteE: DetailEventPage(),
+              pageRouteE: DetailEventExPage(),
             ),
             Spacer(),
             Container(
@@ -100,7 +101,7 @@ class EventexSection extends StatelessWidget {
                 time: '09:00 - 11:00',
                 day: '04 Oktober 2022',
                 location: 'Halaman Sekolah',
-                pageRouteE: DetailEventPage(),
+                pageRouteE: DetailEventExPage(),
               ),
             ),
           ],

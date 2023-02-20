@@ -3,14 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class DetailExtraFutsal extends StatefulWidget {
-  const DetailExtraFutsal({super.key});
+class DetailExtraPramuka extends StatefulWidget {
+  const DetailExtraPramuka({super.key});
 
   @override
-  State<DetailExtraFutsal> createState() => _DetailExtraFutsalState();
+  State<DetailExtraPramuka> createState() => _DetailExtraPaskibraState();
 }
 
-class _DetailExtraFutsalState extends State<DetailExtraFutsal> {
+class _DetailExtraPaskibraState extends State<DetailExtraPramuka> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -24,7 +24,7 @@ class _DetailExtraFutsalState extends State<DetailExtraFutsal> {
               Container(
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('assets/images/headerbasket.png'),
+                        image: AssetImage('assets/images/headerpramuka.png'),
                         fit: BoxFit.cover)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,7 +44,7 @@ class _DetailExtraFutsalState extends State<DetailExtraFutsal> {
                     Container(
                       margin: EdgeInsets.only(left: 26, top: 88),
                       child: Text(
-                        'Extrakurikuler Futsal',
+                        'Extrakurikuler Pramuka',
                         style: GoogleFonts.poppins(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -135,7 +135,7 @@ class _DetailExtraFutsalState extends State<DetailExtraFutsal> {
               Container(
                   margin: EdgeInsets.only(left: 26, right: 26, top: 6),
                   child: Text(
-                    'Basket merupakan permainan yang diciptakan seorang guru olahraga bernama James Naismith pada 1891-an. Kala itu, James ingin membuat permainan yang bisa dimainkan murid-muridnya dalam ruangan tertutup, terutama saat musim dingin. \n\nNamun, basket yang dilakukan James berbeda dari yang sekarang. James hanya membuat beberapa aturan dasar agar bisa diterima banyak orang. \n\nPermainan ini berlangsung dengan cara mempertandingkan dua tim basket dan berebut bola untuk dimasukkan ke dalam ring lawan. Basket memiliki banyak manfaat.',
+                    'Pramuka merupakan permainan yang diciptakan seorang guru olahraga bernama James Naismith pada 1891-an. Kala itu, James ingin membuat permainan yang bisa dimainkan murid-muridnya dalam ruangan tertutup, terutama saat musim dingin. \n\nNamun, basket yang dilakukan James berbeda dari yang sekarang. James hanya membuat beberapa aturan dasar agar bisa diterima banyak orang. \n\nPermainan ini berlangsung dengan cara mempertandingkan dua tim basket dan berebut bola untuk dimasukkan ke dalam ring lawan. Basket memiliki banyak manfaat.',
                     style: GoogleFonts.poppins(
                         fontSize: 13, fontWeight: FontWeight.w400),
                   )),

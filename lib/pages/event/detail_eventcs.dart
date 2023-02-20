@@ -3,14 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class DetailExtraFutsal extends StatefulWidget {
-  const DetailExtraFutsal({super.key});
+class DetailEventCsPage extends StatefulWidget {
+  const DetailEventCsPage({Key? key}) : super(key: key);
 
   @override
-  State<DetailExtraFutsal> createState() => _DetailExtraFutsalState();
+  State<DetailEventCsPage> createState() => _DetailEventPageState();
 }
 
-class _DetailExtraFutsalState extends State<DetailExtraFutsal> {
+class _DetailEventPageState extends State<DetailEventCsPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -24,7 +24,7 @@ class _DetailExtraFutsalState extends State<DetailExtraFutsal> {
               Container(
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('assets/images/headerbasket.png'),
+                        image: AssetImage('assets/images/headerkemah.png'),
                         fit: BoxFit.cover)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,9 +42,9 @@ class _DetailExtraFutsalState extends State<DetailExtraFutsal> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 26, top: 88),
+                      margin: EdgeInsets.only(left: 26, top: 218),
                       child: Text(
-                        'Extrakurikuler Futsal',
+                        'Camping',
                         style: GoogleFonts.poppins(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -52,31 +52,9 @@ class _DetailExtraFutsalState extends State<DetailExtraFutsal> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 26, top: 4, bottom: 38),
+                      margin: EdgeInsets.only(left: 26, top: 4, bottom: 28),
                       child: Row(
                         children: [
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.location_on,
-                                size: 14,
-                                color: Colors.white,
-                              ),
-                              SizedBox(
-                                width: 2,
-                              ),
-                              Text(
-                                'Lapangan Basket',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.white),
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            width: 8,
-                          ),
                           Row(
                             children: [
                               Icon(
@@ -87,7 +65,7 @@ class _DetailExtraFutsalState extends State<DetailExtraFutsal> {
                               SizedBox(
                                 width: 2,
                               ),
-                              Text('Hari Selasa',
+                              Text('28 Oktober 2022',
                                   style: GoogleFonts.poppins(
                                       fontSize: 10,
                                       fontWeight: FontWeight.w400,
@@ -119,30 +97,13 @@ class _DetailExtraFutsalState extends State<DetailExtraFutsal> {
                         ],
                       ),
                     ),
-                    Container(
-                      margin: EdgeInsets.only(left: 26),
-                      child: Text(
-                        'Tentang',
-                        style: GoogleFonts.poppins(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.black),
-                      ),
-                    )
                   ],
                 ),
               ),
               Container(
-                  margin: EdgeInsets.only(left: 26, right: 26, top: 6),
-                  child: Text(
-                    'Basket merupakan permainan yang diciptakan seorang guru olahraga bernama James Naismith pada 1891-an. Kala itu, James ingin membuat permainan yang bisa dimainkan murid-muridnya dalam ruangan tertutup, terutama saat musim dingin. \n\nNamun, basket yang dilakukan James berbeda dari yang sekarang. James hanya membuat beberapa aturan dasar agar bisa diterima banyak orang. \n\nPermainan ini berlangsung dengan cara mempertandingkan dua tim basket dan berebut bola untuk dimasukkan ke dalam ring lawan. Basket memiliki banyak manfaat.',
-                    style: GoogleFonts.poppins(
-                        fontSize: 13, fontWeight: FontWeight.w400),
-                  )),
-              Container(
-                margin: EdgeInsets.only(left: 26, top: 20, bottom: 6),
+                margin: EdgeInsets.only(left: 26, bottom: 6),
                 child: Text(
-                  'Galeri Kegiatan',
+                  'Tentang',
                   style: GoogleFonts.poppins(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
@@ -150,8 +111,47 @@ class _DetailExtraFutsalState extends State<DetailExtraFutsal> {
                 ),
               ),
               Container(
-                  margin: EdgeInsets.symmetric(horizontal: 18),
-                  child: Image.asset('assets/images/galeribasket.png')),
+                  margin: EdgeInsets.only(left: 26, right: 26, top: 6),
+                  child: Text(
+                    'Tujuan Camping yang diadakan sekolah adalah memeberikan pengalaman mempunyainya saling ketergantungan selang unsur-unsur lingkungan kehidupan dan kebutuhan untuk melestarikannya, menjaga ronde yang terkait dan mengembangkan sikap bertanggung jawab hendak masa depan yang menghormati keseimbangan lingkungan kehidupan.',
+                    style: GoogleFonts.poppins(
+                        fontSize: 13, fontWeight: FontWeight.w400),
+                  )),
+              Container(
+                margin: EdgeInsets.only(left: 26, top: 20, bottom: 6),
+                child: Text(
+                  'Syarat dan Ketentuan',
+                  style: GoogleFonts.poppins(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black),
+                ),
+              ),
+              Container(
+                  margin: EdgeInsets.only(left: 26, right: 26, top: 6),
+                  child: Text(
+                    '• Siswa Mtsn 1 Pati \n• Sehat jasmani dan rohani \n• Membawa bekal masing-masing dari rumah • Izin kepada orang tua \n• Membawa perlengkapan mandi \n• Memakai pakaian pramuka lengkap',
+                    style: GoogleFonts.poppins(
+                        fontSize: 13, fontWeight: FontWeight.w400),
+                  )),
+              Container(
+                margin: EdgeInsets.only(left: 26, top: 20, bottom: 6),
+                child: Row(
+                  children: [
+                    Icon(Icons.location_on),
+                    SizedBox(
+                      width: 6,
+                    ),
+                    Text(
+                      'Halaman Sekolah',
+                      style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.black),
+                    ),
+                  ],
+                ),
+              ),
               SizedBox(
                 height: 16,
               )
