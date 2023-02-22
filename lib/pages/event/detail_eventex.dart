@@ -57,7 +57,26 @@ class _DetailEventPageState extends State<DetailEventExPage> {
                         children: [
                           Row(
                             children: [
-                              Icon(
+                              Container(
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.location_on, size: 14, color: Colors.white),
+                                    SizedBox(
+                                      width: 6,
+                                    ),
+                                    Text(
+                                      'Halaman Sekolah',
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.white),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                width: 8,
+                              ),                              Icon(
                                 Icons.calendar_month,
                                 size: 14,
                                 color: Colors.white,
@@ -101,7 +120,7 @@ class _DetailEventPageState extends State<DetailEventExPage> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 26, bottom: 6),
+                margin: EdgeInsets.only(left: 26, bottom: 6, top: 16),
                 child: Text(
                   'Tentang',
                   style: GoogleFonts.poppins(
@@ -147,24 +166,6 @@ class _DetailEventPageState extends State<DetailEventExPage> {
               Container(
                   margin: EdgeInsets.symmetric(horizontal: 18),
                   child: Image.asset('assets/images/galeriextra.png')),
-              Container(
-                margin: EdgeInsets.only(left: 26, top: 20, bottom: 6),
-                child: Row(
-                  children: [
-                    Icon(Icons.location_on),
-                    SizedBox(
-                      width: 6,
-                    ),
-                    Text(
-                      'Halaman Sekolah',
-                      style: GoogleFonts.poppins(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
-                          color: Colors.black),
-                    ),
-                  ],
-                ),
-              ),
               SizedBox(
                 height: 16,
               )

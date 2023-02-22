@@ -59,6 +59,7 @@ class _Detail7AState extends State<Detail7A> {
               child: Row(
                 children: [
                   Container(
+                    
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         color: AppColors.secondaryWhite),
@@ -76,7 +77,8 @@ class _Detail7AState extends State<Detail7A> {
                     children: [
                       Text(
                         _siswa7aController.siswa_7a[index].nama!,
-                        style: AppTextStyle.appTitlew700s14(),
+                        overflow: TextOverflow.ellipsis,
+                        style: AppTextStyle.appTitlew500s12(Colors.black),
                       ),
                       const SizedBox(
                         height: 2,
