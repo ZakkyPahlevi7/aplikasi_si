@@ -18,7 +18,6 @@ class DashboardHeader extends StatefulWidget {
 }
 
 class _DashboardHeaderState extends State<DashboardHeader> {
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,8 +32,10 @@ class _DashboardHeaderState extends State<DashboardHeader> {
           CircleAvatar(
             child: GestureDetector(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const StreamPage()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SignUpPage()));
               },
               child: Image.asset(
                 'assets/images/profile.png',

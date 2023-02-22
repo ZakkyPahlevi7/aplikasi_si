@@ -77,8 +77,8 @@ class _CarouselWithDotsPageState extends State<CarouselWithDotsPage> {
                 })),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: _controller.header.map((url) {
-            int index = _controller.header.indexOf(url);
+          children: widget.imgList.map((url) {
+            int index = widget.imgList.indexOf(url);
             return Container(
               width: 10,
               height: 10,
