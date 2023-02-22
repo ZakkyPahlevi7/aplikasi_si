@@ -6,22 +6,23 @@ import '../theme/theme.dart';
 class CardPrestasi extends StatelessWidget {
   String img;
   String juara;
-  // String nama;
-  // String kategori;
+  String nama;
+  String kategori;
 
   CardPrestasi(
       {Key? key,
       required this.img,
       required this.juara,
-      // required this.nama,
-      // required this.kategori
+      required this.nama,
+      required this.kategori
       })
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(right: 10),
+      width: 250,
+      margin: const EdgeInsets.only(right: 10, top: 15, bottom: 15),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(7.0),
         color: Colors.white,
@@ -47,6 +48,7 @@ class CardPrestasi extends StatelessWidget {
             width: 6,
           ),
           Column(
+            mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
@@ -54,11 +56,11 @@ class CardPrestasi extends StatelessWidget {
                 overflow: TextOverflow.clip,
                 style: AppTextStyle.appTitlew700s10(),
               ),
-              // Text(
-              //   nama,
-              //   style: AppTextStyle.appTitlew400s10(Colors.black),
-              // ),
-              // Text(kategori, style: AppTextStyle.appTitlew400s10(Colors.black)),
+              Text(
+                nama,
+                style: AppTextStyle.appTitlew400s10(Colors.black),
+              ),
+              Text(kategori, style: AppTextStyle.appTitlew400s10(Colors.black)),
             ],
           )
         ],
