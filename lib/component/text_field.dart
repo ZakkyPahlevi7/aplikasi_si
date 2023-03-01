@@ -20,7 +20,7 @@ class CustomTextField extends StatelessWidget {
               style: GoogleFonts.poppins(
                   fontSize: 12,
                   fontWeight: FontWeight.w600,
-                  color: Color(0xffD6D6D6))),
+                  color: const Color(0xffD6D6D6))),
           const SizedBox(height: 4),
           TextField(
             controller: controller,

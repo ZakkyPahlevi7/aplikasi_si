@@ -13,32 +13,33 @@ class EventexCard extends StatelessWidget {
   String location;
   var pageRouteE;
 
-  EventexCard({
-    Key? key,
-    required this.title,
-    required this.peserta,
-    required this.imgex,
-    required this.time,
-    required this.day,
-    required this.location,
-    required this.pageRouteE
-  }) : super(key: key);
+  EventexCard(
+      {Key? key,
+      required this.title,
+      required this.peserta,
+      required this.imgex,
+      required this.time,
+      required this.day,
+      required this.location,
+      required this.pageRouteE})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(
-        left: 28,
-      ),
+      // margin: const EdgeInsets.only(
+      //   left: 28,
+      // ),
       child: GestureDetector(
-        onTap: (){
+        onTap: () {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => pageRouteE));
         },
         child: Container(
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8.0), color: Color(0xff0962E0)),
-          padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 13),
+              borderRadius: BorderRadius.circular(8.0),
+              color: Color(0xff0962E0)),
+          padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

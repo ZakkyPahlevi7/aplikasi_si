@@ -39,82 +39,88 @@ class _DashboardPageState extends State<DashboardPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: isloading
-          ? Center(
-              child: CircularProgressIndicator(),
-            )
-          : ListView.builder(
-              itemCount: 1,
-              itemBuilder: (BuildContext context, int index) {
-                return Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const DashboardHeader(),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    CarouselWithDotsPage(
-                      // gambarheader: terserah,
-                      imgList: imgList,
-                    ),
-                    const SizedBox(
-                      height: 18,
-                    ),
-                    const visiMisiSection(),
-                    SizedBox(
-                      height: 18,
-                    ),
-                    const CivitasSection(),
-                    const SizedBox(
-                      height: 18,
-                    ),
-                    const PrestasiSection(),
-                    const SizedBox(
-                      height: 18,
-                    ),
-                    const ExtraSection(),
-                    const SizedBox(
-                      height: 18,
-                    ),
-                    Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 36),
-                      child: Row(
-                        children: [
-                          Text(
-                            'Lokasi',
-                            style: AppTextStyle.appTitlew800s18(),
-                          ),
-                          const Spacer(),
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const DenahPage()));
-                            },
-                            child: Text(
-                              'Lihat Denah',
-                              style: AppTextStyle.appTitlew400s13(
-                                  const Color.fromRGBO(0, 0, 0, 0.5)),
-                            ),
-                          )
-                        ],
+    return WillPopScope(
+      onWillPop: () async {
+        return false;
+      },
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: isloading
+            ? Center(
+                child: CircularProgressIndicator(),
+              )
+            : ListView.builder(
+                itemCount: 1,
+                itemBuilder: (BuildContext context, int index) {
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const DashboardHeader(),
+                      const SizedBox(
+                        height: 5,
                       ),
-                    ),
-                    const SizedBox(
-                      height: 12,
-                    ),
-                    Container(
-                        margin: const EdgeInsets.symmetric(horizontal: 28),
-                        child: Image.asset('assets/images/mapsnya.png')),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                  ],
-                );
-              }),
+                      CarouselWithDotsPage(
+                        // gambarheader: terserah,
+                        imgList: imgList,
+                      ),
+                      const SizedBox(
+                        height: 18,
+                      ),
+                      const visiMisiSection(),
+                      SizedBox(
+                        height: 18,
+                      ),
+                      const CivitasSection(),
+                      const SizedBox(
+                        height: 18,
+                      ),
+                      const PrestasiSection(),
+                      const SizedBox(
+                        height: 18,
+                      ),
+                      const ExtraSection(),
+                      const SizedBox(
+                        height: 18,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 36),
+                        child: Row(
+                          children: [
+                            Text(
+                              'Lokasi',
+                              style: AppTextStyle.appTitlew800s18(),
+                            ),
+                            const Spacer(),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const DenahPage()));
+                              },
+                              child: Text(
+                                'Lihat Denah',
+                                style: AppTextStyle.appTitlew400s13(
+                                    const Color.fromRGBO(0, 0, 0, 0.5)),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      Container(
+                          margin: const EdgeInsets.symmetric(horizontal: 28),
+                          child: Image.asset('assets/images/mapsnya.png')),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                    ],
+                  );
+                }),
+      ),
     );
   }
 

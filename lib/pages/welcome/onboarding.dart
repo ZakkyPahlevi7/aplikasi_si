@@ -81,7 +81,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
         ),
         done: GestureDetector(
           onTap: () {
-            Navigator.push(context,
+            Navigator.pushReplacement(context,
                 MaterialPageRoute(builder: (context) => BottomNavbar()));
           },
           child: Text(

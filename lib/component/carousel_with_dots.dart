@@ -10,13 +10,13 @@ import 'package:get/get_core/src/get_main.dart';
 import '../model/model_header.dart';
 
 class CarouselWithDotsPage extends StatefulWidget {
-  final List<HeaderData>? gambarheader;
+  // final List<HeaderData>? gambarheader;
   final DashboardController? dashboardController;
   final List<String> imgList;
   const CarouselWithDotsPage(
       {Key? key,
       required this.imgList,
-      this.gambarheader,
+      // this.gambarheader,
       this.dashboardController})
       : super(key: key);
   @override
@@ -27,15 +27,15 @@ class _CarouselWithDotsPageState extends State<CarouselWithDotsPage> {
   int _current = 0;
   final _controller = Get.put(DashboardController());
 
-  @override
-  void initState() {
-    _initData();
-    super.initState();
-  }
+  // @override
+  // void initState() {
+  //   _initData();
+  //   super.initState();
+  // }
 
-  Future<Null> _initData() async {
-    await widget.dashboardController!.loadData(withLoading: true);
-  }
+  // Future<Null> _initData() async {
+  //   await widget.dashboardController!.loadData(withLoading: true);
+  // }
 
   @override
   Widget build(BuildContext context) {
