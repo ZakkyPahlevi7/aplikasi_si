@@ -287,8 +287,7 @@ class _PpdbPageState extends State<PpdbPage> {
               SizedBox(
                 height: 20,
               ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 30),
+              Center(
                 child: ElevatedButton(
                   onPressed: () {
                     setState(() {
@@ -298,7 +297,7 @@ class _PpdbPageState extends State<PpdbPage> {
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xff0962E0),
                       padding:
-                          EdgeInsets.symmetric(horizontal: 123, vertical: 10)),
+                          EdgeInsets.symmetric(horizontal: 140, vertical: 10)),
                   child: Text(
                     'Daftar',
                     style: GoogleFonts.poppins(

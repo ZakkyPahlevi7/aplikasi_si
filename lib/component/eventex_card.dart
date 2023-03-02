@@ -45,33 +45,30 @@ class EventexCard extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: AppTextStyle.appTitlew500s12(Colors.white),
+                style: AppTextStyle.appTitlew500s14(Colors.white),
               ),
               const SizedBox(
                 height: 2,
               ),
               Text(
                 peserta,
-                style: AppTextStyle.appTitlew400s7(Colors.white70),
+                style: AppTextStyle.appTitlew400s9(Colors.white70),
               ),
               const SizedBox(
                 height: 12,
               ),
               Image.asset(
                 imgex,
-                width: 110,
+                width: 122,
               ),
               const SizedBox(
-                height: 8,
-              ),
-              const SizedBox(
-                height: 8,
+                height: 16,
               ),
               Row(
                 children: [
                   const Icon(
                     Icons.calendar_month,
-                    size: 12,
+                    size: 14,
                     color: Colors.white,
                   ),
                   const SizedBox(
@@ -79,7 +76,7 @@ class EventexCard extends StatelessWidget {
                   ),
                   Text(
                     day,
-                    style: AppTextStyle.appTitlew400s8(Colors.white),
+                    style: AppTextStyle.appTitlew400s10(Colors.white),
                   )
                 ],
               ),
@@ -90,7 +87,7 @@ class EventexCard extends StatelessWidget {
                 children: [
                   const Icon(
                     Icons.location_on,
-                    size: 12,
+                    size: 14,
                     color: Colors.white,
                   ),
                   const SizedBox(
@@ -98,7 +95,7 @@ class EventexCard extends StatelessWidget {
                   ),
                   Text(
                     location,
-                    style: AppTextStyle.appTitlew400s8(Colors.white),
+                    style: AppTextStyle.appTitlew400s10(Colors.white),
                   )
                 ],
               )
