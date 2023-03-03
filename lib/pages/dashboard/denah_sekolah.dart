@@ -18,7 +18,7 @@ class _DenahPageState extends State<DenahPage> {
       body: Column(
         children: [
           Container(
-            margin: const EdgeInsets.only(top: 30, left: 33),
+            margin: const EdgeInsets.only(top: 50, left: 33),
             child: Row(
               children: [
                 GestureDetector(
@@ -43,7 +43,9 @@ class _DenahPageState extends State<DenahPage> {
               ],
             ),
           ),
-          Image.asset('assets/images/denahskolah.png')
+          Container(
+              margin: const EdgeInsets.only(left: 10, right: 10, top: 10),
+              child: Image.asset('assets/images/denahskolah.png'))
         ],
       ),
     );

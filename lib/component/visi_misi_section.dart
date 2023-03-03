@@ -41,7 +41,7 @@ class _visiMisiSectionState extends State<visiMisiSection> {
           ),
           margin: EdgeInsets.only(left: 36, right: 36),
           width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
+          height: MediaQuery.of(context).size.height * 0.66,
           child: PageView(
             controller: _controller,
             children: [

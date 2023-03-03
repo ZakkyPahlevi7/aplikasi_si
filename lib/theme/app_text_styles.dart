@@ -120,4 +120,19 @@ class AppTextStyle {
       color: color,
     );
   }
+
+  static appTitlew500s14(Color color) {
+    return GoogleFonts.poppins(
+        fontSize: 14, fontWeight: FontWeight.w500, color: color);
+  }
+
+  static appTitlew400s9(Color color) {
+    return GoogleFonts.poppins(
+      fontSize: 9,
+      fontWeight: FontWeight.w400,
+      color: color,
+    );
+  }
+
+  
 }
