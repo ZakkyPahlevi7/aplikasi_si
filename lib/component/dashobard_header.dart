@@ -23,11 +23,24 @@ class _DashboardHeaderState extends State<DashboardHeader> {
     return Container(
       margin: const EdgeInsets.only(left: 34, right: 34, top: 10),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
             'assets/images/logo.png',
             width: 60,
           ),
+          // CircleAvatar(
+          //   child: GestureDetector(
+          //     onTap: () {
+          //       Navigator.push(context,
+          //           MaterialPageRoute(builder: (context) => const StreamPage()));
+          //     },
+          //     child: Image.asset(
+          //       'assets/images/profile.png',
+          //       width: 58,
+          //     ),
+          //   ),
+          // )
           const Spacer(),
           CircleAvatar(
             child: GestureDetector(

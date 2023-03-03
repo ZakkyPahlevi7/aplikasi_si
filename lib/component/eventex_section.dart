@@ -23,17 +23,20 @@ class EventexSection extends StatelessWidget {
               style: AppTextStyle.appTitlew800s20(Colors.black),
             )),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            EventexCard(
-              title: 'Masak \nTradisional',
-              peserta: 'Seluruh kelas 7,8 dan 9',
-              imgex: 'assets/images/tradisional.png',
-              time: '09:00 - 11:00',
-              day: '04 Oktober 2022',
-              location: 'Halaman Sekolah',
-              pageRouteE: DetailEventExPage(),
+            Container(
+              margin: EdgeInsets.only(left: 28),
+              child: EventexCard(
+                title: 'Masak \nTradisional',
+                peserta: 'Seluruh kelas 7,8 dan 9',
+                imgex: 'assets/images/tradisional.png',
+                time: '09:00 - 11:00',
+                day: '04 Oktober 2022',
+                location: 'Halaman Sekolah',
+                pageRouteE: DetailEventExPage(),
+              ),
             ),
-            Spacer(),
             Container(
               margin: EdgeInsets.only(right: 28),
               child: EventexCard(
@@ -52,17 +55,20 @@ class EventexSection extends StatelessWidget {
           height: 30,
         ),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            EventexCard(
-              title: 'Masak \nTradisional',
-              peserta: 'Seluruh kelas 7,8 dan 9',
-              imgex: 'assets/images/tradisional.png',
-              time: '09:00 - 11:00',
-              day: '04 Oktober 2022',
-              location: 'Halaman Sekolah',
-              pageRouteE: DetailEventExPage(),
+            Container(
+              margin: EdgeInsets.only(left: 28),
+              child: EventexCard(
+                title: 'Masak \nTradisional',
+                peserta: 'Seluruh kelas 7,8 dan 9',
+                imgex: 'assets/images/tradisional.png',
+                time: '09:00 - 11:00',
+                day: '04 Oktober 2022',
+                location: 'Halaman Sekolah',
+                pageRouteE: DetailEventExPage(),
+              ),
             ),
-            Spacer(),
             Container(
               margin: EdgeInsets.only(right: 28),
               child: EventexCard(
@@ -81,17 +87,20 @@ class EventexSection extends StatelessWidget {
           height: 30,
         ),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            EventexCard(
-              title: 'Masak \nTradisional',
-              peserta: 'Seluruh kelas 7,8 dan 9',
-              imgex: 'assets/images/tradisional.png',
-              time: '09:00 - 11:00',
-              day: '04 Oktober 2022',
-              location: 'Halaman Sekolah',
-              pageRouteE: DetailEventExPage(),
+            Container(
+              margin: EdgeInsets.only(left: 28),
+              child: EventexCard(
+                title: 'Masak \nTradisional',
+                peserta: 'Seluruh kelas 7,8 dan 9',
+                imgex: 'assets/images/tradisional.png',
+                time: '09:00 - 11:00',
+                day: '04 Oktober 2022',
+                location: 'Halaman Sekolah',
+                pageRouteE: DetailEventExPage(),
+              ),
             ),
-            Spacer(),
             Container(
               margin: EdgeInsets.only(right: 28),
               child: EventexCard(

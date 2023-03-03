@@ -41,7 +41,7 @@ class _visiMisiSectionState extends State<visiMisiSection> {
           ),
           margin: EdgeInsets.only(left: 36, right: 36),
           width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height * 0.9,
+          height: MediaQuery.of(context).size.height,
           child: PageView(
             controller: _controller,
             children: [
@@ -83,7 +83,9 @@ class _visiMisiSectionState extends State<visiMisiSection> {
   }
 
   buildVisiTujuan() {
-    return Container(
+    return SizedBox(
+      height: MediaQuery.of(context).size.height,
+      width: MediaQuery.of(context).size.width,
       child: Column(children: [
         visiMisiCard(
           icon: 'assets/images/iconeyes.png',
@@ -93,7 +95,7 @@ class _visiMisiSectionState extends State<visiMisiSection> {
         ),
         visiMisiCard(
             icon: 'assets/images/icontarget.png',
-            title: 'Misi',
+            title: 'Tujuan',
             keterangan:
                 'Menghasilkan peserta didik yang berkarakter Islami dengan penerapan sholat wajib, sunnah, dan memfokuskan peserta didik dalam menghafal Al-Quran Menghasilkan peserta didik yang gemar membaca dan mencintai ilmu pengetahuan Mewujudkan efektifitas dan kualitas pembelajaran berbasis teknologi Menghasilkan lulusan yng unggul dalam prestasi alademik dan non akademik Menghasilkan sumber daya manusia yang peduli terhadap lingkungan hidup dengan penerapan program sekolah adiwiyata Mewujudkan hubungan yang harmonis dan dinamis antara sekolah dengan seluruh warga sekolah.')
       ]),

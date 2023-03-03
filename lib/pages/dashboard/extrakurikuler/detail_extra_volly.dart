@@ -42,7 +42,7 @@ class _DetailExtraVollyState extends State<DetailExtraVolly> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 26, top: 88),
+                      margin: EdgeInsets.only(left: 26, top: 120),
                       child: Text(
                         'Extrakurikuler Volly',
                         style: GoogleFonts.poppins(

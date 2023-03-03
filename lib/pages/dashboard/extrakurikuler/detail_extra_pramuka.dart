@@ -42,7 +42,7 @@ class _DetailExtraPaskibraState extends State<DetailExtraPramuka> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 26, top: 88),
+                      margin: EdgeInsets.only(left: 26, top: 120),
                       child: Text(
                         'Extrakurikuler Pramuka',
                         style: GoogleFonts.poppins(

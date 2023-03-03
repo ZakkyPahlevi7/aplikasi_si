@@ -42,7 +42,7 @@ class _DetailEventPageState extends State<DetailEventCsPage> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 26, top: 218),
+                      margin: EdgeInsets.only(left: 26, top: 258),
                       child: Text(
                         'Camping',
                         style: GoogleFonts.poppins(
@@ -60,7 +60,8 @@ class _DetailEventPageState extends State<DetailEventCsPage> {
                               Container(
                                 child: Row(
                                   children: [
-                                    Icon(Icons.location_on, size: 14, color: Colors.white),
+                                    Icon(Icons.location_on,
+                                        size: 14, color: Colors.white),
                                     SizedBox(
                                       width: 6,
                                     ),

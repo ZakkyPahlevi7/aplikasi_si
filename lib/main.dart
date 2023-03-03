@@ -42,3 +42,11 @@ final List<String> imgList = [
   'assets/images/hero3.png',
   'assets/images/hero4.png'
 ];
+
+final List<String> imgExtra = [
+  'assets/images/basket.png',
+  'assets/images/pramuka.png',
+  'assets/images/badmintoon.png',
+  'assets/images/tari.png',
+  'assets/images/futsal.png'
+];
