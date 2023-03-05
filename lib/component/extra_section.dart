@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:aplikasi_si/bottom_navbar.dart';
 import 'package:aplikasi_si/component/extra_card.dart';
 import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_volly.dart';
@@ -24,9 +26,20 @@ class _ExtraSectionState extends State<ExtraSection> {
       children: [
         Container(
           margin: const EdgeInsets.only(left: 36),
-          child: Text(
-            'Extrakurikuler',
-            style: AppTextStyle.appTitlew800s18(),
+          child: Row(
+            children: [
+              Icon(
+                Icons.sports_basketball,
+                color: Color(0xff0962E0),
+              ),
+              SizedBox(
+                width: 6,
+              ),
+              Text(
+                'Extrakurikuler',
+                style: AppTextStyle.appTitlew800s18(),
+              ),
+            ],
           ),
         ),
         const SizedBox(

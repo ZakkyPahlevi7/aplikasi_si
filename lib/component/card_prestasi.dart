@@ -14,15 +14,14 @@ class CardPrestasi extends StatelessWidget {
       required this.img,
       required this.juara,
       required this.nama,
-      required this.kategori
-      })
+      required this.kategori})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 250,
-      margin: const EdgeInsets.only(right: 10, top: 15, bottom: 15),
+      margin: const EdgeInsets.only(right: 10, top: 12, bottom: 8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(7.0),
         color: Colors.white,

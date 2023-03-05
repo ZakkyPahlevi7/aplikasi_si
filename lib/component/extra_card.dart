@@ -8,13 +8,13 @@ class ExtraCard extends StatelessWidget {
   String img;
   String name;
   String jadwal;
-  ExtraCard({
-    Key? key,
-    required this.img,
-    required this.name,
-    required this.jadwal,
-    required this.pageRouteE
-  }) : super(key: key);
+  ExtraCard(
+      {Key? key,
+      required this.img,
+      required this.name,
+      required this.jadwal,
+      required this.pageRouteE})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class ExtraCard extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(7.0),
             image: DecorationImage(image: AssetImage(img), fit: BoxFit.cover)),
-        margin: const EdgeInsets.only(right: 10, top: 6),
+        margin: const EdgeInsets.only(right: 10, top: 6, bottom: 8),
         padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
