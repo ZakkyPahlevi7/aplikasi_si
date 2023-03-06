@@ -41,21 +41,21 @@ class _DashboardHeaderState extends State<DashboardHeader> {
           //     ),
           //   ),
           // )
-          const Spacer(),
-          CircleAvatar(
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const SignUpPage()));
-              },
-              child: Image.asset(
-                'assets/images/profile.png',
-                width: 58,
-              ),
-            ),
-          )
+          // const Spacer(),
+          // CircleAvatar(
+          //   child: GestureDetector(
+          //     onTap: () {
+          //       Navigator.push(
+          //           context,
+          //           MaterialPageRoute(
+          //               builder: (context) => const SignUpPage()));
+          //     },
+          //     child: Image.asset(
+          //       'assets/images/profile.png',
+          //       width: 58,
+          //     ),
+          //   ),
+          // )
         ],
       ),
     );

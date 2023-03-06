@@ -36,6 +36,13 @@ class _PrestasiSectionState extends State<PrestasiSection> {
           margin: const EdgeInsets.symmetric(horizontal: 36),
           child: Row(
             children: [
+              Icon(
+                Icons.workspace_premium,
+                color: Color(0xff0962E0),
+              ),
+              SizedBox(
+                width: 6,
+              ),
               Text('Prestasi', style: AppTextStyle.appTitlew800s18()),
               const Spacer(),
               GestureDetector(
@@ -50,9 +57,6 @@ class _PrestasiSectionState extends State<PrestasiSection> {
               )
             ],
           ),
-        ),
-        const SizedBox(
-          height: 10,
         ),
         SingleChildScrollView(
           padding: const EdgeInsets.symmetric(vertical: 4),

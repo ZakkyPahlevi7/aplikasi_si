@@ -20,22 +20,22 @@ class _DashboardPageState extends State<DashboardPage> {
   bool isloading = false;
   List<HeaderData> terserah = [];
 
-  Future getApi() async {
-    setState(() {
-      isloading = true;
-    });
-    HeaderModel apa = await generateapi().getapi();
-    setState(() {
-      terserah = apa.data!;
-      isloading = false;
-    });
-  }
+  // Future getApi() async {
+  //   setState(() {
+  //     isloading = true;
+  //   });
+  //   HeaderModel apa = await generateapi().getapi();
+  //   setState(() {
+  //     terserah = apa.data!;
+  //     isloading = false;
+  //   });
+  // }
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    getApi();
-  }
+  // @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   getApi();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -86,6 +86,13 @@ class _DashboardPageState extends State<DashboardPage> {
                         margin: const EdgeInsets.symmetric(horizontal: 36),
                         child: Row(
                           children: [
+                            Icon(
+                              Icons.map,
+                              color: Color(0xff0962E0),
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
                             Text(
                               'Lokasi',
                               style: AppTextStyle.appTitlew800s18(),
