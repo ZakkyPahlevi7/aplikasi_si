@@ -9,6 +9,8 @@ import '../../model/model_header.dart';
 import '../page.dart';
 import 'package:aplikasi_si/theme/theme.dart';
 
+import 'maps_sekolah.dart';
+
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
 
@@ -118,9 +120,7 @@ class _DashboardPageState extends State<DashboardPage> {
                       const SizedBox(
                         height: 12,
                       ),
-                      Container(
-                          margin: const EdgeInsets.symmetric(horizontal: 28),
-                          child: Image.asset('assets/images/mapsnya.png')),
+                      MapsContentPage(),
                       const SizedBox(
                         height: 20,
                       ),
