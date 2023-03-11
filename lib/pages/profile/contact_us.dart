@@ -67,6 +67,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
       body: Column(
         children: [
           Container(
+            padding: EdgeInsets.only(bottom: 70),
             decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(
@@ -76,23 +77,29 @@ class _ContactUsPageState extends State<ContactUsPage> {
             child: Column(
               children: [
                 Container(
-                    margin: const EdgeInsets.only(top: 35),
-                    child: Text(
-                      'Kontak Kami',
-                      style: AppTextStyle.appTitlew700s28(Colors.white),
+                    margin: const EdgeInsets.only(top: 20),
+                    child: SafeArea(
+                      child: Text(
+                        'Kontak Kami',
+                        style: AppTextStyle.appTitlew700s28(Colors.white),
+                      ),
                     )),
                 const SizedBox(
-                  height: 66,
+                  height: 50,
                 ),
                 Container(
                   margin: const EdgeInsets.symmetric(horizontal: 30),
                   child: Row(
                     children: [
                       Image.asset('assets/icon/maps.png'),
-                      const Spacer(),
-                      Text(
-                        'Jl. Raya Winong-Pucakwangi Km 02, Desa \nPekalongan, Kec. Winong, Pekalongan, \nKec. Pati, Kabupaten Pati, Jawa Tengah \n59181',
-                        style: AppTextStyle.appTitlew400s12h12(),
+                      SizedBox(width: 14),
+                      SizedBox(
+                        width: 300,
+                        child: Text(
+                          'Jl Arhayasa No.15 Kelurahan Meruyung Kecamatan Limo Kota Depok Provinsi Jawa Barat',
+                          style: AppTextStyle.appTitlew400s12h12(),
+                          overflow: TextOverflow.clip,
+                        ),
                       )
                     ],
                   ),
@@ -109,9 +116,9 @@ class _ContactUsPageState extends State<ContactUsPage> {
                   child: Row(
                     children: [
                       Image.asset('assets/icon/email.png'),
-                      const Spacer(),
+                      const SizedBox(width: 14),
                       Text(
-                        'mtsnegeri1pati@gmail.com',
+                        'smpit.du@yahoo.com',
                         style: AppTextStyle.appTitlew400s12h12(),
                       ),
                     ],
@@ -132,9 +139,9 @@ class _ContactUsPageState extends State<ContactUsPage> {
                   child: Row(
                     children: [
                       Image.asset('assets/icon/phone.png'),
-                      const Spacer(),
+                      const SizedBox(width: 14),
                       Text(
-                        '085228424485',
+                        '02129517205',
                         style: AppTextStyle.appTitlew400s12h12(),
                       )
                     ],
