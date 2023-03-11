@@ -15,20 +15,36 @@ import '../urlconfig.dart';
 
 class EventController extends GetxController{
   var isLoading = true.obs;
+  var isLoadingRecent = true.obs;
   var eventComingSoon = <EventComingSoonData>[].obs;
   var eventRecent = <EventRecentData>[].obs;
 
-  loadData({bool withLoading = false}) async {
+  loadDataComingSoon({bool withLoading = false}) async {
     try {
       isLoading.value = true;
-      var response = await apiConfig.get(UrlConfig.baseUrl()+'event');
+      var response = await apiConfig.get(UrlConfig.baseUrl()+'nextevent');
       //debugPrint('response notes : $response');
       if(response!='error' && response!='fatal'){
         eventComingSoon.value = EventComingSoonModel.fromJson(jsonDecode(response.toString())).data!;
-        eventRecent.value = EventRecentModel.fromJson(jsonDecode(response.toString())).data!;
         isLoading.value=false;
       }else{
         isLoading.value=false;
+      }
+    } catch (e) {
+      // //debugPrint('error notes => : $e');
+    }
+  }
+
+  loadDataRecent({bool withLoading = false}) async {
+    try {
+      isLoadingRecent.value = true;
+      var response = await apiConfig.get(UrlConfig.baseUrl()+'recentevent');
+      //debugPrint('response notes : $response');
+      if(response!='error' && response!='fatal'){
+        eventRecent.value = EventRecentModel.fromJson(jsonDecode(response.toString())).data!;
+        isLoadingRecent.value=false;
+      }else{
+        isLoadingRecent.value=false;
       }
     } catch (e) {
       // //debugPrint('error notes => : $e');

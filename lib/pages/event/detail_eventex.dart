@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:aplikasi_si/controller/event_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DetailEventExPage extends StatefulWidget {
@@ -11,6 +14,22 @@ class DetailEventExPage extends StatefulWidget {
 }
 
 class _DetailEventPageState extends State<DetailEventExPage> {
+  final _controller = Get.put(EventController());
+
+  @override
+  void initState() {
+    _initData();
+    // TODO: implement initState
+    super.initState();
+  }
+
+  Future onRefresh() async {
+    await _initData();
+  }
+
+  Future<Null> _initData() async {
+    await _controller.loadDataRecent(withLoading: true);
+  }
   @override
   Widget build(BuildContext context) {
     return SafeArea(
