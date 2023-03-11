@@ -27,8 +27,9 @@ class _EventcsSectionState extends State<EventcsSection> {
   }
 
   Future<Null> _initData() async {
-    await _eventController.loadData(withLoading: true);
+    await _eventController.loadDataComingSoon(withLoading: true);
   }
+
   @override
   Widget build(BuildContext context) {
     return Column(

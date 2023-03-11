@@ -28,7 +28,8 @@ class _EventPageState extends State<EventPage> {
   }
 
   Future<Null> _initData() async {
-    await _eventController.loadData(withLoading: true);
+    await _eventController.loadDataComingSoon(withLoading: true);
+    await _eventController.loadDataRecent(withLoading: true);
   }
 
   @override
