@@ -49,7 +49,7 @@ class _EventexSectionState extends State<EventexSection> {
                 style: AppTextStyle.appTitlew800s20(Colors.black),
               )),
           SizedBox(height: 20,),
-          Obx(() => _controller.isLoadingRecent.value ? CircularProgressIndicator() :
+          Obx(() => _controller.isLoadingRecent.value ? Center(child: CircularProgressIndicator()) :
             GridView.count(
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,

@@ -166,16 +166,6 @@ class _ContactUsPageState extends State<ContactUsPage> {
                     GestureDetector(
                         onTap: () {
                           setState(() {
-                            _launchtwitter();
-                          });
-                        },
-                        child: Logo(Logos.twitter)),
-                    const SizedBox(
-                      width: 26,
-                    ),
-                    GestureDetector(
-                        onTap: () {
-                          setState(() {
                             _launchfacebook();
                           });
                         },
