@@ -71,10 +71,10 @@ class _ExtraSectionState extends State<ExtraSection> {
               // scrollDirection: Axis.horizontal,
               itemBuilder: (BuildContext context, int index) {
                 return ExtraCard(
-                  img: _extraController.extrakurikuler[index].link,
-                  name: _extraController.extrakurikuler[index].judul,
-                  jadwal: _extraController.extrakurikuler[index].jadwal,
-            pageRouteE: DetailExtra(id: _extraController.extrakurikuler[index].id)
+                    img: _extraController.extrakurikuler[index].link,
+                    name: _extraController.extrakurikuler[index].judul,
+                    jadwal: _extraController.extrakurikuler[index].jadwal,
+                    pageRouteE: DetailExtra(id: _extraController.extrakurikuler[index].id)
                 );
               },
               itemCount: _extraController.extrakurikuler.length,
