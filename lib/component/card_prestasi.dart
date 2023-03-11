@@ -21,8 +21,9 @@ class CardPrestasi extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 250,
-      margin: const EdgeInsets.only(right: 10, top: 12, bottom: 8),
+      margin: const EdgeInsets.only(top: 12, bottom: 8),
       decoration: BoxDecoration(
+        border: Border.all(color: Colors.black.withOpacity(0.2)),
         borderRadius: BorderRadius.circular(7.0),
         color: Colors.white,
         boxShadow: [
