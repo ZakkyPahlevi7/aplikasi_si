@@ -1,22 +1,21 @@
 // To parse this JSON data, do
 //
-//     final apiCivitasGuru = apiCivitasGuruFromJson(jsonString);
+//     final guruModel = guruModelFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
-GuruModel apiCivitasGuruFromJson(String str) => GuruModel.fromJson(json.decode(str));
+GuruModel guruModelFromJson(String str) => GuruModel.fromJson(json.decode(str));
 
-String apiCivitasGuruToJson(GuruModel data) => json.encode(data.toJson());
+String guruModelToJson(GuruModel data) => json.encode(data.toJson());
 
 class GuruModel {
     GuruModel({
-        this.status,
-        this.data,
+        required this.status,
+        required this.data,
     });
 
-    String? status;
-    List<GuruData>? data;
+    String status;
+    List<GuruData> data;
 
     factory GuruModel.fromJson(Map<String, dynamic> json) => GuruModel(
         status: json["status"],
@@ -25,28 +24,30 @@ class GuruModel {
 
     Map<String, dynamic> toJson() => {
         "status": status,
-        "data": List<dynamic>.from(data!.map((x) => x.toJson())),
+        "data": List<dynamic>.from(data.map((x) => x.toJson())),
     };
 }
 
 class GuruData {
     GuruData({
-        this.id,
-        this.foto,
-        this.nama,
-        this.pengampu,
-        this.createdAt,
-        this.updatedAt,
+        required this.id,
+        required this.foto,
+        required this.nama,
+        required this.pengampu,
+        required this.createdAt,
+        required this.updatedAt,
         this.deletedAt,
+        required this.link,
     });
 
-    int? id;
-    String? foto;
-    String? nama;
-    String? pengampu;
-    DateTime? createdAt;
-    DateTime? updatedAt;
+    int id;
+    String foto;
+    String nama;
+    String pengampu;
+    DateTime createdAt;
+    DateTime updatedAt;
     dynamic deletedAt;
+    String link;
 
     factory GuruData.fromJson(Map<String, dynamic> json) => GuruData(
         id: json["id"],
@@ -56,6 +57,7 @@ class GuruData {
         createdAt: DateTime.parse(json["created_at"]),
         updatedAt: DateTime.parse(json["updated_at"]),
         deletedAt: json["deleted_at"],
+        link: json["link"],
     );
 
     Map<String, dynamic> toJson() => {
@@ -63,8 +65,9 @@ class GuruData {
         "foto": foto,
         "nama": nama,
         "pengampu": pengampu,
-        "created_at": createdAt!.toIso8601String(),
-        "updated_at": updatedAt!.toIso8601String(),
+        "created_at": createdAt.toIso8601String(),
+        "updated_at": updatedAt.toIso8601String(),
         "deleted_at": deletedAt,
+        "link": link,
     };
 }

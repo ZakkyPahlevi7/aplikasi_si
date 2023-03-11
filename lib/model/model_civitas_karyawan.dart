@@ -1,22 +1,21 @@
 // To parse this JSON data, do
 //
-//     final apiCivitasKaryawan = apiCivitasKaryawanFromJson(jsonString);
+//     final karyawanModel = karyawanModelFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
-KaryawanModel apiCivitasKaryawanFromJson(String str) => KaryawanModel.fromJson(json.decode(str));
+KaryawanModel karyawanModelFromJson(String str) => KaryawanModel.fromJson(json.decode(str));
 
-String apiCivitasKaryawanToJson(KaryawanModel data) => json.encode(data.toJson());
+String karyawanModelToJson(KaryawanModel data) => json.encode(data.toJson());
 
 class KaryawanModel {
     KaryawanModel({
-       this.status,
-       this.data,
+        required this.status,
+        required this.data,
     });
 
-    String? status;
-    List<KaryawanData>? data;
+    String status;
+    List<KaryawanData> data;
 
     factory KaryawanModel.fromJson(Map<String, dynamic> json) => KaryawanModel(
         status: json["status"],
@@ -25,28 +24,30 @@ class KaryawanModel {
 
     Map<String, dynamic> toJson() => {
         "status": status,
-        "data": List<dynamic>.from(data!.map((x) => x.toJson())),
+        "data": List<dynamic>.from(data.map((x) => x.toJson())),
     };
 }
 
 class KaryawanData {
     KaryawanData({
-        this.id,
-        this.foto,
-        this.nama,
-        this.jabatan,
-        this.createdAt,
-        this.updatedAt,
+        required this.id,
+        required this.foto,
+        required this.nama,
+        required this.jabatan,
+        required this.createdAt,
+        required this.updatedAt,
         this.deletedAt,
+        required this.link,
     });
 
-    int? id;
-    String? foto;
-    String? nama;
-    String? jabatan;
-    DateTime? createdAt;
-    DateTime? updatedAt;
+    int id;
+    String foto;
+    String nama;
+    String jabatan;
+    DateTime createdAt;
+    DateTime updatedAt;
     dynamic deletedAt;
+    String link;
 
     factory KaryawanData.fromJson(Map<String, dynamic> json) => KaryawanData(
         id: json["id"],
@@ -56,6 +57,7 @@ class KaryawanData {
         createdAt: DateTime.parse(json["created_at"]),
         updatedAt: DateTime.parse(json["updated_at"]),
         deletedAt: json["deleted_at"],
+        link: json["link"],
     );
 
     Map<String, dynamic> toJson() => {
@@ -63,8 +65,9 @@ class KaryawanData {
         "foto": foto,
         "nama": nama,
         "jabatan": jabatan,
-        "created_at": createdAt!.toIso8601String(),
-        "updated_at": updatedAt!.toIso8601String(),
+        "created_at": createdAt.toIso8601String(),
+        "updated_at": updatedAt.toIso8601String(),
         "deleted_at": deletedAt,
+        "link": link,
     };
 }

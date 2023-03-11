@@ -39,10 +39,11 @@ class _Detail7AState extends State<Detail7A> {
       backgroundColor: Colors.white,
       body: RefreshIndicator(
         onRefresh: onRefresh,
-        child: Obx(() => _siswa7aController.isLoading.value ? Center(child: CircularProgressIndicator()) :
+        child: Obx(() => _siswa7aController.isLoading.value ? const Center(child: CircularProgressIndicator()) :
         ListView.builder(
           itemCount: _siswa7aController.siswa_7a.length,
           itemBuilder: (BuildContext context, index){
+            print('ini foto : ' + _siswa7aController.siswa_7a[index].link.replaceAll(' ', ''));
             return Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
@@ -64,8 +65,8 @@ class _Detail7AState extends State<Detail7A> {
                         borderRadius: BorderRadius.circular(10.0),
                         color: AppColors.secondaryWhite),
                     padding: const EdgeInsets.all(10),
-                    child: Image.asset(
-                      'assets/images/profilcivitas.png',
+                    child: Image.network(
+                      _siswa7aController.siswa_7a[index].link,
                       width: 50,
                     ),
                   ),

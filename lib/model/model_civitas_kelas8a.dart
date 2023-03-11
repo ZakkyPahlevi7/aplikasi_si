@@ -1,14 +1,12 @@
 // To parse this JSON data, do
 //
-//     final siswa8AModel = siswa8AModelFromJson(jsonString);
+//     final siswa7BModel = siswa7BModelFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
-Siswa8AModel siswa8AModelFromJson(String str) =>
-    Siswa8AModel.fromJson(json.decode(str));
+Siswa8AModel siswa7BModelFromJson(String str) => Siswa8AModel.fromJson(json.decode(str));
 
-String siswa8AModelToJson(Siswa8AModel data) => json.encode(data.toJson());
+String siswa7BModelToJson(Siswa8AModel data) => json.encode(data.toJson());
 
 class Siswa8AModel {
   Siswa8AModel({
@@ -20,15 +18,14 @@ class Siswa8AModel {
   List<Siswa8AData> data;
 
   factory Siswa8AModel.fromJson(Map<String, dynamic> json) => Siswa8AModel(
-        status: json["status"],
-        data: List<Siswa8AData>.from(
-            json["data"].map((x) => Siswa8AData.fromJson(x))),
-      );
+    status: json["status"],
+    data: List<Siswa8AData>.from(json["data"].map((x) => Siswa8AData.fromJson(x))),
+  );
 
   Map<String, dynamic> toJson() => {
-        "status": status,
-        "data": List<dynamic>.from(data.map((x) => x.toJson())),
-      };
+    "status": status,
+    "data": List<dynamic>.from(data.map((x) => x.toJson())),
+  };
 }
 
 class Siswa8AData {
@@ -36,37 +33,101 @@ class Siswa8AData {
     required this.id,
     required this.foto,
     required this.nama,
+    required this.password,
     required this.kelas,
     required this.createdAt,
     required this.updatedAt,
-    required this.deletedAt,
+    this.deletedAt,
+    required this.link,
+    required this.spps,
   });
 
   int id;
   String foto;
   String nama;
+  String password;
   String kelas;
   DateTime createdAt;
   DateTime updatedAt;
   dynamic deletedAt;
+  String link;
+  List<Spp> spps;
 
   factory Siswa8AData.fromJson(Map<String, dynamic> json) => Siswa8AData(
-        id: json["id"],
-        foto: json["foto"],
-        nama: json["nama"],
-        kelas: json["kelas"],
-        createdAt: DateTime.parse(json["created_at"]),
-        updatedAt: DateTime.parse(json["updated_at"]),
-        deletedAt: json["deleted_at"],
-      );
+    id: json["id"],
+    foto: json["foto"],
+    nama: json["nama"],
+    password: json["password"],
+    kelas: json["kelas"],
+    createdAt: DateTime.parse(json["created_at"]),
+    updatedAt: DateTime.parse(json["updated_at"]),
+    deletedAt: json["deleted_at"],
+    link: json["link"],
+    spps: List<Spp>.from(json["spps"].map((x) => Spp.fromJson(x))),
+  );
 
   Map<String, dynamic> toJson() => {
-        "id": id,
-        "foto": foto,
-        "nama": nama,
-        "kelas": kelas,
-        "created_at": createdAt.toIso8601String(),
-        "updated_at": updatedAt.toIso8601String(),
-        "deleted_at": deletedAt,
-      };
+    "id": id,
+    "foto": foto,
+    "nama": nama,
+    "password": password,
+    "kelas": kelas,
+    "created_at": createdAt.toIso8601String(),
+    "updated_at": updatedAt.toIso8601String(),
+    "deleted_at": deletedAt,
+    "link": link,
+    "spps": List<dynamic>.from(spps.map((x) => x.toJson())),
+  };
+}
+
+class Spp {
+  Spp({
+    required this.id,
+    required this.nisId,
+    required this.nisType,
+    required this.tahunAjaran,
+    required this.tanggalTagihan,
+    required this.tagihan,
+    required this.status,
+    this.createdAt,
+    this.updatedAt,
+    this.deletedAt,
+  });
+
+  int id;
+  String nisId;
+  String nisType;
+  String tahunAjaran;
+  DateTime tanggalTagihan;
+  String tagihan;
+  String status;
+  DateTime? createdAt;
+  DateTime? updatedAt;
+  dynamic deletedAt;
+
+  factory Spp.fromJson(Map<String, dynamic> json) => Spp(
+    id: json["id"],
+    nisId: json["NIS_id"],
+    nisType: json["NIS_type"],
+    tahunAjaran: json["tahun_ajaran"],
+    tanggalTagihan: DateTime.parse(json["tanggal_tagihan"]),
+    tagihan: json["tagihan"],
+    status: json["status"],
+    createdAt: json["created_at"] == null ? null : DateTime.parse(json["created_at"]),
+    updatedAt: json["updated_at"] == null ? null : DateTime.parse(json["updated_at"]),
+    deletedAt: json["deleted_at"],
+  );
+
+  Map<String, dynamic> toJson() => {
+    "id": id,
+    "NIS_id": nisId,
+    "NIS_type": nisType,
+    "tahun_ajaran": tahunAjaran,
+    "tanggal_tagihan": "${tanggalTagihan.year.toString().padLeft(4, '0')}-${tanggalTagihan.month.toString().padLeft(2, '0')}-${tanggalTagihan.day.toString().padLeft(2, '0')}",
+    "tagihan": tagihan,
+    "status": status,
+    "created_at": createdAt?.toIso8601String(),
+    "updated_at": updatedAt?.toIso8601String(),
+    "deleted_at": deletedAt,
+  };
 }

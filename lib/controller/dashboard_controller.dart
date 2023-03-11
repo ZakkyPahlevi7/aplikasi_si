@@ -9,7 +9,7 @@ import '../urlconfig.dart';
 
 class DashboardController extends GetxController{
   var isLoading = true.obs;
-  var header = <HeaderData>[].obs;
+  var header = <SekolahData>[].obs;
 
   loadData({bool withLoading = false}) async {
     try {
@@ -17,7 +17,7 @@ class DashboardController extends GetxController{
       var response = await apiConfig.get(UrlConfig.baseUrl()+'sekolah');
       //debugPrint('response notes : $response');
       if(response!='error' && response!='fatal'){
-        header.value = HeaderModel.fromJson(jsonDecode(response.toString())).data!;
+        header.value = SekolahModel.fromJson(jsonDecode(response.toString())).data!;
         isLoading.value=false;
       }else{
         isLoading.value=false;
@@ -26,4 +26,5 @@ class DashboardController extends GetxController{
       // //debugPrint('error notes => : $e');
     }
   }
+
 }

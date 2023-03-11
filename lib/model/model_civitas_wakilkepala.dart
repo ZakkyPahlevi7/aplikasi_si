@@ -1,22 +1,21 @@
 // To parse this JSON data, do
 //
-//     final apiCivitasWakilKepala = apiCivitasWakilKepalaFromJson(jsonString);
+//     final wakilKepalaModel = wakilKepalaModelFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
-WakilKepalaModel apiCivitasWakilKepalaFromJson(String str) => WakilKepalaModel.fromJson(json.decode(str));
+WakilKepalaModel wakilKepalaModelFromJson(String str) => WakilKepalaModel.fromJson(json.decode(str));
 
-String apiCivitasWakilKepalaToJson(WakilKepalaModel data) => json.encode(data.toJson());
+String wakilKepalaModelToJson(WakilKepalaModel data) => json.encode(data.toJson());
 
 class WakilKepalaModel {
     WakilKepalaModel({
-        this.status,
-        this.data,
+        required this.status,
+        required this.data,
     });
 
-    String? status;
-    List<WakilKepalaData>? data;
+    String status;
+    List<WakilKepalaData> data;
 
     factory WakilKepalaModel.fromJson(Map<String, dynamic> json) => WakilKepalaModel(
         status: json["status"],
@@ -25,28 +24,30 @@ class WakilKepalaModel {
 
     Map<String, dynamic> toJson() => {
         "status": status,
-        "data": List<dynamic>.from(data!.map((x) => x.toJson())),
+        "data": List<dynamic>.from(data.map((x) => x.toJson())),
     };
 }
 
 class WakilKepalaData {
     WakilKepalaData({
-        this.id,
-        this.foto,
-        this.nama,
-        this.jabatan,
-        this.createdAt,
-        this.updatedAt,
+        required this.id,
+        required this.foto,
+        required this.nama,
+        required this.jabatan,
+        required this.createdAt,
+        required this.updatedAt,
         this.deletedAt,
+        required this.link,
     });
 
-    int? id;
-    String? foto;
-    String? nama;
-    String? jabatan;
-    DateTime? createdAt;
-    DateTime? updatedAt;
+    int id;
+    String foto;
+    String nama;
+    String jabatan;
+    DateTime createdAt;
+    DateTime updatedAt;
     dynamic deletedAt;
+    String link;
 
     factory WakilKepalaData.fromJson(Map<String, dynamic> json) => WakilKepalaData(
         id: json["id"],
@@ -56,6 +57,7 @@ class WakilKepalaData {
         createdAt: DateTime.parse(json["created_at"]),
         updatedAt: DateTime.parse(json["updated_at"]),
         deletedAt: json["deleted_at"],
+        link: json["link"],
     );
 
     Map<String, dynamic> toJson() => {
@@ -63,8 +65,9 @@ class WakilKepalaData {
         "foto": foto,
         "nama": nama,
         "jabatan": jabatan,
-        "created_at": createdAt!.toIso8601String(),
-        "updated_at": updatedAt!.toIso8601String(),
+        "created_at": createdAt.toIso8601String(),
+        "updated_at": updatedAt.toIso8601String(),
         "deleted_at": deletedAt,
+        "link": link,
     };
 }

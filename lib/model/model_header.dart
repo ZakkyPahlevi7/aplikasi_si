@@ -1,67 +1,65 @@
 // To parse this JSON data, do
 //
-//     final fotoheader = fotoheaderFromJson(jsonString);
+//     final sekolahModel = sekolahModelFromJson(jsonString);
 
-// ignore_for_file: unnecessary_null_comparison, prefer_if_null_operators
-
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
-HeaderModel fotoheaderFromJson(String str) =>
-    HeaderModel.fromJson(json.decode(str));
+SekolahModel sekolahModelFromJson(String str) => SekolahModel.fromJson(json.decode(str));
 
-String fotoheaderToJson(HeaderModel data) => json.encode(data.toJson());
+String sekolahModelToJson(SekolahModel data) => json.encode(data.toJson());
 
-class HeaderModel {
-  HeaderModel({
-    this.status,
-    this.data,
+class SekolahModel {
+  SekolahModel({
+    required this.status,
+    required this.data,
   });
 
-  String? status;
-  List<HeaderData>? data;
+  String status;
+  List<SekolahData> data;
 
-  factory HeaderModel.fromJson(Map<String, dynamic> json) => HeaderModel(
-        status: json["status"],
-        data: List<HeaderData>.from(json["data"].map((x) => HeaderData.fromJson(x))),
-      );
+  factory SekolahModel.fromJson(Map<String, dynamic> json) => SekolahModel(
+    status: json["status"],
+    data: List<SekolahData>.from(json["data"].map((x) => SekolahData.fromJson(x))),
+  );
 
   Map<String, dynamic> toJson() => {
-        "status": status,
-        "data": List<dynamic>.from(data!.map((x) => x.toJson())),
-      };
+    "status": status,
+    "data": List<dynamic>.from(data.map((x) => x.toJson())),
+  };
 }
 
-class HeaderData {
-  HeaderData({
-    this.id,
-    this.foto,
+class SekolahData {
+  SekolahData({
+    required this.id,
+    required this.foto,
     this.createdAt,
     this.updatedAt,
     this.deletedAt,
+    required this.link,
   });
 
-  int? id;
-  String? foto;
+  int id;
+  String foto;
   dynamic createdAt;
   dynamic updatedAt;
   dynamic deletedAt;
+  String link;
 
-  factory HeaderData.fromJson(Map<String, dynamic> json) => HeaderData(
-        id: json["id"],
-        foto: json["foto"],
-        createdAt: json["created_at"] == null ? '' : json["created_at"],
-        updatedAt: json["updateat"] == null ? '' : json["updateat"],
-           
-        deletedAt: json["deleted_at"] == null ? '' : json["deleted_at"],
-      );
+  factory SekolahData.fromJson(Map<String, dynamic> json) => SekolahData(
+    id: json["id"],
+    foto: json["foto"],
+    createdAt: json["created_at"],
+    updatedAt: json["updated_at"],
+    deletedAt: json["deleted_at"],
+    link: json["link"],
+  );
 
   Map<String, dynamic> toJson() => {
-        "id": id,
-        "foto": foto,
-        "created_at": createdAt == null ? '' : createdAt,
-        "updated_at":
-            updatedAt.toIso8601String == null ? '' : updatedAt.toIso8601String,
-        "deleted_at": deletedAt == null ? '' : deletedAt,
-      };
+    "id": id,
+    "foto": foto,
+    "created_at": createdAt,
+    "updated_at": updatedAt,
+    "deleted_at": deletedAt,
+    "link": link,
+  };
 }

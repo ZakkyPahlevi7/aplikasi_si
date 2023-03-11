@@ -26,7 +26,7 @@ class ExtraCard extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(7.0),
-            image: DecorationImage(image: AssetImage(img), fit: BoxFit.cover)),
+            image: DecorationImage(image: NetworkImage(img), fit: BoxFit.cover)),
         margin: const EdgeInsets.only(right: 10, top: 6, bottom: 8),
         padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 8),
         child: Column(

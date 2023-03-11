@@ -32,6 +32,7 @@ class _DetaiDataStaffState extends State<DetaiDataStaff> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Data Staff'),
+        backgroundColor: AppColors.contactUsIconColor,
       ),
       backgroundColor: Colors.white,
       body: RefreshIndicator(
@@ -60,8 +61,8 @@ class _DetaiDataStaffState extends State<DetaiDataStaff> {
                         borderRadius: BorderRadius.circular(10.0),
                         color: AppColors.secondaryWhite),
                     padding: const EdgeInsets.all(10),
-                    child: Image.asset(
-                      'assets/images/profilcivitas.png',
+                    child: Image.network(
+                      _karyawanController.staff[index].link,
                       width: 50,
                     ),
                   ),

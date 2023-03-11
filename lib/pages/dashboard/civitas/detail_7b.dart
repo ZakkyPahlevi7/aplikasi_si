@@ -61,11 +61,11 @@ class _Detail7BState extends State<Detail7B> {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: AppColors.secondaryWhite),
+                        borderRadius: BorderRadius.circular(10.0)),
                     padding: const EdgeInsets.all(10),
-                    child: Image.asset(
-                      'assets/images/profilcivitas.png',
+                    child: Image.network(
+                      fit: BoxFit.cover,
+                      _siswa7bController.siswa_7b[index].link,
                       width: 50,
                     ),
                   ),
@@ -76,14 +76,14 @@ class _Detail7BState extends State<Detail7B> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        _siswa7bController.siswa_7b[index].nama!,
+                        _siswa7bController.siswa_7b[index].nama,
                         style: AppTextStyle.appTitlew700s14(),
                       ),
                       const SizedBox(
                         height: 2,
                       ),
                       Text(
-                        _siswa7bController.siswa_7b[index].kelas!,
+                        _siswa7bController.siswa_7b[index].kelas,
                         style: AppTextStyle.appTitlew400s12h13(),
                       )
                     ],

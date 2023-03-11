@@ -1,66 +1,69 @@
 // To parse this JSON data, do
 //
-//     final apiform = apiformFromJson(jsonString);
+//     final ppdbModel = ppdbModelFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
-FormModel apiformFromJson(String str) => FormModel.fromJson(json.decode(str));
+PpdbModel ppdbModelFromJson(String str) => PpdbModel.fromJson(json.decode(str));
 
-String apiformToJson(FormModel data) => json.encode(data.toJson());
+String ppdbModelToJson(PpdbModel data) => json.encode(data.toJson());
 
-class FormModel {
-    FormModel({
-        this.status,
-        this.data,
+class PpdbModel {
+    PpdbModel({
+        required this.status,
+        required this.data,
     });
 
-    String? status;
-    List<FormsData>? data;
+    String status;
+    List<PpdbData> data;
 
-    factory FormModel.fromJson(Map<String, dynamic> json) => FormModel(
+    factory PpdbModel.fromJson(Map<String, dynamic> json) => PpdbModel(
         status: json["status"],
-        data: List<FormsData>.from(json["data"].map((x) => FormsData.fromJson(x))),
+        data: List<PpdbData>.from(json["data"].map((x) => PpdbData.fromJson(x))),
     );
 
     Map<String, dynamic> toJson() => {
         "status": status,
-        "data": List<dynamic>.from(data!.map((x) => x.toJson())),
+        "data": List<dynamic>.from(data.map((x) => x.toJson())),
     };
 }
 
-class FormsData {
-    FormsData({
-       this.id,
-       this.createdAt,
-       this.updatedAt,
-       this.judul,
-       this.file,
-       this.deletedAt,
+class PpdbData {
+    PpdbData({
+        required this.id,
+        required this.createdAt,
+        required this.updatedAt,
+        required this.judul,
+        required this.file,
+        this.deletedAt,
+        required this.link,
     });
 
-    int? id;
-    DateTime? createdAt;
-    DateTime? updatedAt;
-    String? judul;
-    String? file;
+    int id;
+    DateTime createdAt;
+    DateTime updatedAt;
+    String judul;
+    String file;
     dynamic deletedAt;
+    String link;
 
-    factory FormsData.fromJson(Map<String, dynamic> json) => FormsData(
+    factory PpdbData.fromJson(Map<String, dynamic> json) => PpdbData(
         id: json["id"],
         createdAt: DateTime.parse(json["created_at"]),
         updatedAt: DateTime.parse(json["updated_at"]),
         judul: json["judul"],
         file: json["file"],
         deletedAt: json["deleted_at"],
+        link: json["link"],
     );
 
     Map<String, dynamic> toJson() => {
         "id": id,
-        "created_at": createdAt!.toIso8601String(),
-        "updated_at": updatedAt!.toIso8601String(),
+        "created_at": createdAt.toIso8601String(),
+        "updated_at": updatedAt.toIso8601String(),
         "judul": judul,
         "file": file,
         "deleted_at": deletedAt,
+        "link": link,
     };
 }

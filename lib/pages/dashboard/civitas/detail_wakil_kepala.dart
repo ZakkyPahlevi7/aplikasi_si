@@ -61,8 +61,8 @@ class _DetailWakilKepalaState extends State<DetailWakilKepala> {
                           borderRadius: BorderRadius.circular(10.0),
                           color: AppColors.secondaryWhite),
                       padding: const EdgeInsets.all(10),
-                      child: Image.asset(
-                        'assets/images/profilcivitas.png',
+                      child: Image.network(
+                        _wakilKepalaController.wakilKepala[index].link,
                         width: 50,
                       ),
                     ),

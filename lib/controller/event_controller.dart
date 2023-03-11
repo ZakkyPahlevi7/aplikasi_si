@@ -15,7 +15,8 @@ import '../urlconfig.dart';
 
 class EventController extends GetxController{
   var isLoading = true.obs;
-  var event = <EventData>[].obs;
+  var eventComingSoon = <EventComingSoonData>[].obs;
+  var eventRecent = <EventRecentData>[].obs;
 
   loadData({bool withLoading = false}) async {
     try {
@@ -23,7 +24,8 @@ class EventController extends GetxController{
       var response = await apiConfig.get(UrlConfig.baseUrl()+'event');
       //debugPrint('response notes : $response');
       if(response!='error' && response!='fatal'){
-        event.value = EventModel.fromJson(jsonDecode(response.toString())).data!;
+        eventComingSoon.value = EventComingSoonModel.fromJson(jsonDecode(response.toString())).data!;
+        eventRecent.value = EventRecentModel.fromJson(jsonDecode(response.toString())).data!;
         isLoading.value=false;
       }else{
         isLoading.value=false;
