@@ -67,8 +67,8 @@ class _Detail9AState extends State<Detail9A> {
                         borderRadius: BorderRadius.circular(10.0),
                         color: AppColors.secondaryWhite),
                     padding: const EdgeInsets.all(10),
-                    child: Image.asset(
-                      'assets/images/profilcivitas.png',
+                    child: Image.network(
+                      _siswa9aController.siswa_9a[index].link,
                       width: 50,
                     ),
                   ),

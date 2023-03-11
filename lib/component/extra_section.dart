@@ -2,12 +2,14 @@
 
 import 'package:aplikasi_si/bottom_navbar.dart';
 import 'package:aplikasi_si/component/extra_card.dart';
+import 'package:aplikasi_si/controller/extrakurikuler_controller.dart';
 import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_volly.dart';
 import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_basket.dart';
 import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_futsal.dart';
 import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_tari.dart';
 import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_pramuka.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 
 import '../theme/theme.dart';
 
@@ -19,9 +21,23 @@ class ExtraSection extends StatefulWidget {
 }
 
 class _ExtraSectionState extends State<ExtraSection> {
+  final ExtrakurikulerController _extraController = ExtrakurikulerController();
+
+  @override
+  void initState() {
+    _initData();
+    // TODO: implement initState
+    super.initState();
+  }
+
+  Future<Null> _initData() async {
+    await _extraController.loadData(withLoading: true);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
@@ -45,105 +61,26 @@ class _ExtraSectionState extends State<ExtraSection> {
         const SizedBox(
           height: 10,
         ),
-        // ListView.builder(
-        //   clipBehavior: Clip.hardEdge,
-        //   scrollDirection: Axis.horizontal,
-        //   itemBuilder: (BuildContext context, int index) {
-        //     return ExtraCard(
-        //       img: index == 0
-        //           ? 'assets/images/basket.png'
-        //           : index == 1
-        //               ? 'assets/images/pramuka.png'
-        //               : index == 2
-        //                   ? 'assets/images/voli.png'
-        //                   : index == 3
-        //                       ? 'assets/images/tari.png'
-        //                       : index == 4
-        //                           ? 'assets/images/tari.png'
-        //                           : 'assets/images/tari.png',
-        //       name: index == 0
-        //           ? 'Kepala Sekolah'
-        //           : index == 1
-        //               ? 'Wakil Kepala'
-        //               : index == 2
-        //                   ? 'Data Guru'
-        //                   : index == 3
-        //                       ? 'Wali Kelas'
-        //                       : index == 4
-        //                           ? 'Data Staff'
-        //                           : 'Data Siswa',
-        //       jadwal: index == 0
-        //           ? 'Kepala Sekolah'
-        //           : index == 1
-        //               ? 'Wakil Kepala'
-        //               : index == 2
-        //                   ? 'Data Guru'
-        //                   : index == 3
-        //                       ? 'Wali Kelas'
-        //                       : index == 4
-        //                           ? 'Data Staff'
-        //                           : 'Data Siswa',
-        // pageRouteE: index == 0
-        //     ? const DetailExtraBadminton()
-        //     : index == 1
-        //         ? const DetailExtraBasket()
-        //         : index == 2
-        //             ? const DetailExtraFutsal()
-        //             : index == 3
-        //                 ? const DetailExtraNaghdam()
-        //                 : index == 4
-        //                     ? const DetailExtraPaskibra()
-        //                     : const BottomNavbar()
-        //     );
-        //   },
-        //   itemCount: 5,
-        // )
-        // List.generate(5, (index) {
-        //   return ExtraCard(img: index == 0, name: index == 0, jadwal: index == 0, pageRouteE: index == 0);
-        // })
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Container(
-            margin: const EdgeInsets.only(left: 36),
-            child: Row(
-              children: [
-                ExtraCard(
-                  img: 'assets/images/basket.png',
-                  name: 'Extrakurikuler Basket',
-                  jadwal: 'Setiap Hari Senin 15:00 - 17:00',
-                  pageRouteE: const DetailExtraPage(),
-                ),
-                ExtraCard(
-                  img: 'assets/images/pramuka.png',
-                  name: 'Extrakurikuler Pramuka',
-                  jadwal: 'Setiap Hari Senin 14:00 - 16:00',
-                  pageRouteE: const DetailExtraPramuka(),
-                ),
-                ExtraCard(
-                  img: 'assets/images/badmintoon.png',
-                  name: 'Extrakurikuler Badmintoon',
-                  jadwal: 'Setiap Hari Senin 15:00 - 17:00',
-                  pageRouteE: const DetailExtraVolly(),
-                ),
-                ExtraCard(
-                  img: 'assets/images/tari.png',
-                  name: 'Extrakurikuler Tari',
-                  jadwal: 'Setiap Hari Senin 14:00 - 15:00',
-                  pageRouteE: const DetailExtraTari(),
-                ),
-                ExtraCard(
-                  img: 'assets/images/futsal.png',
-                  name: 'Extrakurikuler Futsal',
-                  jadwal: 'Setiap Hari Senin 14:00 - 15:00',
-                  pageRouteE: const DetailExtraFutsal(),
-                ),
-                const SizedBox(
-                  width: 26,
-                )
-              ],
+        Obx(() => _extraController.isLoading.value ? Center(child: CircularProgressIndicator()) :
+          Container(
+            width: MediaQuery.of(context).size.width ,
+            child: ListView.builder(
+              physics: NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              clipBehavior: Clip.hardEdge,
+              // scrollDirection: Axis.horizontal,
+              itemBuilder: (BuildContext context, int index) {
+                return ExtraCard(
+                  img: _extraController.extrakurikuler[index].link,
+                  name: _extraController.extrakurikuler[index].judul,
+                  jadwal: _extraController.extrakurikuler[index].jadwal,
+            pageRouteE: DetailExtra(id: _extraController.extrakurikuler[index].id)
+                );
+              },
+              itemCount: _extraController.extrakurikuler.length,
             ),
           ),
-        ),
+        )
       ],
     );
   }

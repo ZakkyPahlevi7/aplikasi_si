@@ -16,7 +16,7 @@ import '../urlconfig.dart';
 
 class FormController extends GetxController{
   var isLoading = true.obs;
-  var form = <FormsData>[].obs;
+  var form = <PpdbData>[].obs;
 
   loadData({bool withLoading = false}) async {
     try {
@@ -24,7 +24,7 @@ class FormController extends GetxController{
       var response = await apiConfig.get(UrlConfig.baseUrl()+'form');
       //debugPrint('response notes : $response');
       if(response!='error' && response!='fatal'){
-        form.value = FormModel.fromJson(jsonDecode(response.toString())).data!;
+        form.value = PpdbModel.fromJson(jsonDecode(response.toString())).data!;
         isLoading.value=false;
       }else{
         isLoading.value=false;

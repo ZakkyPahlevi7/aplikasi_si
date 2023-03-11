@@ -63,8 +63,8 @@ class _DetailDataGuruState extends State<DetailDataGuru> {
                           borderRadius: BorderRadius.circular(10.0),
                           color: AppColors.secondaryWhite),
                       padding: const EdgeInsets.all(10),
-                      child: Image.asset(
-                        'assets/images/profilcivitas.png',
+                      child: Image.network(
+                        _guruController.guru[index].link,
                         width: 50,
                       ),
                     ),

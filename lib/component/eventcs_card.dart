@@ -8,7 +8,6 @@ class EventcsCard extends StatelessWidget {
   String title;
   String peserta;
   String img;
-  String time;
   String day;
   String location;
   var pageRouteE;
@@ -18,7 +17,6 @@ class EventcsCard extends StatelessWidget {
     required this.title,
     required this.peserta,
     required this.img,
-    required this.time,
     required this.day,
     required this.location,
     required this.pageRouteE
@@ -53,7 +51,7 @@ class EventcsCard extends StatelessWidget {
                 const SizedBox(
                   height: 24,
                 ),
-                Image.asset(
+                Image.network(
                   img,
                   width: 160,
                 ),

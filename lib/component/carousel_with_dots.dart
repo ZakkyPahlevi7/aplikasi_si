@@ -10,14 +10,15 @@ import 'package:get/get_core/src/get_main.dart';
 import '../model/model_header.dart';
 
 class CarouselWithDotsPage extends StatefulWidget {
-  // final List<HeaderData>? gambarheader;
-  final DashboardController? dashboardController;
+  final List<SekolahData>? gambarheader;
   final List<String> imgList;
-  const CarouselWithDotsPage(
+  int? id;
+  CarouselWithDotsPage(
       {Key? key,
       required this.imgList,
-      // this.gambarheader,
-      this.dashboardController})
+      this.gambarheader,
+      this.id,
+  })
       : super(key: key);
   @override
   State<CarouselWithDotsPage> createState() => _CarouselWithDotsPageState();
@@ -27,22 +28,25 @@ class _CarouselWithDotsPageState extends State<CarouselWithDotsPage> {
   int _current = 0;
   final _controller = Get.put(DashboardController());
 
-  // @override
-  // void initState() {
-  //   _initData();
-  //   super.initState();
-  // }
+  @override
+  void initState() {
+    _initData();
+    super.initState();
+  }
 
-  // Future<Null> _initData() async {
-  //   await widget.dashboardController!.loadData(withLoading: true);
-  // }
+  Future<Null> _initData() async {
+    await _controller.loadData(withLoading: true);
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Obx(() => _controller.isLoading.value ? const Padding(
+      padding: EdgeInsets.symmetric(vertical: 8.0),
+      child: Center(child: CircularProgressIndicator()),
+    ) : Column(
       children: [
         CarouselSlider.builder(
-            itemCount: imgList.length,
+            itemCount: _controller.header.length,
             itemBuilder: (BuildContext context, int index, i) {
               return Container(
                 margin: const EdgeInsets.only(
@@ -54,10 +58,10 @@ class _CarouselWithDotsPageState extends State<CarouselWithDotsPage> {
                   ),
                   child: Stack(
                     children: [
-                      Image.asset(
-                        // _controller.header[index].foto!,
+                      Image.network(
+                        _controller.header[index].link,
                         // widget.gambarheader![index].foto!,
-                        imgList[index],
+                        // imgList[index],
                         fit: BoxFit.contain,
                         width: 900,
                       ),
@@ -75,10 +79,11 @@ class _CarouselWithDotsPageState extends State<CarouselWithDotsPage> {
                     _current = index;
                   });
                 })),
+        const SizedBox(height: 2),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: widget.imgList.map((url) {
-            int index = widget.imgList.indexOf(url);
+          children: _controller.header.map((url) {
+            int index = _controller.header.indexOf(url);
             return Container(
               width: 10,
               height: 10,
@@ -92,7 +97,7 @@ class _CarouselWithDotsPageState extends State<CarouselWithDotsPage> {
           }).toList(),
         ),
       ],
-    );
+    ));
   }
 }
 

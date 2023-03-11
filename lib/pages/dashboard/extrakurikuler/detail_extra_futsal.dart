@@ -3,14 +3,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class DetailExtraFutsal extends StatefulWidget {
-  const DetailExtraFutsal({super.key});
+class DetailExtra extends StatefulWidget {
+  int? id;
+  DetailExtra({super.key, required this.id});
 
   @override
-  State<DetailExtraFutsal> createState() => _DetailExtraFutsalState();
+  State<DetailExtra> createState() => _DetailExtraState();
 }
 
-class _DetailExtraFutsalState extends State<DetailExtraFutsal> {
+class _DetailExtraState extends State<DetailExtra> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(

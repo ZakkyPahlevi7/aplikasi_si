@@ -6,14 +6,14 @@ import '../theme/theme.dart';
 class CardPrestasi extends StatelessWidget {
   String img;
   String juara;
-  String nama;
+  String tingkat;
   String kategori;
 
   CardPrestasi(
       {Key? key,
       required this.img,
       required this.juara,
-      required this.nama,
+      required this.tingkat,
       required this.kategori})
       : super(key: key);
 
@@ -38,7 +38,7 @@ class CardPrestasi extends StatelessWidget {
         children: [
           Container(
             margin: const EdgeInsets.only(top: 4),
-            child: Image.asset(
+            child: Image.network(
               img,
               width: 36,
             ),
@@ -56,7 +56,7 @@ class CardPrestasi extends StatelessWidget {
                 style: AppTextStyle.appTitlew700s10(),
               ),
               Text(
-                nama,
+                tingkat,
                 style: AppTextStyle.appTitlew400s10(Colors.black),
               ),
               Text(kategori, style: AppTextStyle.appTitlew400s10(Colors.black)),
