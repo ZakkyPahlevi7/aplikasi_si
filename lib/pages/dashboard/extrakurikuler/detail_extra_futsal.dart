@@ -1,10 +1,13 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../controller/extrakurikuler_controller.dart';
+
 class DetailExtra extends StatefulWidget {
-  int? id;
+  int id;
   DetailExtra({super.key, required this.id});
 
   @override
@@ -12,20 +15,39 @@ class DetailExtra extends StatefulWidget {
 }
 
 class _DetailExtraState extends State<DetailExtra> {
+  final ExtrakurikulerController _extraController = ExtrakurikulerController();
+  int _current = 0;
+
+  @override
+  void initState() {
+    _initData();
+    // TODO: implement initState
+    super.initState();
+  }
+
+  Future onRefresh() async {
+    await _initData();
+  }
+
+  Future<Null> _initData() async {
+    await _extraController.loadData(withLoading: true);
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
       backgroundColor: Colors.white,
-      body: ListView(
-        children: [
-          Column(
+      body: RefreshIndicator(
+        onRefresh: onRefresh,
+        child: SingleChildScrollView(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('assets/images/headerbasket.png'),
+                        image: NetworkImage(_extraController.extrakurikuler[widget.id].link),
                         fit: BoxFit.cover)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,7 +67,7 @@ class _DetailExtraState extends State<DetailExtra> {
                     Container(
                       margin: EdgeInsets.only(left: 26, top: 88),
                       child: Text(
-                        'Extrakurikuler Futsal',
+                        _extraController.extrakurikuler[widget.id].judul,
                         style: GoogleFonts.poppins(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -67,7 +89,7 @@ class _DetailExtraState extends State<DetailExtra> {
                                 width: 2,
                               ),
                               Text(
-                                'Lapangan Basket',
+                                _extraController.extrakurikuler[widget.id].lokasi,
                                 style: GoogleFonts.poppins(
                                     fontSize: 10,
                                     fontWeight: FontWeight.w400,
@@ -88,7 +110,7 @@ class _DetailExtraState extends State<DetailExtra> {
                               SizedBox(
                                 width: 2,
                               ),
-                              Text('Hari Selasa',
+                              Text(_extraController.extrakurikuler[widget.id].jadwal,
                                   style: GoogleFonts.poppins(
                                       fontSize: 10,
                                       fontWeight: FontWeight.w400,
@@ -109,7 +131,7 @@ class _DetailExtraState extends State<DetailExtra> {
                                 width: 2,
                               ),
                               Text(
-                                '16:00 - 17:00',
+                                _extraController.extrakurikuler[widget.id].jam,
                                 style: GoogleFonts.poppins(
                                     fontSize: 10,
                                     fontWeight: FontWeight.w400,
@@ -120,23 +142,13 @@ class _DetailExtraState extends State<DetailExtra> {
                         ],
                       ),
                     ),
-                    Container(
-                      margin: EdgeInsets.only(left: 26),
-                      child: Text(
-                        'Tentang',
-                        style: GoogleFonts.poppins(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.black),
-                      ),
-                    )
                   ],
                 ),
               ),
               Container(
                   margin: EdgeInsets.only(left: 26, right: 26, top: 6),
                   child: Text(
-                    'Basket merupakan permainan yang diciptakan seorang guru olahraga bernama James Naismith pada 1891-an. Kala itu, James ingin membuat permainan yang bisa dimainkan murid-muridnya dalam ruangan tertutup, terutama saat musim dingin. \n\nNamun, basket yang dilakukan James berbeda dari yang sekarang. James hanya membuat beberapa aturan dasar agar bisa diterima banyak orang. \n\nPermainan ini berlangsung dengan cara mempertandingkan dua tim basket dan berebut bola untuk dimasukkan ke dalam ring lawan. Basket memiliki banyak manfaat.',
+                    _extraController.extrakurikuler[widget.id].tentang,
                     style: GoogleFonts.poppins(
                         fontSize: 13, fontWeight: FontWeight.w400),
                   )),
@@ -150,15 +162,67 @@ class _DetailExtraState extends State<DetailExtra> {
                       color: Colors.black),
                 ),
               ),
-              Container(
-                  margin: EdgeInsets.symmetric(horizontal: 18),
-                  child: Image.asset('assets/images/galeribasket.png')),
+              Column(
+                children: [
+                  CarouselSlider.builder(
+                      itemCount: _extraController.extrakurikuler[widget.id].images.length,
+                      itemBuilder: (BuildContext context, int index, i) {
+                        return Container(
+                          margin: const EdgeInsets.only(
+                            top: 25,
+                          ),
+                          child: ClipRRect(
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(5.0),
+                            ),
+                            child: Stack(
+                              children: [
+                                Image.network(
+                                  _extraController.extrakurikuler[widget.id].images[index].link,
+                                  // widget.gambarheader![index].foto!,
+                                  // imgList[index],
+                                  fit: BoxFit.contain,
+                                  width: 900,
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                      options: CarouselOptions(
+                          autoPlay: true,
+                          enlargeCenterPage: true,
+                          aspectRatio: 2.0,
+                          onPageChanged: (index, reason) {
+                            setState(() {
+                              _current = index;
+                            });
+                          })),
+                  const SizedBox(height: 2),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: _extraController.extrakurikuler[widget.id].images.map((url) {
+                      int index = _extraController.extrakurikuler[widget.id].images.indexOf(url);
+                      return Container(
+                        width: 10,
+                        height: 10,
+                        margin: const EdgeInsets.symmetric(vertical: 0, horizontal: 3),
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: _current == index
+                                ? const Color(0xff0962E0)
+                                : const Color(0xffD9D9D9)),
+                      );
+                    }).toList(),
+                  ),
+                ],
+              ),
               SizedBox(
                 height: 16,
               )
             ],
           ),
-        ],
+        ),
       ),
     ));
   }
