@@ -63,18 +63,19 @@ class _ExtraSectionState extends State<ExtraSection> {
         ),
         Obx(() => _extraController.isLoading.value ? Center(child: CircularProgressIndicator()) :
           Container(
-            width: MediaQuery.of(context).size.width ,
+            margin: EdgeInsets.symmetric(horizontal: 33),
+            height: 150,
             child: ListView.builder(
-              physics: NeverScrollableScrollPhysics(),
+              // physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
-              clipBehavior: Clip.hardEdge,
-              // scrollDirection: Axis.horizontal,
+              // clipBehavior: Clip.hardEdge,
+              scrollDirection: Axis.horizontal,
               itemBuilder: (BuildContext context, int index) {
                 return ExtraCard(
                     img: _extraController.extrakurikuler[index].link,
                     name: _extraController.extrakurikuler[index].judul,
                     jadwal: _extraController.extrakurikuler[index].jadwal,
-                    pageRouteE: DetailExtra(id: _extraController.extrakurikuler[index].id)
+                    pageRouteE: DetailExtra(extraData: _extraController.extrakurikuler[index])
                 );
               },
               itemCount: _extraController.extrakurikuler.length,

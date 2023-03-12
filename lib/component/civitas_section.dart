@@ -27,9 +27,6 @@ class CivitasSection extends StatelessWidget {
               Text('Civitas', style: AppTextStyle.appTitlew800s18()),
             ],
           ),
-          const SizedBox(
-            height: 12,
-          ),
           GridView.count(
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
