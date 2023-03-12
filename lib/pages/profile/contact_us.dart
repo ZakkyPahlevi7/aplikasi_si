@@ -88,7 +88,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
                   height: 50,
                 ),
                 Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 30),
+                  margin: const EdgeInsets.only(left: 30),
                   child: Row(
                     children: [
                       Image.asset('assets/icon/maps.png'),

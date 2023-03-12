@@ -81,39 +81,38 @@ class _DashboardPageState extends State<DashboardPage> {
                   height: 18,
                 ),
                 Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 36),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.map,
-                        color: Color(0xff0962E0),
-                      ),
-                      SizedBox(
-                        width: 6,
-                      ),
-                      Text(
-                        'Lokasi',
-                        style: AppTextStyle.appTitlew800s18(),
-                      ),
-                      const Spacer(),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const DenahPage()));
-                        },
-                        child: Text(
-                          'Lihat Denah',
-                          style: AppTextStyle.appTitlew400s13(
-                              const Color.fromRGBO(0, 0, 0, 0.5)),
+                    margin: const EdgeInsets.symmetric(horizontal: 36),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.map,
+                          color: Color(0xff0962E0),
                         ),
-                      ),
-                    ],
-                  )
-                  ),
+                        SizedBox(
+                          width: 6,
+                        ),
+                        Text(
+                          'Lokasi',
+                          style: AppTextStyle.appTitlew800s18(),
+                        ),
+                        const Spacer(),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const DenahPage()));
+                          },
+                          child: Text(
+                            'Lihat Denah',
+                            style: AppTextStyle.appTitlew400s13(
+                                const Color.fromRGBO(0, 0, 0, 0.5)),
+                          ),
+                        ),
+                      ],
+                    )),
                 const SizedBox(
-                  height: 12,
+                  height: 22,
                 ),
                 MapsContentPage(),
                 const SizedBox(

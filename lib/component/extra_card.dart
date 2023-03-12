@@ -1,19 +1,28 @@
 import 'package:flutter/material.dart';
 
+import '../controller/extrakurikuler_controller.dart';
 import '../theme/theme.dart';
 
 // ignore: must_be_immutable
 class ExtraCard extends StatelessWidget {
+  final ExtrakurikulerController _extraController = ExtrakurikulerController();
+
+  Future<Null> _initData() async {
+    await _extraController.loadData(withLoading: true);
+  }
+
   var pageRouteE;
   String img;
   String name;
   String jadwal;
+  String pukulwaktu;
   ExtraCard(
       {Key? key,
       required this.img,
       required this.name,
       required this.jadwal,
-      required this.pageRouteE})
+      required this.pageRouteE,
+      required this.pukulwaktu})
       : super(key: key);
 
   @override
@@ -24,11 +33,12 @@ class ExtraCard extends StatelessWidget {
             context, MaterialPageRoute(builder: (context) => pageRouteE));
       },
       child: Container(
-        width: 345,
+        width: 240,
         height: 150,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(7.0),
-            image: DecorationImage(image: NetworkImage(img), fit: BoxFit.cover)),
+            image:
+                DecorationImage(image: NetworkImage(img), fit: BoxFit.cover)),
         margin: const EdgeInsets.only(right: 10, top: 6, bottom: 8),
         padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 8),
         child: Column(
@@ -36,11 +46,11 @@ class ExtraCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              name,
+              'Extrakurikuler ' + name,
               style: AppTextStyle.appTitlew600s12(Colors.white),
             ),
             Text(
-              jadwal,
+              'Setiap Hari ' + jadwal + ' ' + pukulwaktu,
               style: AppTextStyle.appTitlew400s10(Colors.white),
             ),
             // const SizedBox(
