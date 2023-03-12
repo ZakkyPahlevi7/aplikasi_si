@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:aplikasi_si/model/model_extra.dart' as extra;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,8 +8,8 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../controller/extrakurikuler_controller.dart';
 
 class DetailExtra extends StatefulWidget {
-  int id;
-  DetailExtra({super.key, required this.id});
+  extra.ExtraData extraData;
+  DetailExtra({super.key, required this.extraData});
 
   @override
   State<DetailExtra> createState() => _DetailExtraState();
@@ -47,7 +48,7 @@ class _DetailExtraState extends State<DetailExtra> {
               Container(
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: NetworkImage(_extraController.extrakurikuler[widget.id].link),
+                        image: NetworkImage(widget.extraData.link),
                         fit: BoxFit.cover)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -67,7 +68,7 @@ class _DetailExtraState extends State<DetailExtra> {
                     Container(
                       margin: EdgeInsets.only(left: 26, top: 88),
                       child: Text(
-                        _extraController.extrakurikuler[widget.id].judul,
+                        widget.extraData.judul,
                         style: GoogleFonts.poppins(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -75,7 +76,7 @@ class _DetailExtraState extends State<DetailExtra> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 26, top: 4, bottom: 38),
+                      margin: EdgeInsets.only(left: 26, top: 4, bottom: 15),
                       child: Row(
                         children: [
                           Row(
@@ -89,7 +90,7 @@ class _DetailExtraState extends State<DetailExtra> {
                                 width: 2,
                               ),
                               Text(
-                                _extraController.extrakurikuler[widget.id].lokasi,
+                                widget.extraData.lokasi,
                                 style: GoogleFonts.poppins(
                                     fontSize: 10,
                                     fontWeight: FontWeight.w400,
@@ -110,7 +111,7 @@ class _DetailExtraState extends State<DetailExtra> {
                               SizedBox(
                                 width: 2,
                               ),
-                              Text(_extraController.extrakurikuler[widget.id].jadwal,
+                              Text(widget.extraData.jadwal,
                                   style: GoogleFonts.poppins(
                                       fontSize: 10,
                                       fontWeight: FontWeight.w400,
@@ -131,7 +132,7 @@ class _DetailExtraState extends State<DetailExtra> {
                                 width: 2,
                               ),
                               Text(
-                                _extraController.extrakurikuler[widget.id].jam,
+                                widget.extraData.jam,
                                 style: GoogleFonts.poppins(
                                     fontSize: 10,
                                     fontWeight: FontWeight.w400,
@@ -145,10 +146,11 @@ class _DetailExtraState extends State<DetailExtra> {
                   ],
                 ),
               ),
+              SizedBox(height: 20,),
               Container(
-                  margin: EdgeInsets.only(left: 26, right: 26, top: 6),
+                  margin: EdgeInsets.only(left: 26, right: 26),
                   child: Text(
-                    _extraController.extrakurikuler[widget.id].tentang,
+                    widget.extraData.tentang,
                     style: GoogleFonts.poppins(
                         fontSize: 13, fontWeight: FontWeight.w400),
                   )),
@@ -165,7 +167,7 @@ class _DetailExtraState extends State<DetailExtra> {
               Column(
                 children: [
                   CarouselSlider.builder(
-                      itemCount: _extraController.extrakurikuler[widget.id].images.length,
+                      itemCount: widget.extraData.images.length,
                       itemBuilder: (BuildContext context, int index, i) {
                         return Container(
                           margin: const EdgeInsets.only(
@@ -178,7 +180,7 @@ class _DetailExtraState extends State<DetailExtra> {
                             child: Stack(
                               children: [
                                 Image.network(
-                                  _extraController.extrakurikuler[widget.id].images[index].link,
+                                  widget.extraData.images[index].link,
                                   // widget.gambarheader![index].foto!,
                                   // imgList[index],
                                   fit: BoxFit.contain,
@@ -201,8 +203,8 @@ class _DetailExtraState extends State<DetailExtra> {
                   const SizedBox(height: 2),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: _extraController.extrakurikuler[widget.id].images.map((url) {
-                      int index = _extraController.extrakurikuler[widget.id].images.indexOf(url);
+                    children: widget.extraData.images.map((url) {
+                      int index = widget.extraData.images.indexOf(url);
                       return Container(
                         width: 10,
                         height: 10,

@@ -5,14 +5,14 @@ import 'package:aplikasi_si/pages/profile/spp/tagihansmt2.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class berandaSppPage extends StatefulWidget {
-  const berandaSppPage({super.key});
+class SppScreen extends StatefulWidget {
+  const SppScreen({super.key});
 
   @override
-  State<berandaSppPage> createState() => _berandaSppPageState();
+  State<SppScreen> createState() => _SppScreenState();
 }
 
-class _berandaSppPageState extends State<berandaSppPage> {
+class _SppScreenState extends State<SppScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

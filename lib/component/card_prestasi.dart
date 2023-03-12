@@ -20,6 +20,7 @@ class CardPrestasi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 100,
       width: 250,
       margin: const EdgeInsets.only(top: 12, bottom: 8),
       decoration: BoxDecoration(
@@ -45,10 +46,10 @@ class CardPrestasi extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            width: 6,
+            width: 15,
           ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(

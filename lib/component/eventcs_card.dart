@@ -25,7 +25,9 @@ class EventcsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 28),
+      width: 200,
+      height: 250,
+      // margin: EdgeInsets.only(left: 28),
       child: GestureDetector(
         onTap: (){
           Navigator.push(
@@ -38,6 +40,7 @@ class EventcsCard extends StatelessWidget {
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(8.0)),
             padding: const EdgeInsets.symmetric(vertical: 34, horizontal: 16),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
@@ -54,6 +57,7 @@ class EventcsCard extends StatelessWidget {
                 Image.network(
                   img,
                   width: 160,
+                  height: 100,
                 ),
                 const SizedBox(
                   height: 10,
@@ -110,24 +114,25 @@ class RPSCustomPainter extends CustomPainter {
   bool? isFilled;
   @override
   void paint(Canvas canvas, Size size) {
+    double customWidth = 190;
     PaintingStyle.fill;
     Path path_0 = Path();
     path_0.moveTo(0, size.height * 0.06601492);
     path_0.cubicTo(
         0,
         size.height * 0.02658206,
-        size.width * 0.06023602,
+        customWidth * 0.06023602,
         size.height * -0.003313460,
-        size.width * 0.1260220,
+        customWidth * 0.1260220,
         size.height * 0.003469079);
-    path_0.lineTo(size.width * 0.9109677, size.height * 0.08439714);
-    path_0.cubicTo(size.width * 0.9624409, size.height * 0.08970413, size.width,
-        size.height * 0.1160908, size.width, size.height * 0.1469432);
-    path_0.lineTo(size.width, size.height * 0.9365079);
-    path_0.cubicTo(size.width, size.height * 0.9715746, size.width * 0.9518602,
-        size.height, size.width * 0.8924731, size.height);
-    path_0.lineTo(size.width * 0.1075269, size.height);
-    path_0.cubicTo(size.width * 0.04814145, size.height, 0,
+    path_0.lineTo(customWidth * 0.9109677, size.height * 0.08439714);
+    path_0.cubicTo(customWidth * 0.9624409, size.height * 0.08970413, customWidth,
+        size.height * 0.1160908, customWidth, size.height * 0.1469432);
+    path_0.lineTo(customWidth, size.height * 0.9365079);
+    path_0.cubicTo(customWidth, size.height * 0.9715746, customWidth * 0.9518602,
+        size.height, customWidth * 0.8924731, size.height);
+    path_0.lineTo(customWidth * 0.1075269, size.height);
+    path_0.cubicTo(customWidth * 0.04814145, size.height, 0,
         size.height * 0.9715746, 0, size.height * 0.9365079);
     path_0.lineTo(0, size.height * 0.06601492);
     path_0.close();

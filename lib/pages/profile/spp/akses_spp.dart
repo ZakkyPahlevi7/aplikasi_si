@@ -1,27 +1,82 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors
 
+import 'package:aplikasi_si/controller/user_controller.dart';
 import 'package:aplikasi_si/pages/profile/spp/spp.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import '../../../config/preferences.dart';
+import '../../../controller/dashboard_controller.dart';
 import '../../../theme/app_text_styles.dart';
 import 'garisputus.dart';
 
-class aksesSppPage extends StatefulWidget {
-  const aksesSppPage({super.key});
+class SppLogin extends StatefulWidget {
+  const SppLogin({super.key});
 
   @override
-  State<aksesSppPage> createState() => _aksesSppPageState();
+  State<SppLogin> createState() => _SppLoginState();
 }
 
-class _aksesSppPageState extends State<aksesSppPage> {
+class _SppLoginState extends State<SppLogin> with WidgetsBindingObserver {
+  final _controller = Get.put(UserController());
+
+  final TextEditingController _nisController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  int tabIndex = 0;
+  bool _btnLoginEnable = false;
+  bool _obscureText = true;
+
+  @override
+  void initState() {
+    _checkPassw();
+    _nisController.addListener(_handleLogin);
+    _passwordController.addListener(_handleLogin);
+    // TODO: implement initState
+    super.initState();
+  }
+
+  _handleLogin() {
+    if (tabIndex == 0) {
+      if (_nisController.text.isEmpty || _passwordController.text.isEmpty) {
+        setState(() {
+          _btnLoginEnable = false;
+        });
+      } else {
+        setState(() {
+          _btnLoginEnable = true;
+        });
+      }
+    }
+  }
+
+  _checkPassw() async {
+    final nis = await prefs.getEmail();
+    final password = await prefs.readPassword();
+    // //print(mail);
+    if (password.toString().isNotEmpty && nis.toString().isNotEmpty) {
+      _nisController.text = nis;
+      _passwordController.text = password;
+    }
+  }
+
+  gotoDashboard() async {
+    await _controller.login(
+        nis: _nisController.text,
+        passw: _passwordController.text
+    );
+    _nisController.clear();
+    _passwordController.clear();
+    WidgetsBinding.instance.removeObserver(this);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: ListView(
-        children: [
-          Column(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               GestureDetector(
@@ -68,7 +123,7 @@ class _aksesSppPageState extends State<aksesSppPage> {
                 margin: EdgeInsets.only(left: 26, right: 26, top: 20),
                 child: Row(
                   children: [
-                    Text('Nama Lengkap',
+                    Text('NIS',
                         style: GoogleFonts.poppins(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
@@ -87,11 +142,11 @@ class _aksesSppPageState extends State<aksesSppPage> {
                   right: 26,
                 ),
                 child: TextField(
-                  // controller: controller,
+                  controller: _nisController,
                   decoration: InputDecoration(
                       contentPadding: const EdgeInsets.symmetric(
                           vertical: 16, horizontal: 12),
-                      hintText: 'Masukkan nama lengkapmu',
+                      hintText: 'Masukkan Nomor Induk Siswa',
                       hintStyle: AppTextStyle.appTitlew500s14(Colors.black26),
                       enabledBorder: OutlineInputBorder(
                           borderSide:
@@ -107,7 +162,7 @@ class _aksesSppPageState extends State<aksesSppPage> {
                 margin: EdgeInsets.only(left: 26, right: 26, top: 10),
                 child: Row(
                   children: [
-                    Text('Kode',
+                    Text('Password',
                         style: GoogleFonts.poppins(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
@@ -126,11 +181,23 @@ class _aksesSppPageState extends State<aksesSppPage> {
                   right: 26,
                 ),
                 child: TextField(
-                  // controller: controller,
+                  controller: _passwordController,
+                  obscureText: _obscureText,
                   decoration: InputDecoration(
+                      suffixIcon: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            _obscureText = !_obscureText;
+                          });
+                        },
+                        child: Icon(
+                          _obscureText ? Icons.visibility_off : Icons.visibility,
+                          color: _obscureText ? Color(0xFFb9b9b9) : Colors.blue,
+                        ),
+                      ),
                       contentPadding: const EdgeInsets.symmetric(
                           vertical: 16, horizontal: 12),
-                      hintText: 'Masukkan kodemu',
+                      hintText: 'Masukkan Password',
                       hintStyle: AppTextStyle.appTitlew500s14(Colors.black26),
                       enabledBorder: OutlineInputBorder(
                           borderSide:
@@ -149,13 +216,10 @@ class _aksesSppPageState extends State<aksesSppPage> {
                   width: MediaQuery.of(context).size.width,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => berandaSppPage()));
+                      _btnLoginEnable ? () => gotoDashboard() : () {};
                     },
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xff1468E2)),
+                        backgroundColor: _btnLoginEnable ? Color(0xff1468E2) : Color(0xFFDBDBDB)),
                     child: Text(
                       'Masuk',
                       style: GoogleFonts.poppins(
@@ -166,7 +230,7 @@ class _aksesSppPageState extends State<aksesSppPage> {
               )
             ],
           ),
-        ],
+        ),
       ),
     );
   }

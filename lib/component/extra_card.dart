@@ -24,17 +24,17 @@ class ExtraCard extends StatelessWidget {
             context, MaterialPageRoute(builder: (context) => pageRouteE));
       },
       child: Container(
+        width: 345,
+        height: 150,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(7.0),
             image: DecorationImage(image: NetworkImage(img), fit: BoxFit.cover)),
         margin: const EdgeInsets.only(right: 10, top: 6, bottom: 8),
         padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 8),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(
-              height: 80,
-            ),
             Text(
               name,
               style: AppTextStyle.appTitlew600s12(Colors.white),
@@ -43,9 +43,9 @@ class ExtraCard extends StatelessWidget {
               jadwal,
               style: AppTextStyle.appTitlew400s10(Colors.white),
             ),
-            const SizedBox(
-              width: 210,
-            )
+            // const SizedBox(
+            //   width: 210,
+            // )
           ],
         ),
       ),

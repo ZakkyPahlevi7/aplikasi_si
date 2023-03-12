@@ -43,22 +43,30 @@ class _EventcsSectionState extends State<EventcsSection> {
               style: AppTextStyle.appTitlew800s20(Colors.black),
             )),
         Obx(() => _eventController.isLoading.value ? Center(child: CircularProgressIndicator()) :
-          ListView.builder(
-            physics: PageScrollPhysics(),
-            shrinkWrap: true,
-            clipBehavior: Clip.hardEdge,
-            // scrollDirection: Axis.vertical,
-            itemCount: _eventController.eventComingSoon.length,
-              itemBuilder: (BuildContext context, index){
-                return EventcsCard(
-                  title: _eventController.eventComingSoon[index].event,
-                  peserta: _eventController.eventComingSoon[index].peserta,
-                  img: _eventController.eventComingSoon[index].link,
-                  day: _eventController.eventComingSoon[index].tanggal.toString(),
-                  location: _eventController.eventComingSoon[index].lokasi,
-                  pageRouteE: DetailEventCsPage(),
-                );
-              }
+          SizedBox(
+            height: 310,
+            child: ListView.separated(
+                padding: const EdgeInsets.symmetric(horizontal: 22.0),
+                physics: PageScrollPhysics(),
+              shrinkWrap: true,
+              clipBehavior: Clip.hardEdge,
+              scrollDirection: Axis.horizontal,
+              itemCount: _eventController.eventComingSoon.length,
+                separatorBuilder: (_, __) {
+                  return SizedBox(width: 10,);
+                },
+                itemBuilder: (BuildContext context, index){
+                print(_eventController.eventComingSoon.length);
+                  return EventcsCard(
+                    title: _eventController.eventComingSoon[index].event,
+                    peserta: _eventController.eventComingSoon[index].peserta,
+                    img: _eventController.eventComingSoon[index].link,
+                    day: _eventController.eventComingSoon[index].tanggal.toString(),
+                    location: _eventController.eventComingSoon[index].lokasi,
+                    pageRouteE: DetailEventCsPage(),
+                  );
+                }
+            ),
           ),
         )
       ],

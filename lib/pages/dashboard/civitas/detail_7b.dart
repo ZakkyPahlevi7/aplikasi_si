@@ -61,7 +61,8 @@ class _Detail7BState extends State<Detail7B> {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0)),
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: AppColors.secondaryWhite),
                     padding: const EdgeInsets.all(10),
                     child: Image.network(
                       fit: BoxFit.cover,
@@ -72,21 +73,25 @@ class _Detail7BState extends State<Detail7B> {
                   const SizedBox(
                     width: 16,
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        _siswa7bController.siswa_7b[index].nama,
-                        style: AppTextStyle.appTitlew700s14(),
-                      ),
-                      const SizedBox(
-                        height: 2,
-                      ),
-                      Text(
-                        _siswa7bController.siswa_7b[index].kelas,
-                        style: AppTextStyle.appTitlew400s12h13(),
-                      )
-                    ],
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        FittedBox(
+                          child: Text(
+                            _siswa7bController.siswa_7b[index].nama,
+                            style: AppTextStyle.appTitlew700s14(),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 2,
+                        ),
+                        Text(
+                          _siswa7bController.siswa_7b[index].kelas,
+                          style: AppTextStyle.appTitlew400s12h13(),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),

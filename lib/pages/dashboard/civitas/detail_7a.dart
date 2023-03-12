@@ -60,7 +60,6 @@ class _Detail7AState extends State<Detail7A> {
               child: Row(
                 children: [
                   Container(
-                    
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         color: AppColors.secondaryWhite),
