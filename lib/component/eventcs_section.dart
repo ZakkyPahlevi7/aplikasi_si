@@ -63,7 +63,7 @@ class _EventcsSectionState extends State<EventcsSection> {
                     img: _eventController.eventComingSoon[index].link,
                     day: _eventController.eventComingSoon[index].tanggal.toString(),
                     location: _eventController.eventComingSoon[index].lokasi,
-                    pageRouteE: DetailEventCsPage(),
+                    pageRouteE: DetailEventCsPage(eventComingSoonData: _eventController.eventComingSoon[index]),
                   );
                 }
             ),

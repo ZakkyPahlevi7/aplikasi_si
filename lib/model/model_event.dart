@@ -92,7 +92,6 @@ class EventComingSoonData {
     };
 }
 
-
 // To parse this JSON data, do
 //
 //     final eventRecentModel = eventRecentModelFromJson(jsonString);
@@ -150,7 +149,7 @@ class EventRecentData {
     DateTime updatedAt;
     dynamic deletedAt;
     String link;
-    List<dynamic> imagesEvents;
+    List<ImagesEvent> imagesEvents;
 
     factory EventRecentData.fromJson(Map<String, dynamic> json) => EventRecentData(
         id: json["id"],
@@ -165,7 +164,7 @@ class EventRecentData {
         updatedAt: DateTime.parse(json["updated_at"]),
         deletedAt: json["deleted_at"],
         link: json["link"],
-        imagesEvents: List<dynamic>.from(json["images_events"].map((x) => x)),
+        imagesEvents: List<ImagesEvent>.from(json["images_events"].map((x) => ImagesEvent.fromJson(x))),
     );
 
     Map<String, dynamic> toJson() => {
@@ -181,7 +180,47 @@ class EventRecentData {
         "updated_at": updatedAt.toIso8601String(),
         "deleted_at": deletedAt,
         "link": link,
-        "images_events": List<dynamic>.from(imagesEvents.map((x) => x)),
+        "images_events": List<dynamic>.from(imagesEvents.map((x) => x.toJson())),
+    };
+}
+
+class ImagesEvent {
+    ImagesEvent({
+        required this.id,
+        required this.image,
+        required this.eventsId,
+        required this.createdAt,
+        required this.updatedAt,
+        this.deletedAt,
+        required this.link,
+    });
+
+    int id;
+    String image;
+    String eventsId;
+    DateTime createdAt;
+    DateTime updatedAt;
+    dynamic deletedAt;
+    String link;
+
+    factory ImagesEvent.fromJson(Map<String, dynamic> json) => ImagesEvent(
+        id: json["id"],
+        image: json["image"],
+        eventsId: json["events_id"],
+        createdAt: DateTime.parse(json["created_at"]),
+        updatedAt: DateTime.parse(json["updated_at"]),
+        deletedAt: json["deleted_at"],
+        link: json["link"],
+    );
+
+    Map<String, dynamic> toJson() => {
+        "id": id,
+        "image": image,
+        "events_id": eventsId,
+        "created_at": createdAt.toIso8601String(),
+        "updated_at": updatedAt.toIso8601String(),
+        "deleted_at": deletedAt,
+        "link": link,
     };
 }
 

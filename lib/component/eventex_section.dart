@@ -67,7 +67,7 @@ class _EventexSectionState extends State<EventexSection> {
                         imgex: _controller.eventRecent[index].link,
                         day: _controller.eventRecent[index].tanggal.toString(),
                         location: _controller.eventRecent[index].lokasi,
-                        pageRouteE: DetailEventExPage());
+                        pageRouteE: DetailEventExPage(eventRecentData: _controller.eventRecent[index]));
                   }),
             ),
           )
