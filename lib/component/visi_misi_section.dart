@@ -47,22 +47,22 @@ class _visiMisiSectionState extends State<visiMisiSection> {
             children: [
               buildVisiTujuan(),
               buildMisi(),
-              GestureDetector(
-                onHorizontalDragEnd: (details) {
-                  setState(() {
-                    nextPage();
-                  });
-                },
-                child: buildVisiTujuan(),
-              ),
-              GestureDetector(
-                onHorizontalDragEnd: (details) {
-                  setState(() {
-                    previousPage();
-                  });
-                },
-                child: buildMisi(),
-              )
+              // GestureDetector(
+              //   onHorizontalDragEnd: (details) {
+              //     setState(() {
+              //       nextPage();
+              //     });
+              //   },
+              //   child: buildVisiTujuan(),
+              // ),
+              // GestureDetector(
+              //   onHorizontalDragEnd: (details) {
+              //     setState(() {
+              //       previousPage();
+              //     });
+              //   },
+              //   child: buildMisi(),
+              // )
             ],
           ),
         ),

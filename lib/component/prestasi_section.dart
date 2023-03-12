@@ -57,31 +57,40 @@ class _PrestasiSectionState extends State<PrestasiSection> {
           ],
         ),
       ),
-      Obx(() => _prestasiController.isLoading.value ? CircularProgressIndicator() :
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 33.0),
-          child: SizedBox(
-            height: 100,
-            child: ListView.builder(
-              // physics: NeverScrollableScrollPhysics(),
-              // clipBehavior: Clip.hardEdge,
-              scrollDirection: Axis.horizontal,
-              shrinkWrap: true,
-              itemCount: 5,
-              itemBuilder: (BuildContext context, index) {
-                print(_prestasiController.prestasi[index].juara.link.replaceAll(' ', ''));
-                return Padding(
-                  padding: const EdgeInsets.only(right: 8.0),
-                  child: CardPrestasi(
-                      img: _prestasiController.prestasi[index].juara.link,
-                      juara: _prestasiController.prestasi[index].juara.juara,
-                      tingkat: _prestasiController.prestasi[index].tingkat,
-                      kategori: _prestasiController.prestasi[index].lomba),
-                );
-              },
-            ),
-          ),
-        ),
+      SizedBox(
+        height: 12,
+      ),
+      Obx(
+        () => _prestasiController.isLoading.value
+            ? CircularProgressIndicator()
+            : Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 33.0),
+                child: SizedBox(
+                  height: 100,
+                  child: ListView.builder(
+                    // physics: NeverScrollableScrollPhysics(),
+                    // clipBehavior: Clip.hardEdge,
+                    scrollDirection: Axis.horizontal,
+                    shrinkWrap: true,
+                    itemCount: 5,
+                    itemBuilder: (BuildContext context, index) {
+                      print(_prestasiController.prestasi[index].juara.link
+                          .replaceAll(' ', ''));
+                      return Padding(
+                        padding: const EdgeInsets.only(right: 8.0),
+                        child: CardPrestasi(
+                            img: _prestasiController.prestasi[index].juara.link,
+                            juara:
+                                _prestasiController.prestasi[index].juara.juara,
+                            tingkat:
+                                _prestasiController.prestasi[index].tingkat,
+                            kategori:
+                                _prestasiController.prestasi[index].lomba),
+                      );
+                    },
+                  ),
+                ),
+              ),
       )
       // SingleChildScrollView(
       //   padding: const EdgeInsets.symmetric(vertical: 4),

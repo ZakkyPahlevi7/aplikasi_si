@@ -56,28 +56,33 @@ class _ExtraSectionState extends State<ExtraSection> {
           ),
         ),
         const SizedBox(
-          height: 10,
+          height: 18,
         ),
-        Obx(() => _extraController.isLoading.value ? Center(child: CircularProgressIndicator()) :
-          Container(
-            margin: EdgeInsets.symmetric(horizontal: 33),
-            height: 150,
-            child: ListView.builder(
-              // physics: NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              // clipBehavior: Clip.hardEdge,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (BuildContext context, int index) {
-                return ExtraCard(
-                    img: _extraController.extrakurikuler[index].link,
-                    name: _extraController.extrakurikuler[index].judul,
-                    jadwal: _extraController.extrakurikuler[index].jadwal,
-                    pageRouteE: DetailExtra(extraData: _extraController.extrakurikuler[index])
-                );
-              },
-              itemCount: _extraController.extrakurikuler.length,
-            ),
-          ),
+        Obx(
+          () => _extraController.isLoading.value
+              ? Center(child: CircularProgressIndicator())
+              : Container(
+                  margin: EdgeInsets.symmetric(horizontal: 33),
+                  height: 150,
+                  child: ListView.builder(
+                    // physics: NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    // clipBehavior: Clip.hardEdge,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (BuildContext context, int index) {
+                      return ExtraCard(
+                          img: _extraController.extrakurikuler[index].link,
+                          name: _extraController.extrakurikuler[index].judul,
+                          jadwal: _extraController.extrakurikuler[index].jadwal,
+                          pukulwaktu:
+                              _extraController.extrakurikuler[index].jam,
+                          pageRouteE: DetailExtra(
+                              extraData:
+                                  _extraController.extrakurikuler[index]));
+                    },
+                    itemCount: _extraController.extrakurikuler.length,
+                  ),
+                ),
         )
       ],
     );
