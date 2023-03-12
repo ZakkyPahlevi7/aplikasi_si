@@ -3,20 +3,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class TagihanSmt1Card extends StatelessWidget {
+class TagihanCard extends StatelessWidget {
   String bulan;
-  String tagihan;
   String jumlahtagihan;
   String status;
-  String kondisistatus;
 
-  TagihanSmt1Card(
+  TagihanCard(
       {Key? key,
       required this.bulan,
-      required this.tagihan,
       required this.jumlahtagihan,
-      required this.status,
-      required this.kondisistatus})
+      required this.status})
       : super(key: key);
 
   @override
@@ -48,7 +44,7 @@ class TagihanSmt1Card extends StatelessWidget {
           Row(
             children: [
               Text(
-                tagihan,
+                'Tagihan',
                 style: GoogleFonts.poppins(
                     fontSize: 13,
                     fontWeight: FontWeight.w400,
@@ -68,13 +64,13 @@ class TagihanSmt1Card extends StatelessWidget {
           ),
           Row(
             children: [
-              Text(status,
+              Text('Status',
                   style: GoogleFonts.poppins(
                       fontSize: 13,
                       fontWeight: FontWeight.w400,
                       color: Color(0xff464646))),
               Spacer(),
-              Text(kondisistatus,
+              Text(status,
                   style: GoogleFonts.poppins(
                       fontSize: 13,
                       fontWeight: FontWeight.w600,

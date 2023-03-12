@@ -29,34 +29,7 @@ class _DashboardHeaderState extends State<DashboardHeader> {
             'assets/images/logo.png',
             width: 60,
           ),
-          // CircleAvatar(
-          //   child: GestureDetector(
-          //     onTap: () {
-          //       Navigator.push(context,
-          //           MaterialPageRoute(builder: (context) => const StreamPage()));
-          //     },
-          //     child: Image.asset(
-          //       'assets/images/profile.png',
-          //       width: 58,
-          //     ),
-          //   ),
-          // )
-          // const Spacer(),
-          // CircleAvatar(
-          //   child: GestureDetector(
-          //     onTap: () {
-          //       Navigator.push(
-          //           context,
-          //           MaterialPageRoute(
-          //               builder: (context) => const SignUpPage()));
-          //     },
-          //     child: Image.asset(
-          //       'assets/images/profile.png',
-          //       width: 58,
-          //     ),
-          //   ),
-          // )
-        ],
+          ],
       ),
     );
   }

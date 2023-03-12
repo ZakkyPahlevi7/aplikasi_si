@@ -1,15 +1,11 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors
 
 import 'package:aplikasi_si/controller/user_controller.dart';
-import 'package:aplikasi_si/pages/profile/spp/spp.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../../config/preferences.dart';
-import '../../../controller/dashboard_controller.dart';
 import '../../../theme/app_text_styles.dart';
-import 'garisputus.dart';
 
 class SppLogin extends StatefulWidget {
   const SppLogin({super.key});
@@ -26,10 +22,11 @@ class _SppLoginState extends State<SppLogin> with WidgetsBindingObserver {
   int tabIndex = 0;
   bool _btnLoginEnable = false;
   bool _obscureText = true;
+  String? id;
+  String? password;
 
   @override
   void initState() {
-    _checkPassw();
     _nisController.addListener(_handleLogin);
     _passwordController.addListener(_handleLogin);
     // TODO: implement initState
@@ -50,21 +47,8 @@ class _SppLoginState extends State<SppLogin> with WidgetsBindingObserver {
     }
   }
 
-  _checkPassw() async {
-    final nis = await prefs.getEmail();
-    final password = await prefs.readPassword();
-    // //print(mail);
-    if (password.toString().isNotEmpty && nis.toString().isNotEmpty) {
-      _nisController.text = nis;
-      _passwordController.text = password;
-    }
-  }
-
   gotoDashboard() async {
-    await _controller.login(
-        nis: _nisController.text,
-        passw: _passwordController.text
-    );
+    await _controller.login(_nisController.text, _passwordController.text);
     _nisController.clear();
     _passwordController.clear();
     WidgetsBinding.instance.removeObserver(this);
@@ -216,7 +200,7 @@ class _SppLoginState extends State<SppLogin> with WidgetsBindingObserver {
                   width: MediaQuery.of(context).size.width,
                   child: ElevatedButton(
                     onPressed: () {
-                      _btnLoginEnable ? () => gotoDashboard() : () {};
+                      _btnLoginEnable ? gotoDashboard() : (){};
                     },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: _btnLoginEnable ? Color(0xff1468E2) : Color(0xFFDBDBDB)),
