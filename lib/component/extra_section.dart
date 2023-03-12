@@ -3,11 +3,8 @@
 import 'package:aplikasi_si/bottom_navbar.dart';
 import 'package:aplikasi_si/component/extra_card.dart';
 import 'package:aplikasi_si/controller/extrakurikuler_controller.dart';
-import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_volly.dart';
-import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_basket.dart';
-import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_futsal.dart';
-import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_tari.dart';
-import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra_pramuka.dart';
+import 'package:aplikasi_si/pages/dashboard/extrakurikuler/detail_extra.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 

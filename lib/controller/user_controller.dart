@@ -34,7 +34,7 @@ class UserController extends GetxController {
           barrierDismissible: false);
       Map<String, dynamic> nisMap = {'id': nis, 'password': passw};
 
-      var resp = await apiConfig.post(UrlConfig.baseUrl() + 'login-siswa',
+      var resp = await apiConfig.post(UrlConfig.baseUrl() + 'loginSiswa',
           map: nisMap);
       print('ini response ' + resp);
 
@@ -48,7 +48,7 @@ class UserController extends GetxController {
         print('map $nisMap');
         print(token_siswa);
         if (token_siswa.isNotEmpty) {
-          var response = await apiConfig.post(UrlConfig.baseUrl() + 'login-siswa', map: nisMap);
+          var response = await apiConfig.post(UrlConfig.baseUrl() + 'loginSiswa', map: nisMap);
 
           print(response);
           if (response != 'error' && response != 'fatal') {
@@ -151,7 +151,7 @@ class UserController extends GetxController {
       print(e);
       Get.back();
       var response = await apiConfig
-          .post(UrlConfig.baseUrl() + 'login-siswa', map: map);
+          .post(UrlConfig.baseUrl() + 'loginSiswa', map: map);
       if (response == 'error' && response == 'fatal')
         Fluttertoast.showToast(
             msg: 'Check your nis or password',
