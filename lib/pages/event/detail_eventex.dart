@@ -154,7 +154,7 @@ class _DetailEventPageState extends State<DetailEventExPage> {
                           child: Stack(
                             children: [
                               Image.network(
-                                widget.eventRecentData.imagesEvents[index].link,
+                                widget.eventRecentData.imagesEvents.isEmpty ? widget.eventRecentData.link : widget.eventRecentData.imagesEvents[index].link,
                                 // widget.gambarheader![index].foto!,
                                 // imgList[index],
                                 fit: BoxFit.contain,
