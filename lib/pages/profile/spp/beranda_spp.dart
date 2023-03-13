@@ -102,7 +102,7 @@ class _SppScreenState extends State<SppScreen> {
                     },
                     child: Container(
                       margin: EdgeInsets.symmetric(horizontal: 26),
-                      height: 100,
+                      height: 195,
                       padding: EdgeInsets.all(12), // atur jarak teks dari pinggir container
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(7.0),
@@ -114,15 +114,22 @@ class _SppScreenState extends State<SppScreen> {
                               color: Colors.black.withOpacity(0.2))
                         ],
                       ),
-                      child: Center(
-                        child: Text(
-                          widget.sppModel.spps![index].tahun,
-                          style: TextStyle(
-                            fontSize: 16, // atur ukuran teks sesuai kebutuhan
-                            fontWeight:
-                            FontWeight.w500, // atur gaya teks sesuai kebutuhan
-                          ),
-                        ),
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/tagihanbackground.png'),
+                          SizedBox(height: 10,),
+                          Center(
+                            child: Text(
+                              'Tagihan Pembayaran SPP ' +
+                              widget.sppModel.spps![index].tahun,
+                              style: TextStyle(
+                                fontSize: 16, // atur ukuran teks sesuai kebutuhan
+                                fontWeight:
+                                FontWeight.w500, // atur gaya teks sesuai kebutuhan
+                              ),
+                            ),
+                          )
+                        ],
                       ),
                     ),
                   );
