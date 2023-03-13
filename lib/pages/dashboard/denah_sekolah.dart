@@ -1,3 +1,4 @@
+import 'package:aplikasi_si/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:aplikasi_si/bottom_navbar.dart';
 
@@ -14,38 +15,13 @@ class _DenahPageState extends State<DenahPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      appBar: AppBar(title: Text('Denah Sekolah'), backgroundColor: AppColors.contactUsIconColor,),
+      // backgroundColor: AppColors.contactUsIconColor,
       body: Column(
         children: [
           Container(
-            margin: const EdgeInsets.only(top: 50, left: 33),
-            child: Row(
-              children: [
-                GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const BottomNavbar()));
-                    },
-                    child: const Icon(
-                      Icons.arrow_back_ios,
-                      color: Colors.black,
-                      size: 26,
-                    )),
-                const SizedBox(
-                  width: 6,
-                ),
-                Text(
-                  'Denah MTsN 1 Pati',
-                  style: AppTextStyle.appTitlew600s18(Colors.black),
-                )
-              ],
-            ),
-          ),
-          Container(
               margin: const EdgeInsets.only(left: 10, right: 10, top: 10),
-              child: Image.asset('assets/images/denahskolah.png'))
+              child: Image.asset('assets/images/denah_du.png'))
         ],
       ),
     );
