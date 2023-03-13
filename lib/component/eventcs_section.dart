@@ -46,7 +46,7 @@ class _EventcsSectionState extends State<EventcsSection> {
           () => _eventController.isLoading.value
               ? Center(child: CircularProgressIndicator())
               : SizedBox(
-                  height: 300,
+                  height: 310,
                   child: ListView.separated(
                       padding: const EdgeInsets.symmetric(horizontal: 22.0),
                       physics: PageScrollPhysics(),
