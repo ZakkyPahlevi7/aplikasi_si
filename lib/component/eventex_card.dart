@@ -37,7 +37,7 @@ class EventexCard extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.0),
               color: Color(0xff0962E0)),
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -60,7 +60,7 @@ class EventexCard extends StatelessWidget {
                 width: 122,
               ),
               const SizedBox(
-                height: 16,
+                height: 10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -74,8 +74,7 @@ class EventexCard extends StatelessWidget {
                   const SizedBox(
                     width: 4,
                   ),
-                  Container(
-                    width: 120,
+                  Expanded(
                     child: Text(
                       day,
                       style: AppTextStyle.appTitlew400s10(Colors.white),
@@ -87,21 +86,23 @@ class EventexCard extends StatelessWidget {
               const SizedBox(
                 height: 4,
               ),
-              Row(
-                children: [
-                  const Icon(
-                    Icons.location_on,
-                    size: 14,
-                    color: Colors.white,
-                  ),
-                  const SizedBox(
-                    width: 4,
-                  ),
-                  Text(
-                    location,
-                    style: AppTextStyle.appTitlew400s10(Colors.white),
-                  )
-                ],
+              Expanded(
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.location_on,
+                      size: 14,
+                      color: Colors.white,
+                    ),
+                    const SizedBox(
+                      width: 4,
+                    ),
+                    Text(
+                      location,
+                      style: AppTextStyle.appTitlew400s10(Colors.white),
+                    )
+                  ],
+                ),
               )
             ],
           ),

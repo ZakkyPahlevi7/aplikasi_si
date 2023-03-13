@@ -42,32 +42,40 @@ class _EventcsSectionState extends State<EventcsSection> {
               'Event yang akan datang',
               style: AppTextStyle.appTitlew800s20(Colors.black),
             )),
-        Obx(() => _eventController.isLoading.value ? Center(child: CircularProgressIndicator()) :
-          SizedBox(
-            height: 310,
-            child: ListView.separated(
-                padding: const EdgeInsets.symmetric(horizontal: 22.0),
-                physics: PageScrollPhysics(),
-              shrinkWrap: true,
-              clipBehavior: Clip.hardEdge,
-              scrollDirection: Axis.horizontal,
-              itemCount: _eventController.eventComingSoon.length,
-                separatorBuilder: (_, __) {
-                  return SizedBox(width: 10,);
-                },
-                itemBuilder: (BuildContext context, index){
-                print(_eventController.eventComingSoon.length);
-                  return EventcsCard(
-                    title: _eventController.eventComingSoon[index].event,
-                    peserta: _eventController.eventComingSoon[index].peserta,
-                    img: _eventController.eventComingSoon[index].link,
-                    day: _eventController.eventComingSoon[index].tanggal.toString(),
-                    location: _eventController.eventComingSoon[index].lokasi,
-                    pageRouteE: DetailEventCsPage(eventComingSoonData: _eventController.eventComingSoon[index]),
-                  );
-                }
-            ),
-          ),
+        Obx(
+          () => _eventController.isLoading.value
+              ? Center(child: CircularProgressIndicator())
+              : SizedBox(
+                  height: 300,
+                  child: ListView.separated(
+                      padding: const EdgeInsets.symmetric(horizontal: 22.0),
+                      physics: PageScrollPhysics(),
+                      shrinkWrap: true,
+                      clipBehavior: Clip.hardEdge,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: _eventController.eventComingSoon.length,
+                      separatorBuilder: (_, __) {
+                        return SizedBox(
+                          width: 10,
+                        );
+                      },
+                      itemBuilder: (BuildContext context, index) {
+                        print(_eventController.eventComingSoon.length);
+                        return EventcsCard(
+                          title: _eventController.eventComingSoon[index].event,
+                          peserta:
+                              _eventController.eventComingSoon[index].peserta,
+                          img: _eventController.eventComingSoon[index].link,
+                          day: _eventController.eventComingSoon[index].tanggal
+                              .toString(),
+                          location:
+                              _eventController.eventComingSoon[index].lokasi,
+                          pageRouteE: DetailEventCsPage(
+                              eventComingSoonData:
+                                  _eventController.eventComingSoon[index]),
+                        );
+                      }),
+                ),
         )
       ],
     );
