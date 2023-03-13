@@ -142,7 +142,7 @@ class _DetailEventPageState extends State<DetailEventCsPage> {
                       fontSize: 16, fontWeight: FontWeight.w400),
                 )),
             SizedBox(
-              height: 12,
+              height: 30,
             )
           ],
         ),
