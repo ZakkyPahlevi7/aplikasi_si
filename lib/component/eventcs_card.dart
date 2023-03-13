@@ -12,15 +12,15 @@ class EventcsCard extends StatelessWidget {
   String location;
   var pageRouteE;
 
-  EventcsCard({
-    Key? key,
-    required this.title,
-    required this.peserta,
-    required this.img,
-    required this.day,
-    required this.location,
-    required this.pageRouteE
-  }) : super(key: key);
+  EventcsCard(
+      {Key? key,
+      required this.title,
+      required this.peserta,
+      required this.img,
+      required this.day,
+      required this.location,
+      required this.pageRouteE})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class EventcsCard extends StatelessWidget {
       height: 250,
       // margin: EdgeInsets.only(left: 28),
       child: GestureDetector(
-        onTap: (){
+        onTap: () {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => pageRouteE));
         },
@@ -126,11 +126,21 @@ class RPSCustomPainter extends CustomPainter {
         customWidth * 0.1260220,
         size.height * 0.003469079);
     path_0.lineTo(customWidth * 0.9109677, size.height * 0.08439714);
-    path_0.cubicTo(customWidth * 0.9624409, size.height * 0.08970413, customWidth,
-        size.height * 0.1160908, customWidth, size.height * 0.1469432);
+    path_0.cubicTo(
+        customWidth * 0.9624409,
+        size.height * 0.08970413,
+        customWidth,
+        size.height * 0.1160908,
+        customWidth,
+        size.height * 0.1469432);
     path_0.lineTo(customWidth, size.height * 0.9365079);
-    path_0.cubicTo(customWidth, size.height * 0.9715746, customWidth * 0.9518602,
-        size.height, customWidth * 0.8924731, size.height);
+    path_0.cubicTo(
+        customWidth,
+        size.height * 0.9715746,
+        customWidth * 0.9518602,
+        size.height,
+        customWidth * 0.8924731,
+        size.height);
     path_0.lineTo(customWidth * 0.1075269, size.height);
     path_0.cubicTo(customWidth * 0.04814145, size.height, 0,
         size.height * 0.9715746, 0, size.height * 0.9365079);

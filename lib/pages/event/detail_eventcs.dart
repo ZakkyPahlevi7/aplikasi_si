@@ -6,7 +6,8 @@ import 'package:aplikasi_si/model/model_event.dart' as event;
 
 class DetailEventCsPage extends StatefulWidget {
   event.EventComingSoonData eventComingSoonData;
-  DetailEventCsPage({Key? key, required this.eventComingSoonData}) : super(key: key);
+  DetailEventCsPage({Key? key, required this.eventComingSoonData})
+      : super(key: key);
 
   @override
   State<DetailEventCsPage> createState() => _DetailEventPageState();
@@ -108,7 +109,7 @@ class _DetailEventPageState extends State<DetailEventCsPage> {
               child: Text(
                 'Tentang',
                 style: GoogleFonts.poppins(
-                    fontSize: 16,
+                    fontSize: 18,
                     fontWeight: FontWeight.w700,
                     color: Colors.black),
               ),
@@ -118,10 +119,30 @@ class _DetailEventPageState extends State<DetailEventCsPage> {
                 child: Text(
                   widget.eventComingSoonData.tentang,
                   style: GoogleFonts.poppins(
-                      fontSize: 13, fontWeight: FontWeight.w400),
+                      fontSize: 16, fontWeight: FontWeight.w400, height: 1.5),
                 )),
             SizedBox(
               height: 16,
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 26, bottom: 6, top: 16),
+              child: Text(
+                'Syarat dan Ketentuan',
+                style: GoogleFonts.poppins(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.black),
+              ),
+            ),
+            Container(
+                margin: EdgeInsets.only(left: 26, right: 26, top: 6),
+                child: Text(
+                  '• Siswa Mtsn 1 Pati \n• Sehat jasmani dan rohani \n• Membawa bekal masing-masing dari rumah \n• Izin kepada orang tua \n• Membawa perlengkapan mandi Memakai pakaian pramuka lengkap',
+                  style: GoogleFonts.poppins(
+                      fontSize: 16, fontWeight: FontWeight.w400),
+                )),
+            SizedBox(
+              height: 12,
             )
           ],
         ),
