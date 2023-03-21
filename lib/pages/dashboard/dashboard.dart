@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:aplikasi_si/component/event_section.dart';
 import 'package:aplikasi_si/controller/prestasi_controller.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -65,19 +66,23 @@ class _DashboardPageState extends State<DashboardPage> {
                     const SizedBox(
                       height: 18,
                     ),
-                    const visiMisiSection(),
-                    SizedBox(
-                      height: 18,
-                    ),
-                    const CivitasSection(),
+                    const EventSection(),
                     const SizedBox(
                       height: 18,
                     ),
+                      // const visiMisiSection(),
+                      // const SizedBox(
+                      //   height: 18,
+                      // ),
                     const PrestasiSection(),
                     const SizedBox(
                       height: 18,
                     ),
                     const ExtraSection(),
+                    SizedBox(
+                      height: 18,
+                    ),
+                    const CivitasSection(),
                     const SizedBox(
                       height: 18,
                     ),

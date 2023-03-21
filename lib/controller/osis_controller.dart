@@ -1,21 +1,21 @@
 import 'dart:convert';
-
-import 'package:aplikasi_si/model/model_civitas_karyawan.dart';
+import 'package:aplikasi_si/model/model_civitas_walikelas.dart';
+import 'package:aplikasi_si/model/model_osis.dart';
 import 'package:get/get.dart';
 
 import '../urlconfig.dart';
 
-class KaryawanController extends GetxController{
+class OsisController extends GetxController{
   var isLoading = true.obs;
-  var staff = <KaryawanData>[].obs;
+  var osis = <OsisData>[].obs;
 
   loadData({bool withLoading = false}) async {
     try {
       isLoading.value = true;
-      var response = await apiConfig.get(UrlConfig.baseUrl()+'karyawan');
+      var response = await apiConfig.get(UrlConfig.baseUrl()+'osis');
       //debugPrint('response notes : $response');
       if(response!='error' && response!='fatal'){
-        staff.value = KaryawanModel.fromJson(jsonDecode(response.toString())).data!;
+        osis.value = OsisModel.fromJson(jsonDecode(response.toString())).data!;
         isLoading.value=false;
       }else{
         isLoading.value=false;

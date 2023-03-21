@@ -56,7 +56,7 @@ class _ExtraSectionState extends State<ExtraSection> {
           ),
         ),
         const SizedBox(
-          height: 18,
+          height: 12,
         ),
         Obx(
           () => _extraController.isLoading.value

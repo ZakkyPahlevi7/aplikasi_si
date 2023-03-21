@@ -5,11 +5,6 @@ import '../theme/theme.dart';
 
 // ignore: must_be_immutable
 class ExtraCard extends StatelessWidget {
-  final ExtrakurikulerController _extraController = ExtrakurikulerController();
-
-  Future<Null> _initData() async {
-    await _extraController.loadData(withLoading: true);
-  }
 
   var pageRouteE;
   String img;

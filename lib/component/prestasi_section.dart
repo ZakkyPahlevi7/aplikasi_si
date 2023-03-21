@@ -58,7 +58,7 @@ class _PrestasiSectionState extends State<PrestasiSection> {
         ),
       ),
       SizedBox(
-        height: 12,
+        height: 4,
       ),
       Obx(
         () => _prestasiController.isLoading.value

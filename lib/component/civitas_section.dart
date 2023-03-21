@@ -61,7 +61,7 @@ class CivitasSection extends StatelessWidget {
                                     ? 'Wali Kelas'
                                     : index == 4
                                         ? 'Data Staff'
-                                        : 'Data Siswa',
+                                        : 'OSIS',
                     pageRoute: index == 0
                         ? const DetailKepalaSekolah()
                         : index == 1
@@ -72,7 +72,7 @@ class CivitasSection extends StatelessWidget {
                                     ? const DetailWaliKelas()
                                     : index == 4
                                         ? const DetaiDataStaff()
-                                        : const DetailDataSiswa());
+                                        : const DetailOsis());
               },
             ),
           )
