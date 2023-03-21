@@ -1,3 +1,4 @@
+import 'package:aplikasi_si/controller/osis_controller.dart';
 import 'package:aplikasi_si/pages/dashboard/civitas/detail_7a.dart';
 import 'package:aplikasi_si/pages/dashboard/civitas/detail_7b.dart';
 import 'package:aplikasi_si/pages/dashboard/civitas/detail_8a.dart';
@@ -9,98 +10,97 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-class DetailDataSiswa extends StatefulWidget {
-  const DetailDataSiswa({Key? key}) : super(key: key);
+import '../../../theme/app_text_styles.dart';
+
+class DetailOsis extends StatefulWidget {
+  const DetailOsis({Key? key}) : super(key: key);
 
   @override
-  State<DetailDataSiswa> createState() => _DetailDataSiswaState();
+  State<DetailOsis> createState() => _DetailOsisState();
 }
 
-class _DetailDataSiswaState extends State<DetailDataSiswa> {
+class _DetailOsisState extends State<DetailOsis> {
+  final OsisController osisController = OsisController();
+
+  @override
+  void initState() {
+    _initData();
+    // TODO: implement initState
+    super.initState();
+  }
+
+  Future onRefresh() async {
+    await _initData();
+  }
+
+  Future<Null> _initData() async {
+    await osisController.loadData(withLoading: true);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Siswa'),
+        title: const Text('Data OSIS'),
         backgroundColor: AppColors.contactUsIconColor,
       ),
-      body: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 22, vertical: 10),
-        child: Column(
-          children: [
-            GestureDetector(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const Detail7A()));
-              },
-              child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 15),
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: const Color(0xff93E396).withOpacity(0.5)),
-                child: const Center(child: Text('Kelas 7A'),),
-              )
-            ),
-            const SizedBox(height: 10,),
-            GestureDetector(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const Detail7B()));
-              },
-              child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 15),
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: const Color(0xff93E396).withOpacity(0.5)),
-                child: const Center(child: Text('Kelas 7B'),),
-              )
-            ),
-            const SizedBox(height: 10,),
-            GestureDetector(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const Detail8A()));
-              },
-              child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 15),
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: const Color(0xffEDCC5D).withOpacity(0.5)),
-                child: const Center(child: Text('Kelas 8A'),),
-              )
-            ),
-            const SizedBox(height: 10,),
-            GestureDetector(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const Detail8B()));
-              },
-              child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 15),
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: const Color(0xffEDCC5D).withOpacity(0.5)),
-                child: const Center(child: Text('Kelas 8B'),),
-              )
-            ),
-            const SizedBox(height: 10,),
-            GestureDetector(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const Detail9A()));
-              },
-              child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 15),
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: const Color(0xffFF9790).withOpacity(0.5)),
-                child: const Center(child: Text('Kelas 9A'),),
-              )
-            ),
-            const SizedBox(height: 10,),
-            GestureDetector(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const Detail9B()));
-              },
-              child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 15),
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: const Color(0xffFF9790).withOpacity(0.5)),
-                child: const Center(child: Text('Kelas 9B'),),
-              )
-            ),
-          ],
-        )
+      backgroundColor: Colors.white,
+      body: RefreshIndicator(
+        onRefresh: onRefresh,
+        child: Obx(() => osisController.isLoading.value ? const Center(child: CircularProgressIndicator()) :
+        ListView.builder(
+          itemCount: osisController.osis.length,
+          itemBuilder: (BuildContext context, index){
+            return Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                      blurRadius: 2.5,
+                      spreadRadius: 0.9,
+                      color: Colors.black.withOpacity(0.1))
+                ],
+              ),
+              margin: const EdgeInsets.symmetric(horizontal: 22, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
+              child: Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: AppColors.secondaryWhite),
+                    padding: const EdgeInsets.all(10),
+                    child: Image.network(
+                      osisController.osis[index].link!,
+                      width: 50,
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 16,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        osisController.osis[index].nama!,
+                        style: AppTextStyle.appTitlew700s14(),
+                      ),
+                      const SizedBox(
+                        height: 2,
+                      ),
+                      Text(
+                        osisController.osis[index].jabatan!,
+                        style: AppTextStyle.appTitlew400s12h13(),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            );
+          },
+        ),
+        ),
       ),
     );
   }
