@@ -2,11 +2,17 @@
 
 import 'package:aplikasi_si/component/event_section.dart';
 import 'package:aplikasi_si/controller/prestasi_controller.dart';
+import 'package:aplikasi_si/model/spp_model.dart';
+import 'package:aplikasi_si/model/user_model.dart';
+import 'package:aplikasi_si/pages/profile/spp/beranda_spp.dart';
+import 'package:aplikasi_si/pages/profile/spp/spp.dart';
 import 'package:get/get.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../controller/dashboard_controller.dart';
 import '../../controller/extrakurikuler_controller.dart';
+import '../../controller/user_controller.dart';
 import '../../generateapi.dart';
 import '../../main.dart';
 import 'package:flutter/material.dart';
@@ -26,6 +32,8 @@ class DashboardPage extends StatefulWidget {
 class _DashboardPageState extends State<DashboardPage> {
   bool isloading = false;
   final _controller = Get.put(DashboardController());
+  final _userController = Get.put(UserController());
+
 
   @override
   void initState() {
@@ -62,6 +70,15 @@ class _DashboardPageState extends State<DashboardPage> {
                     CarouselWithDotsPage(
                       // gambarheader: terserah,
                       imgList: imgList,
+                    ),
+                    const SizedBox(
+                      height: 18,
+                    ),
+                    Center(
+                      child: GestureDetector(
+                        onTap: (){Get.to(SppLogin());},
+                        child: Image.asset('assets/images/banner_spp.png'),
+                      ),
                     ),
                     const SizedBox(
                       height: 18,
