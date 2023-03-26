@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../theme/app_text_styles.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SppLogin extends StatefulWidget {
   const SppLogin({super.key});
@@ -31,6 +32,17 @@ class _SppLoginState extends State<SppLogin> with WidgetsBindingObserver {
     _passwordController.addListener(_handleLogin);
     // TODO: implement initState
     super.initState();
+    _checkLoginStatus();
+  }
+
+  void _checkLoginStatus() async {
+    final prefs = await SharedPreferences.getInstance();
+    final isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+
+    if (isLoggedIn) {
+      // Pengguna sudah login, arahkan ke halaman utama
+      Navigator.pushNamed(context, '/home');
+    }
   }
 
   _handleLogin() {

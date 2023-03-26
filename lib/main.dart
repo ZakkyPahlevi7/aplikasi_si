@@ -2,6 +2,7 @@ import 'package:aplikasi_si/bottom_navbar.dart';
 import 'package:aplikasi_si/pages/edit_profile/google_sign_in.dart';
 import 'package:aplikasi_si/pages/edit_profile/loginuser.dart';
 import 'package:aplikasi_si/pages/page.dart';
+import 'package:aplikasi_si/pages/profile/spp/beranda_spp.dart';
 import 'package:aplikasi_si/pages/welcome/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -43,8 +44,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
 
 final List<String> imgList = [
   'assets/images/hero1.png',
