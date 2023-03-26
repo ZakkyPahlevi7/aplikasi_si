@@ -139,7 +139,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 //   ),
                 // ),
                 const SizedBox(
-                  height: 18,
+                  height: 24,
                 ),
                 const EventSection(),
                 const SizedBox(
