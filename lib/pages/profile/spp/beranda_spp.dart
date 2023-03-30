@@ -30,19 +30,22 @@ class _SppScreenState extends State<SppScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SPP Siswa'), 
-        backgroundColor: AppColors.contactUsIconColor, leading: IconButton(
-        icon: Icon(Icons.arrow_back, color: Colors.white),
-        onPressed: () => Get.toNamed('/main', arguments: {'id': Random().nextInt(10000).toString()}),
-      ),),
+        title: const Text('SPP Siswa'),
+        backgroundColor: AppColors.contactUsIconColor,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => Get.toNamed('/main',
+              arguments: {'id': Random().nextInt(10000).toString()}),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
-              margin:
-              const EdgeInsets.only(left: 26, right: 26, top: 16, bottom: 8),
+              margin: const EdgeInsets.only(
+                  left: 26, right: 26, top: 16, bottom: 8),
               padding:
-              const EdgeInsets.only(left: 14, right: 14, top: 8, bottom: 8),
+                  const EdgeInsets.only(left: 14, right: 14, top: 8, bottom: 8),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(7.0),
                 color: Colors.white,
@@ -81,29 +84,31 @@ class _SppScreenState extends State<SppScreen> {
               ),
             ),
             ListView.separated(
-              separatorBuilder: (BuildContext context, index){
-                return SizedBox(height: 12);
-              },
+                separatorBuilder: (BuildContext context, index) {
+                  return SizedBox(height: 12);
+                },
                 clipBehavior: Clip.hardEdge,
                 shrinkWrap: true,
                 itemCount: widget.sppModel.spps!.length,
-                itemBuilder: (BuildContext context, index){
+                itemBuilder: (BuildContext context, index) {
                   return GestureDetector(
                     onTap: () {
-                      try{
+                      try {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => DetailSPP(sppDatas: widget.sppModel.spps![index].spp))
-                        );
-                      }catch(e){
+                                builder: (context) => DetailSPP(
+                                    sppDatas:
+                                        widget.sppModel.spps![index].spp)));
+                      } catch (e) {
                         print(e.toString());
                       }
                     },
                     child: Container(
                       margin: EdgeInsets.symmetric(horizontal: 26),
                       height: 195,
-                      padding: EdgeInsets.all(12), // atur jarak teks dari pinggir container
+                      padding: EdgeInsets.all(
+                          12), // atur jarak teks dari pinggir container
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(7.0),
                         color: Colors.white,
@@ -117,15 +122,18 @@ class _SppScreenState extends State<SppScreen> {
                       child: Column(
                         children: [
                           Image.asset('assets/images/tagihanbackground.png'),
-                          SizedBox(height: 10,),
+                          SizedBox(
+                            height: 10,
+                          ),
                           Center(
                             child: Text(
                               'Tagihan Pembayaran SPP ' +
-                              widget.sppModel.spps![index].tahun,
+                                  widget.sppModel.spps![index].tahun,
                               style: TextStyle(
-                                fontSize: 16, // atur ukuran teks sesuai kebutuhan
-                                fontWeight:
-                                FontWeight.w500, // atur gaya teks sesuai kebutuhan
+                                fontSize:
+                                    16, // atur ukuran teks sesuai kebutuhan
+                                fontWeight: FontWeight
+                                    .w500, // atur gaya teks sesuai kebutuhan
                               ),
                             ),
                           )
@@ -133,8 +141,7 @@ class _SppScreenState extends State<SppScreen> {
                       ),
                     ),
                   );
-                }
-            ),
+                }),
           ],
         ),
       ),

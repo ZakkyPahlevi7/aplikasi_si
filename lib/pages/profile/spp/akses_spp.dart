@@ -1,5 +1,6 @@
-// ignore_for_file: camel_case_types, prefer_const_constructors
+// ignore_for_file: camel_case_types, prefer_const_constructors, use_build_context_synchronously
 
+import 'package:aplikasi_si/bottom_navbar.dart';
 import 'package:aplikasi_si/controller/user_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -41,7 +42,7 @@ class _SppLoginState extends State<SppLogin> with WidgetsBindingObserver {
 
     if (isLoggedIn) {
       // Pengguna sudah login, arahkan ke halaman utama
-      Navigator.pushNamed(context, '/home');
+      Navigator.pushNamed(context, '/main');
     }
   }
 
@@ -77,7 +78,8 @@ class _SppLoginState extends State<SppLogin> with WidgetsBindingObserver {
             children: [
               GestureDetector(
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => BottomNavbar()));
                 },
                 child: Container(
                     margin: EdgeInsets.only(top: 20, left: 26),
@@ -187,7 +189,9 @@ class _SppLoginState extends State<SppLogin> with WidgetsBindingObserver {
                           });
                         },
                         child: Icon(
-                          _obscureText ? Icons.visibility_off : Icons.visibility,
+                          _obscureText
+                              ? Icons.visibility_off
+                              : Icons.visibility,
                           color: _obscureText ? Color(0xFFb9b9b9) : Colors.blue,
                         ),
                       ),
@@ -212,10 +216,12 @@ class _SppLoginState extends State<SppLogin> with WidgetsBindingObserver {
                   width: MediaQuery.of(context).size.width,
                   child: ElevatedButton(
                     onPressed: () {
-                      _btnLoginEnable ? gotoDashboard() : (){};
+                      _btnLoginEnable ? gotoDashboard() : () {};
                     },
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: _btnLoginEnable ? Color(0xff1468E2) : Color(0xFFDBDBDB)),
+                        backgroundColor: _btnLoginEnable
+                            ? Color(0xff1468E2)
+                            : Color(0xFFDBDBDB)),
                     child: Text(
                       'Masuk',
                       style: GoogleFonts.poppins(
