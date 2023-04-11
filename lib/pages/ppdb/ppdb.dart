@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
 import 'package:aplikasi_si/controller/form_controller.dart';
+import 'package:aplikasi_si/pages/ppdb/pdfPage.dart';
 import 'package:aplikasi_si/pages/ppdb/ppdb_blur.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -162,11 +163,14 @@ class _PpdbPageState extends State<PpdbPage> {
                                             height: 8,
                                           ),
                                           ElevatedButton(
-                                            onPressed: () {
-                                              setState(() {
-                                                _launchpdf1(_ppdbController
-                                                    .form[index].link);
-                                              });
+                                            onPressed: () async {
+                                              String url = _ppdbController.form[index].link;
+                                              var urllaunchable = await canLaunch(url); //canLaunch is from url_launcher package
+                                              if(urllaunchable){
+                                                await launch(url); //launch is from url_launcher package to launch URL
+                                              }else{
+                                                print("URL can't be launched.");
+                                              }
                                             },
                                             child: Text(
                                               'Download',

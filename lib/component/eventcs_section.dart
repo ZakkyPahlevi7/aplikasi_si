@@ -5,6 +5,7 @@ import 'package:aplikasi_si/pages/event/detail_eventcs.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:intl/intl.dart';
 
 import '../theme/app_text_styles.dart';
 import 'eventcs_card.dart';
@@ -66,8 +67,7 @@ class _EventcsSectionState extends State<EventcsSection> {
                           peserta:
                               _eventController.eventComingSoon[index].peserta,
                           img: _eventController.eventComingSoon[index].link,
-                          day: _eventController.eventComingSoon[index].tanggal
-                              .toString(),
+                          day: DateFormat.yMMMd().format(_eventController.eventComingSoon[index].tanggal),
                           location:
                               _eventController.eventComingSoon[index].lokasi,
                           pageRouteE: DetailEventCsPage(

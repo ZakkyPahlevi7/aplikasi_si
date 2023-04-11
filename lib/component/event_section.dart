@@ -2,6 +2,7 @@ import 'package:aplikasi_si/controller/event_controller.dart';
 import 'package:aplikasi_si/pages/event/detail_eventcs.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import 'package:intl/intl.dart';
 
 import '../theme/app_text_styles.dart';
 import 'highlight_event_card.dart';
@@ -15,6 +16,7 @@ class EventSection extends StatefulWidget {
 
 class _EventSectionState extends State<EventSection> {
   final EventController eventController = EventController();
+
 
   @override
   void initState() {
@@ -69,7 +71,7 @@ class _EventSectionState extends State<EventSection> {
                 return HighlightEventCard(
                 img: eventController.eventComingSoon[index].link,
                     name: eventController.eventComingSoon[index].event,
-                    jadwal: eventController.eventComingSoon[index].tanggal.toString(),
+                    jadwal: DateFormat.yMMMd().format(eventController.eventComingSoon[index].tanggal),
                     pageRouteE: DetailEventCsPage(
                     eventComingSoonData:
                     eventController.eventComingSoon[index]),

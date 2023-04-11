@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:aplikasi_si/model/model_event.dart' as eventRecent;
+import 'package:intl/intl.dart';
 
 class DetailEventExPage extends StatefulWidget {
   eventRecent.EventRecentData eventRecentData;
@@ -93,7 +94,8 @@ class _DetailEventPageState extends State<DetailEventExPage> {
                             SizedBox(
                               width: 2,
                             ),
-                            Text(widget.eventRecentData.tanggal.toString(),
+                            Text(
+                                DateFormat.yMMMd().format(widget.eventRecentData.tanggal),
                                 style: GoogleFonts.poppins(
                                     fontSize: 10,
                                     fontWeight: FontWeight.w400,
