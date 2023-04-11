@@ -5,6 +5,7 @@ import 'package:aplikasi_si/pages/event/detail_eventcs.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:intl/intl.dart';
 
 import '../controller/event_controller.dart';
 import '../pages/event/detail_eventex.dart';
@@ -65,7 +66,7 @@ class _EventexSectionState extends State<EventexSection> {
                         title: _controller.eventRecent[index].event,
                         peserta: _controller.eventRecent[index].peserta,
                         imgex: _controller.eventRecent[index].link,
-                        day: _controller.eventRecent[index].tanggal.toString(),
+                        day: DateFormat.yMMMd().format(_controller.eventRecent[index].tanggal),
                         location: _controller.eventRecent[index].lokasi,
                         pageRouteE: DetailEventExPage(eventRecentData: _controller.eventRecent[index]));
                   }),

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:aplikasi_si/model/model_event.dart' as event;
+import 'package:intl/intl.dart';
 
 class DetailEventCsPage extends StatefulWidget {
   event.EventComingSoonData eventComingSoonData;
@@ -88,7 +89,8 @@ class _DetailEventPageState extends State<DetailEventCsPage> {
                             SizedBox(
                               width: 2,
                             ),
-                            Text(widget.eventComingSoonData.tanggal.toString(),
+                            Text(
+                                DateFormat.yMMMd().format(widget.eventComingSoonData.tanggal),
                                 style: GoogleFonts.poppins(
                                     fontSize: 10,
                                     fontWeight: FontWeight.w400,
