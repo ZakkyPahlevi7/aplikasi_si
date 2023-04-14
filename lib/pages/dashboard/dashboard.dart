@@ -70,10 +70,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 const SizedBox(
                   height: 5,
                 ),
-                CarouselWithDotsPage(
-                  // gambarheader: terserah,
-                  imgList: imgList,
-                ),
+                CarouselWithDotsPage(),
                 const SizedBox(
                   height: 24,
                 ),

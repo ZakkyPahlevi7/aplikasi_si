@@ -56,7 +56,6 @@ dependencies:
   http: ^0.13.5
   intl: ^0.17.0
   flutter_pdfview: ^1.0.0
-  flutter_file_path_provider: ^0.0.3
 
 
 dev_dependencies:
