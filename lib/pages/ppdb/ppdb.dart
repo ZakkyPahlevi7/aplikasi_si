@@ -71,7 +71,7 @@ class _PpdbPageState extends State<PpdbPage> {
                     showDialog(
                         context: context,
                         builder: (_) => PpdbBlur(
-                              link: 'assets/images/vectorppdb.png',
+                              link: 'assets/banner_ppdb.png',
                             ));
                   },
                   child: Center(

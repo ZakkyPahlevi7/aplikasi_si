@@ -158,14 +158,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_file_path_provider:
-    dependency: "direct main"
-    description:
-      name: flutter_file_path_provider
-      sha256: ab055bf31297a550cde6fabbb6121993c476272df53dca597aa93a2df93994ae
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.3"
   flutter_lints:
     dependency: "direct dev"
     description:

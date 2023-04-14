@@ -10,15 +10,8 @@ import 'package:get/get_core/src/get_main.dart';
 import '../model/model_header.dart';
 
 class CarouselWithDotsPage extends StatefulWidget {
-  final List<SekolahData>? gambarheader;
-  final List<String> imgList;
-  int? id;
-  CarouselWithDotsPage(
-      {Key? key,
-      required this.imgList,
-      this.gambarheader,
-      this.id,
-  })
+  const CarouselWithDotsPage(
+      {Key? key})
       : super(key: key);
   @override
   State<CarouselWithDotsPage> createState() => _CarouselWithDotsPageState();
