@@ -72,13 +72,14 @@ class _PpdbPageState extends State<PpdbPage> {
                         context: context,
                         builder: (_) => PpdbBlur(
                               link: 'assets/banner_ppdb.png',
-                            ));
+                            ),
+                    );
                   },
                   child: Center(
                     child: Container(
                       margin: const EdgeInsets.symmetric(horizontal: 22),
                       child: Image.asset(
-                        'assets/images/ppdbalur.png',
+                        'assets/banner_ppdb.png',
                         width: 340,
                       ),
                     ),
