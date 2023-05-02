@@ -1,13 +1,11 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, prefer_const_constructors, camel_case_types
 
-import 'package:aplikasi_si/component/tagihansmt1_section.dart';
 import 'package:aplikasi_si/theme/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 
 import '../../../component/tagihansmt1_card.dart';
 import '../../../model/spp_model.dart';
-import 'garisputus.dart';
 
 class DetailSPP extends StatefulWidget {
   final List<SppDatas> sppDatas;
@@ -31,7 +29,7 @@ class _DetailSPPState extends State<DetailSPP> {
         itemCount: widget.sppDatas.length,
         itemBuilder: (BuildContext context, index){
           return TagihanCard(
-              bulan: widget.sppDatas[index].tanggalTagihan.month.toString(),
+              bulan: DateFormat.MMMM().format(widget.sppDatas[index].tanggalTagihan),
               jumlahtagihan: widget.sppDatas[index].tagihan,
               status: widget.sppDatas[index].status);
         },
